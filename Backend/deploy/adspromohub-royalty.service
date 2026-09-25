@@ -1,0 +1,12 @@
+[Unit]
+Description=AdsPromoHub Daily Royalty Pool Processor
+After=network.target mysql.service
+Wants=network.target
+
+[Service]
+Type=oneshot
+User=aph
+Group=aph
+WorkingDirectory=/opt/adspromohub/backend
+Environment=PYTHONUNBUFFERED=1
+ExecStart=/opt/adspromohub/backend/.venv/bin/python /opt/adspromohub/backend/scripts/process_daily_royalty.py
