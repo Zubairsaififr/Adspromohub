@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React, { useEffect, useState } from "react";
 
 // import {
@@ -1984,6 +1985,8 @@
 
 
 
+=======
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 import React, { useEffect, useState } from "react";
 
 import {
@@ -2001,12 +2004,20 @@ import {
 
 import { useNavigate } from "react-router-dom";
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 // =========================================================
 // API
 // =========================================================
 
 const API_URL = import.meta.env.VITE_API_URL;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 // =========================================================
 // TYPES
 // =========================================================
@@ -2019,6 +2030,10 @@ interface ReferralSummary {
     total_referral_transactions: number;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 interface IncomeWalletResponse {
     success: boolean;
     balance: string | number;
@@ -2031,6 +2046,10 @@ interface IncomeWalletSummaryResponse {
     daily_compounding: string | number;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 interface DailyCompoundingStatus {
     success: boolean;
 
@@ -2078,13 +2097,24 @@ interface DailyCompoundingStatus {
     } | null;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 // =========================================================
 // COMPONENT
 // =========================================================
 
 const MyEarning: React.FC = () => {
+<<<<<<< HEAD
     const navigate = useNavigate();
 
+=======
+
+    const navigate = useNavigate();
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     // =====================================================
     // ADS EARNING
     //
@@ -2097,6 +2127,10 @@ const MyEarning: React.FC = () => {
         setAdEarning,
     ] = useState(0);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     // =====================================================
     // REFERRAL STATE
     // =====================================================
@@ -2112,6 +2146,10 @@ const MyEarning: React.FC = () => {
         total_referral_transactions: 0,
     });
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     // =====================================================
     // INCOME WALLET STATE
     // =====================================================
@@ -2126,6 +2164,10 @@ const MyEarning: React.FC = () => {
         total_withdrawn: "0.00",
     });
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     // =====================================================
     // DAILY COMPOUNDING / ADS PROGRESS STATE
     // =====================================================
@@ -2171,6 +2213,10 @@ const MyEarning: React.FC = () => {
         session: null,
     });
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     // =====================================================
     // LOADING / ERROR
     // =====================================================
@@ -2180,60 +2226,109 @@ const MyEarning: React.FC = () => {
         setLoading,
     ] = useState(true);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     const [
         error,
         setError,
     ] = useState("");
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     // =====================================================
     // GET TOKEN
     // =====================================================
 
     const getToken = (): string => {
+<<<<<<< HEAD
         try {
+=======
+
+        try {
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             const directToken =
                 localStorage.getItem(
                     "access_token"
                 );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             if (directToken) {
                 return directToken;
             }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             const storedUser =
                 localStorage.getItem(
                     "user"
                 );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             if (!storedUser) {
                 return "";
             }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             const user =
                 JSON.parse(
                     storedUser
                 );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             return (
                 user?.access_token ||
                 user?.accessToken ||
                 ""
             );
+<<<<<<< HEAD
         } catch (error) {
+=======
+
+        } catch (error) {
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             console.error(
                 "Unable to read token:",
                 error
             );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             return "";
         }
     };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     // =====================================================
     // LOAD REAL EARNING DATA
     // =====================================================
 
     useEffect(() => {
+<<<<<<< HEAD
         let isMounted = true;
 
         const loadEarningData =
@@ -2247,6 +2342,30 @@ const MyEarning: React.FC = () => {
 
                     if (!token) {
                         if (isMounted) {
+=======
+
+        let isMounted = true;
+
+
+        const loadEarningData =
+            async () => {
+
+                try {
+
+                    setLoading(true);
+
+                    setError("");
+
+
+                    const token =
+                        getToken();
+
+
+                    if (!token) {
+
+                        if (isMounted) {
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             setError(
                                 "Login session not found. Please login again."
                             );
@@ -2255,11 +2374,19 @@ const MyEarning: React.FC = () => {
                         return;
                     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     // =====================================
                     // COMMON HEADERS
                     // =====================================
 
                     const headers = {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         Authorization:
                             `Bearer ${token}`,
 
@@ -2267,6 +2394,10 @@ const MyEarning: React.FC = () => {
                             "application/json",
                     };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     // =====================================
                     // REFERRAL + WALLET + ADS STATUS
                     // =====================================
@@ -2286,6 +2417,10 @@ const MyEarning: React.FC = () => {
                             }
                         ),
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         fetch(
                             `${API_URL}/api/income-wallet`,
                             {
@@ -2294,6 +2429,10 @@ const MyEarning: React.FC = () => {
                             }
                         ),
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         fetch(
                             `${API_URL}/api/income-wallet/summary`,
                             {
@@ -2302,6 +2441,10 @@ const MyEarning: React.FC = () => {
                             }
                         ),
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         fetch(
                             `${API_URL}/api/daily-compounding/status`,
                             {
@@ -2309,8 +2452,15 @@ const MyEarning: React.FC = () => {
                                 headers,
                             }
                         ),
+<<<<<<< HEAD
                     ]);
 
+=======
+
+                    ]);
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     // =====================================
                     // SESSION EXPIRED
                     // =====================================
@@ -2321,7 +2471,13 @@ const MyEarning: React.FC = () => {
                         walletSummaryResponse.status === 401 ||
                         compoundingResponse.status === 401
                     ) {
+<<<<<<< HEAD
                         if (isMounted) {
+=======
+
+                        if (isMounted) {
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             setError(
                                 "Login session expired. Please login again."
                             );
@@ -2330,6 +2486,10 @@ const MyEarning: React.FC = () => {
                         return;
                     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     // =====================================
                     // JSON
                     // =====================================
@@ -2337,6 +2497,7 @@ const MyEarning: React.FC = () => {
                     const referralResult =
                         await referralResponse.json();
 
+<<<<<<< HEAD
                     const walletResult =
                         await walletResponse.json();
 
@@ -2347,50 +2508,109 @@ const MyEarning: React.FC = () => {
                     const compoundingResult =
                         await compoundingResponse.json();
 
+=======
+
+                    const walletResult =
+                        await walletResponse.json();
+
+
+                    const walletSummaryResult: IncomeWalletSummaryResponse =
+                        await walletSummaryResponse.json();
+
+
+                    const compoundingResult =
+                        await compoundingResponse.json();
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     console.log(
                         "Referral Summary:",
                         referralResult
                     );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     console.log(
                         "Income Wallet:",
                         walletResult
                     );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     console.log(
                         "Daily Compounding Status:",
                         compoundingResult
                     );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     // =====================================
                     // REFERRAL ERROR
                     // =====================================
 
                     if (!referralResponse.ok) {
+<<<<<<< HEAD
                         throw new Error(
                             referralResult?.detail ||
                             referralResult?.message ||
+=======
+
+                        throw new Error(
+
+                            referralResult?.detail ||
+
+                            referralResult?.message ||
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             "Unable to load referral earnings."
                         );
                     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     // =====================================
                     // WALLET ERROR
                     // =====================================
 
                     if (!walletResponse.ok) {
+<<<<<<< HEAD
                         throw new Error(
                             walletResult?.detail ||
                             walletResult?.message ||
+=======
+
+                        throw new Error(
+
+                            walletResult?.detail ||
+
+                            walletResult?.message ||
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             "Unable to load income wallet."
                         );
                     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     // =====================================
                     // WALLET INCOME SUMMARY ERROR
                     // =====================================
 
                     if (!walletSummaryResponse.ok) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         throw new Error(
                             (walletSummaryResult as any)?.detail ||
                             (walletSummaryResult as any)?.message ||
@@ -2398,27 +2618,53 @@ const MyEarning: React.FC = () => {
                         );
                     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     // =====================================
                     // COMPOUNDING STATUS ERROR
                     // =====================================
 
                     if (!compoundingResponse.ok) {
+<<<<<<< HEAD
                         throw new Error(
                             compoundingResult?.detail ||
                             compoundingResult?.message ||
+=======
+
+                        throw new Error(
+
+                            compoundingResult?.detail ||
+
+                            compoundingResult?.message ||
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             "Unable to load ads progress."
                         );
                     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     if (!isMounted) {
                         return;
                     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     // =====================================
                     // SAVE REFERRAL
                     // =====================================
 
                     setReferralSummary({
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         success:
                             referralResult?.success ??
                             true,
@@ -2446,11 +2692,19 @@ const MyEarning: React.FC = () => {
                             ),
                     });
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     // =====================================
                     // SAVE WALLET
                     // =====================================
 
                     setIncomeWallet({
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         success:
                             walletResult?.success ??
                             true,
@@ -2468,6 +2722,10 @@ const MyEarning: React.FC = () => {
                             "0.00",
                     });
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     // =====================================
                     // SAVE ADS EARNING
                     // =====================================
@@ -2481,11 +2739,19 @@ const MyEarning: React.FC = () => {
                         )
                     );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     // =====================================
                     // SAVE ADS / COMPOUNDING STATUS
                     // =====================================
 
                     setCompoundingStatus({
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         success:
                             compoundingResult?.success ??
                             true,
@@ -2609,12 +2875,19 @@ const MyEarning: React.FC = () => {
                             null,
                     });
 
+<<<<<<< HEAD
                 } catch (err) {
+=======
+
+                } catch (err) {
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     console.error(
                         "My Earning API Error:",
                         err
                     );
 
+<<<<<<< HEAD
                     if (isMounted) {
                         let message =
                             "Unable to load earnings.";
@@ -2622,16 +2895,41 @@ const MyEarning: React.FC = () => {
                         if (
                             err instanceof Error
                         ) {
+=======
+
+                    if (isMounted) {
+
+                        let message =
+                            "Unable to load earnings.";
+
+
+                        if (
+                            err instanceof Error
+                        ) {
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             message =
                                 err.message;
                         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         setError(
                             message
                         );
                     }
+<<<<<<< HEAD
                 } finally {
                     if (isMounted) {
+=======
+
+                } finally {
+
+                    if (isMounted) {
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         setLoading(
                             false
                         );
@@ -2639,6 +2937,7 @@ const MyEarning: React.FC = () => {
                 }
             };
 
+<<<<<<< HEAD
         loadEarningData();
 
         return () => {
@@ -2646,6 +2945,20 @@ const MyEarning: React.FC = () => {
         };
     }, []);
 
+=======
+
+        loadEarningData();
+
+
+        return () => {
+
+            isMounted = false;
+        };
+
+    }, []);
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     // =====================================================
     // NUMBER HELPER
     // =====================================================
@@ -2653,11 +2966,19 @@ const MyEarning: React.FC = () => {
     const toNumber = (
         value: string | number
     ): number => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         const parsed =
             Number(
                 value || 0
             );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         return Number.isFinite(
             parsed
         )
@@ -2665,6 +2986,10 @@ const MyEarning: React.FC = () => {
             : 0;
     };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     // =====================================================
     // REAL BACKEND VALUES
     // =====================================================
@@ -2674,38 +2999,66 @@ const MyEarning: React.FC = () => {
             incomeWallet.balance
         );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     const totalEarned =
         toNumber(
             incomeWallet.total_earned
         );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     const totalWithdrawn =
         toNumber(
             incomeWallet.total_withdrawn
         );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     const referralEarning =
         toNumber(
             referralSummary
                 .total_referral_income
         );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     const firstSubscriptionIncome =
         toNumber(
             referralSummary
                 .first_subscription_income
         );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     const upgradeIncome =
         toNumber(
             referralSummary
                 .upgrade_income
         );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     const referralTransactions =
         referralSummary
             .total_referral_transactions;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     // =====================================================
     // REAL ADS PROGRESS VALUES
     // =====================================================
@@ -2719,6 +3072,10 @@ const MyEarning: React.FC = () => {
             0
         );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     const totalAds =
         Math.max(
             Number(
@@ -2728,6 +3085,10 @@ const MyEarning: React.FC = () => {
             1
         );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     const adsRemaining =
         Math.max(
             Number(
@@ -2737,6 +3098,10 @@ const MyEarning: React.FC = () => {
             0
         );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     // =====================================================
     // ADS PROGRESS %
     // =====================================================
@@ -2754,99 +3119,183 @@ const MyEarning: React.FC = () => {
             )
             : 0;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     // =====================================================
     // ADS STATUS TEXT
     // =====================================================
 
     const getAdsStatusText = () => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         if (loading) {
             return "Loading today's ads progress...";
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         if (
             compoundingStatus.reason ===
             "ad_running"
         ) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             return (
                 "Advertisement is currently being watched."
             );
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         if (
             compoundingStatus.reason ===
             "credit_pending"
         ) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             return (
                 "Today's ad is completed. Compounding income is pending."
             );
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         if (
             compoundingStatus.reason ===
             "credit_ready"
         ) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             return (
                 "Today's ad is completed. Compounding income is ready."
             );
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         if (
             compoundingStatus.reason ===
             "daily_ad_completed"
         ) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             return (
                 "You already watched today's ad. Please come back tomorrow."
             );
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         if (
             compoundingStatus.reason ===
             "available"
         ) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             return (
                 "Today's ad is available to watch."
             );
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         if (
             compoundingStatus.reason ===
             "outside_ad_window"
         ) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             return (
                 compoundingStatus.message ||
                 "Ads are currently outside the available watching time."
             );
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         if (
             compoundingStatus.reason ===
             "subscription_inactive"
         ) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             return (
                 "An active subscription is required to watch ads."
             );
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         if (
             compoundingStatus.reason ===
             "cycle_limit_reached"
         ) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             return (
                 "Your current subscription cycle has reached its earning limit."
             );
         }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         return (
             compoundingStatus.message ||
             "Track your daily ad watching progress."
         );
     };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     // =====================================================
     // STATIC CONTENT
     // =====================================================
 
     const earningPoints = [
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         {
             icon: PlayCircle,
 
@@ -2887,20 +3336,36 @@ const MyEarning: React.FC = () => {
                 "Participate in available campaigns, bonuses and promotional reward programs.",
         },
     ];
+<<<<<<< HEAD
 
     const handlewithdwar = () => {
         navigate("/claim-ads-points");
     };
+=======
+  const handlewithdwar = () => {
+    navigate("/claim-ads-points");
+  };
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
     // =====================================================
     // UI
     // =====================================================
 
     return (
+<<<<<<< HEAD
         <div className="min-h-screen w-full bg-gradient-to-br from-[#FFF9FA] via-[#F8EEF0] to-[#FFFFFF] px-4 py-5 text-gray-900 sm:px-6 lg:px-8">
 
             <div className="mx-auto max-w-7xl space-y-6">
 
+=======
+
+        <div className="min-h-screen w-full bg-gray-50 px-4 py-5 text-gray-900 sm:px-6 lg:px-8">
+
+            <div className="mx-auto max-w-7xl space-y-6">
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 {/* ================================================= */}
                 {/* HEADER */}
                 {/* ================================================= */}
@@ -2909,7 +3374,11 @@ const MyEarning: React.FC = () => {
 
                     <div>
 
+<<<<<<< HEAD
                         <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-[#D99AA3]/30 bg-[#FFE5E8]/70 px-3 py-1 text-xs font-semibold text-[#8F4F5A]">
+=======
+                        <div className="mb-2 inline-flex items-center gap-2 rounded-full border border-purple-100 bg-purple-50 px-3 py-1 text-xs font-semibold text-purple-700">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                             <Sparkles className="h-3.5 w-3.5" />
 
@@ -2917,12 +3386,20 @@ const MyEarning: React.FC = () => {
 
                         </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
 
                             My Earning
 
                         </h1>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         <p className="mt-1 text-sm text-gray-500 sm:text-base">
 
                             Track your ads, referrals and reward earnings in one place.
@@ -2931,10 +3408,18 @@ const MyEarning: React.FC = () => {
 
                     </div>
 
+<<<<<<< HEAD
                     <button
                         className="flex w-fit items-center gap-2 rounded-xl bg-gradient-to-r from-[#8F4F5A] via-[#B76E79] to-[#D99AA3] px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-[#B76E79]/25 transition hover:from-[#7C414B] hover:via-[#A85F6B] hover:to-[#C9828C]"
                         onClick={handlewithdwar}
                     >
+=======
+
+                    <button className="flex w-fit items-center gap-2 rounded-xl bg-purple-600 px-5 py-
+                     text-sm font-semibold text-white shadow-lg shadow-purple-200 transition hover:bg-purple-700 p-2"
+                     onClick={handlewithdwar}
+                     >
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                         <Wallet className="h-4 w-4" />
 
@@ -2946,21 +3431,38 @@ const MyEarning: React.FC = () => {
 
                 </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 {/* ================================================= */}
                 {/* MAIN EARNING CARD */}
                 {/* ================================================= */}
 
+<<<<<<< HEAD
                 <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[#8F4F5A] via-[#B76E79] to-[#D99AA3] p-6 text-white shadow-xl shadow-[#B76E79]/20 sm:p-8">
 
                     <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/10 blur-3xl" />
 
                     <div className="absolute -bottom-24 left-1/3 h-72 w-72 rounded-full bg-[#FFE5E8]/20 blur-3xl" />
+=======
+                <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-700 via-purple-600 to-purple-500 p-6 text-white shadow-xl shadow-purple-200 sm:p-8">
+
+                    <div className="absolute -right-20 -top-20 h-64 w-64 rounded-full bg-white/10 blur-3xl" />
+
+                    <div className="absolute -bottom-24 left-1/3 h-72 w-72 rounded-full bg-purple-300/20 blur-3xl" />
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                     <div className="relative z-10 grid gap-8 lg:grid-cols-[1.3fr_1fr] lg:items-center">
 
                         <div>
 
+<<<<<<< HEAD
                             <div className="mb-3 flex items-center gap-2 text-sm text-[#FFE5E8]">
+=======
+                            <div className="mb-3 flex items-center gap-2 text-sm text-purple-100">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                 <Wallet className="h-5 w-5" />
 
@@ -2968,6 +3470,10 @@ const MyEarning: React.FC = () => {
 
                             </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             <div className="flex items-end gap-2">
 
                                 <span className="text-5xl font-extrabold tracking-tight sm:text-6xl">
@@ -2981,6 +3487,10 @@ const MyEarning: React.FC = () => {
 
                             </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             <div className="mt-4 flex flex-wrap items-center gap-3">
 
                                 <span className="inline-flex items-center gap-1 rounded-full bg-white/15 px-3 py-1.5 text-xs font-medium backdrop-blur">
@@ -2991,6 +3501,10 @@ const MyEarning: React.FC = () => {
 
                                 </span>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 <span className="inline-flex items-center gap-1 rounded-full bg-white/15 px-3 py-1.5 text-xs font-medium backdrop-blur">
 
                                     <CheckCircle2 className="h-3.5 w-3.5" />
@@ -3003,20 +3517,34 @@ const MyEarning: React.FC = () => {
 
                         </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         <div className="grid grid-cols-2 gap-3">
 
                             {/* ADS EARNING */}
 
                             <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
 
+<<<<<<< HEAD
                                 <PlayCircle className="mb-3 h-6 w-6 text-[#FFE5E8]" />
 
                                 <p className="text-xs text-[#FFE5E8]">
+=======
+                                <PlayCircle className="mb-3 h-6 w-6 text-purple-100" />
+
+                                <p className="text-xs text-purple-100">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                     Ads Earnings
 
                                 </p>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 <p className="mt-1 text-xl font-bold">
 
                                     {loading
@@ -3028,18 +3556,32 @@ const MyEarning: React.FC = () => {
 
                             </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             {/* REFERRAL */}
 
                             <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
 
+<<<<<<< HEAD
                                 <Users className="mb-3 h-6 w-6 text-[#FFE5E8]" />
 
                                 <p className="text-xs text-[#FFE5E8]">
+=======
+                                <Users className="mb-3 h-6 w-6 text-purple-100" />
+
+                                <p className="text-xs text-purple-100">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                     Referral Earnings
 
                                 </p>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 <p className="mt-1 text-xl font-bold">
 
                                     {loading
@@ -3051,18 +3593,32 @@ const MyEarning: React.FC = () => {
 
                             </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             {/* TOTAL EARNED */}
 
                             <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
 
+<<<<<<< HEAD
                                 <TrendingUp className="mb-3 h-6 w-6 text-[#FFE5E8]" />
 
                                 <p className="text-xs text-[#FFE5E8]">
+=======
+                                <TrendingUp className="mb-3 h-6 w-6 text-purple-100" />
+
+                                <p className="text-xs text-purple-100">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                     Total Earned
 
                                 </p>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 <p className="mt-1 text-xl font-bold">
 
                                     {loading
@@ -3074,18 +3630,32 @@ const MyEarning: React.FC = () => {
 
                             </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             {/* TOTAL WITHDRAWN */}
 
                             <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
 
+<<<<<<< HEAD
                                 <Coins className="mb-3 h-6 w-6 text-[#FFE5E8]" />
 
                                 <p className="text-xs text-[#FFE5E8]">
+=======
+                                <Coins className="mb-3 h-6 w-6 text-purple-100" />
+
+                                <p className="text-xs text-purple-100">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                     Total Withdrawl
 
                                 </p>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 <p className="mt-1 text-xl font-bold">
 
                                     {loading
@@ -3103,13 +3673,21 @@ const MyEarning: React.FC = () => {
 
                 </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 {/* ================================================= */}
                 {/* ERROR */}
                 {/* ================================================= */}
 
                 {error && (
 
+<<<<<<< HEAD
                     <div className="rounded-xl border border-[#D99AA3]/40 bg-[#FFF5F6] px-4 py-3 text-sm text-[#8F4F5A]">
+=======
+                    <div className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-600">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                         {error}
 
@@ -3117,12 +3695,17 @@ const MyEarning: React.FC = () => {
 
                 )}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 {/* ================================================= */}
                 {/* EARNING STATS */}
                 {/* ================================================= */}
 
                 <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
 
+<<<<<<< HEAD
                     {/* ADS EARNINGS */}
 
                     <div className="rounded-2xl border border-[#D99AA3]/25 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-[#D99AA3]/50 hover:shadow-lg">
@@ -3130,12 +3713,27 @@ const MyEarning: React.FC = () => {
                         <div className="mb-4 flex items-center justify-between">
 
                             <div className="rounded-xl bg-[#FFE5E8] p-3 text-[#B76E79]">
+=======
+
+                    {/* ADS EARNINGS */}
+
+                    <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg">
+
+                        <div className="mb-4 flex items-center justify-between">
+
+                            <div className="rounded-xl bg-purple-50 p-3 text-purple-600">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                 <PlayCircle className="h-6 w-6" />
 
                             </div>
 
+<<<<<<< HEAD
                             <span className="text-xs font-semibold text-[#B76E79]">
+=======
+
+                            <span className="text-xs font-semibold text-purple-600">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                 Credited
 
@@ -3143,12 +3741,20 @@ const MyEarning: React.FC = () => {
 
                         </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         <p className="text-sm text-gray-500">
 
                             Ads Earnings
 
                         </p>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         <p className="mt-1 text-2xl font-bold text-gray-900">
 
                             ${adEarning.toFixed(2)}
@@ -3157,10 +3763,18 @@ const MyEarning: React.FC = () => {
 
                     </div>
 
+<<<<<<< HEAD
                     {/* REFERRAL EARNINGS */}
 
                     <div
                         className="cursor-pointer rounded-2xl border border-[#D99AA3]/25 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-[#D99AA3]/50 hover:shadow-lg"
+=======
+
+                    {/* REFERRAL EARNINGS */}
+
+                    <div
+                        className="cursor-pointer rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         onClick={() =>
                             navigate(
                                 "/referral"
@@ -3170,13 +3784,22 @@ const MyEarning: React.FC = () => {
 
                         <div className="mb-4 flex items-center justify-between">
 
+<<<<<<< HEAD
                             <div className="rounded-xl bg-[#FFE5E8] p-3 text-[#B76E79]">
+=======
+                            <div className="rounded-xl bg-purple-50 p-3 text-purple-600">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                 <Users className="h-6 w-6" />
 
                             </div>
 
+<<<<<<< HEAD
                             <span className="text-xs font-semibold text-[#8F4F5A]">
+=======
+
+                            <span className="text-xs font-semibold text-green-600">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                 {loading
                                     ? "..."
@@ -3187,12 +3810,20 @@ const MyEarning: React.FC = () => {
 
                         </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         <p className="text-sm text-gray-500">
 
                             Referral Earnings
 
                         </p>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         <p className="mt-1 text-2xl font-bold text-gray-900">
 
                             {loading
@@ -3204,10 +3835,18 @@ const MyEarning: React.FC = () => {
 
                     </div>
 
+<<<<<<< HEAD
                     {/* INCOME WALLET */}
 
                     <div
                         className="cursor-pointer rounded-2xl border border-[#D99AA3]/25 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-[#D99AA3]/50 hover:shadow-lg"
+=======
+
+                    {/* INCOME WALLET */}
+
+                    <div
+                        className="cursor-pointer rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                         onClick={() =>
                             navigate(
@@ -3218,13 +3857,22 @@ const MyEarning: React.FC = () => {
 
                         <div className="mb-4 flex items-center justify-between">
 
+<<<<<<< HEAD
                             <div className="rounded-xl bg-[#FFE5E8] p-3 text-[#B76E79]">
+=======
+                            <div className="rounded-xl bg-purple-50 p-3 text-purple-600">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                 <Wallet className="h-6 w-6" />
 
                             </div>
 
+<<<<<<< HEAD
                             <span className="text-xs font-semibold text-[#B76E79]">
+=======
+
+                            <span className="text-xs font-semibold text-purple-600">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                 Available
 
@@ -3232,12 +3880,20 @@ const MyEarning: React.FC = () => {
 
                         </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         <p className="text-sm text-gray-500">
 
                             Income Wallet
 
                         </p>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         <p className="mt-1 text-2xl font-bold text-gray-900">
 
                             {loading
@@ -3249,10 +3905,18 @@ const MyEarning: React.FC = () => {
 
                     </div>
 
+<<<<<<< HEAD
                     {/* REFERRAL CREDITS */}
 
                     <div
                         className="cursor-pointer rounded-2xl border border-[#D99AA3]/25 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-[#D99AA3]/50 hover:shadow-lg"
+=======
+
+                    {/* REFERRAL CREDITS */}
+
+                    <div
+                        className="cursor-pointer rounded-2xl border border-gray-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                         onClick={() =>
                             navigate(
@@ -3263,13 +3927,22 @@ const MyEarning: React.FC = () => {
 
                         <div className="mb-4 flex items-center justify-between">
 
+<<<<<<< HEAD
                             <div className="rounded-xl bg-[#FFE5E8] p-3 text-[#B76E79]">
+=======
+                            <div className="rounded-xl bg-purple-50 p-3 text-purple-600">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                 <UserPlus className="h-6 w-6" />
 
                             </div>
 
+<<<<<<< HEAD
                             <span className="text-xs font-semibold text-[#8F4F5A]">
+=======
+
+                            <span className="text-xs font-semibold text-green-600">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                 Credited
 
@@ -3277,12 +3950,20 @@ const MyEarning: React.FC = () => {
 
                         </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         <p className="text-sm text-gray-500">
 
                             Referral Transactions
 
                         </p>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         <p className="mt-1 text-2xl font-bold text-gray-900">
 
                             {loading
@@ -3296,17 +3977,29 @@ const MyEarning: React.FC = () => {
 
                 </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 {/* ================================================= */}
                 {/* PROGRESS + REFERRAL */}
                 {/* ================================================= */}
 
                 <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     {/* ================================================= */}
                     {/* ADS PROGRESS */}
                     {/* ================================================= */}
 
+<<<<<<< HEAD
                     <div className="rounded-3xl border border-[#D99AA3]/25 bg-white p-6 shadow-sm">
+=======
+                    <div className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                         <div className="flex items-start justify-between gap-4">
 
@@ -3314,12 +4007,20 @@ const MyEarning: React.FC = () => {
 
                                 <div className="mb-2 flex items-center gap-2">
 
+<<<<<<< HEAD
                                     <div className="rounded-xl bg-[#FFE5E8] p-2.5 text-[#B76E79]">
+=======
+                                    <div className="rounded-xl bg-purple-50 p-2.5 text-purple-600">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                         <PlayCircle className="h-5 w-5" />
 
                                     </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                     <h2 className="font-bold text-gray-900">
 
                                         Ads Watching Progress
@@ -3328,6 +4029,10 @@ const MyEarning: React.FC = () => {
 
                                 </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 <p className="text-sm text-gray-500">
 
                                     {getAdsStatusText()}
@@ -3336,7 +4041,12 @@ const MyEarning: React.FC = () => {
 
                             </div>
 
+<<<<<<< HEAD
                             <span className="shrink-0 rounded-full bg-[#FFE5E8] px-3 py-1 text-xs font-bold text-[#8F4F5A]">
+=======
+
+                            <span className="shrink-0 rounded-full bg-purple-50 px-3 py-1 text-xs font-bold text-purple-700">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                 {loading
                                     ? ".../..."
@@ -3347,6 +4057,10 @@ const MyEarning: React.FC = () => {
 
                         </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         <div className="mt-6">
 
                             <div className="mb-2 flex justify-between text-xs font-medium">
@@ -3357,7 +4071,12 @@ const MyEarning: React.FC = () => {
 
                                 </span>
 
+<<<<<<< HEAD
                                 <span className="text-[#B76E79]">
+=======
+
+                                <span className="text-purple-600">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                     {loading
                                         ? "..."
@@ -3368,10 +4087,18 @@ const MyEarning: React.FC = () => {
 
                             </div>
 
+<<<<<<< HEAD
                             <div className="h-3 overflow-hidden rounded-full bg-[#FFE5E8]">
 
                                 <div
                                     className="h-full rounded-full bg-gradient-to-r from-[#8F4F5A] via-[#B76E79] to-[#D99AA3] transition-all duration-700"
+=======
+
+                            <div className="h-3 overflow-hidden rounded-full bg-purple-50">
+
+                                <div
+                                    className="h-full rounded-full bg-purple-600 transition-all duration-700"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                     style={{
                                         width:
@@ -3383,9 +4110,16 @@ const MyEarning: React.FC = () => {
 
                         </div>
 
+<<<<<<< HEAD
                         <div className="mt-6 grid grid-cols-2 gap-3">
 
                             <div className="rounded-2xl bg-[#FFF9FA] p-4">
+=======
+
+                        <div className="mt-6 grid grid-cols-2 gap-3">
+
+                            <div className="rounded-2xl bg-gray-50 p-4">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                 <p className="text-xs text-gray-500">
 
@@ -3393,6 +4127,10 @@ const MyEarning: React.FC = () => {
 
                                 </p>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 <p className="mt-1 text-xl font-bold text-gray-900">
 
                                     {loading
@@ -3404,7 +4142,12 @@ const MyEarning: React.FC = () => {
 
                             </div>
 
+<<<<<<< HEAD
                             <div className="rounded-2xl bg-[#FFF9FA] p-4">
+=======
+
+                            <div className="rounded-2xl bg-gray-50 p-4">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                 <p className="text-xs text-gray-500">
 
@@ -3412,7 +4155,12 @@ const MyEarning: React.FC = () => {
 
                                 </p>
 
+<<<<<<< HEAD
                                 <p className="mt-1 text-xl font-bold text-[#B76E79]">
+=======
+
+                                <p className="mt-1 text-xl font-bold text-purple-600">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                     {loading
                                         ? "..."
@@ -3427,11 +4175,19 @@ const MyEarning: React.FC = () => {
 
                     </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     {/* ================================================= */}
                     {/* REFERRAL NETWORK */}
                     {/* ================================================= */}
 
+<<<<<<< HEAD
                     <div className="rounded-3xl border border-[#D99AA3]/25 bg-white p-6 shadow-sm">
+=======
+                    <div className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                         <div className="flex items-start justify-between">
 
@@ -3439,12 +4195,20 @@ const MyEarning: React.FC = () => {
 
                                 <div className="mb-2 flex items-center gap-2">
 
+<<<<<<< HEAD
                                     <div className="rounded-xl bg-[#FFE5E8] p-2.5 text-[#B76E79]">
+=======
+                                    <div className="rounded-xl bg-purple-50 p-2.5 text-purple-600">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                         <Users className="h-5 w-5" />
 
                                     </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                     <h2 className="font-bold text-gray-900">
 
                                         Referral Network
@@ -3453,6 +4217,10 @@ const MyEarning: React.FC = () => {
 
                                 </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 <p className="text-sm text-gray-500">
 
                                     Track your referral income generated from subscriptions and upgrades.
@@ -3461,10 +4229,19 @@ const MyEarning: React.FC = () => {
 
                             </div>
 
+<<<<<<< HEAD
                             <UserPlus className="h-6 w-6 text-[#B76E79]" />
 
                         </div>
 
+=======
+
+                            <UserPlus className="h-6 w-6 text-purple-500" />
+
+                        </div>
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         {/* TOTAL REFERRAL */}
 
                         <div className="mt-6">
@@ -3477,7 +4254,12 @@ const MyEarning: React.FC = () => {
 
                                 </span>
 
+<<<<<<< HEAD
                                 <span className="text-[#B76E79]">
+=======
+
+                                <span className="text-purple-600">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                     {loading
                                         ? "..."
@@ -3488,10 +4270,18 @@ const MyEarning: React.FC = () => {
 
                             </div>
 
+<<<<<<< HEAD
                             <div className="h-3 overflow-hidden rounded-full bg-[#FFE5E8]">
 
                                 <div
                                     className="h-full rounded-full bg-gradient-to-r from-[#8F4F5A] via-[#B76E79] to-[#D99AA3] transition-all duration-700"
+=======
+
+                            <div className="h-3 overflow-hidden rounded-full bg-purple-50">
+
+                                <div
+                                    className="h-full rounded-full bg-purple-600 transition-all duration-700"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                     style={{
                                         width:
@@ -3505,11 +4295,19 @@ const MyEarning: React.FC = () => {
 
                         </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         {/* REFERRAL BREAKDOWN */}
 
                         <div className="mt-6 grid grid-cols-2 gap-3">
 
+<<<<<<< HEAD
                             <div className="rounded-2xl bg-[#FFF9FA] p-4">
+=======
+                            <div className="rounded-2xl bg-gray-50 p-4">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                 <p className="text-xs text-gray-500">
 
@@ -3517,6 +4315,10 @@ const MyEarning: React.FC = () => {
 
                                 </p>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 <p className="mt-1 text-xl font-bold text-gray-900">
 
                                     {loading
@@ -3526,6 +4328,10 @@ const MyEarning: React.FC = () => {
 
                                 </p>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 <p className="mt-1 text-xs text-gray-400">
 
                                     10% referral income
@@ -3534,7 +4340,12 @@ const MyEarning: React.FC = () => {
 
                             </div>
 
+<<<<<<< HEAD
                             <div className="rounded-2xl bg-[#FFF9FA] p-4">
+=======
+
+                            <div className="rounded-2xl bg-gray-50 p-4">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                 <p className="text-xs text-gray-500">
 
@@ -3542,7 +4353,12 @@ const MyEarning: React.FC = () => {
 
                                 </p>
 
+<<<<<<< HEAD
                                 <p className="mt-1 text-xl font-bold text-[#B76E79]">
+=======
+
+                                <p className="mt-1 text-xl font-bold text-purple-600">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                     {loading
                                         ? "..."
@@ -3551,6 +4367,10 @@ const MyEarning: React.FC = () => {
 
                                 </p>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 <p className="mt-1 text-xs text-gray-400">
 
                                     5% upgrade income
@@ -3561,6 +4381,7 @@ const MyEarning: React.FC = () => {
 
                         </div>
 
+<<<<<<< HEAD
                         {/* REFERRAL CREDITS */}
 
                         <div className="mt-3 flex items-center justify-between rounded-2xl bg-[#FFE5E8] p-4">
@@ -3568,12 +4389,27 @@ const MyEarning: React.FC = () => {
                             <div>
 
                                 <p className="text-xs text-[#8F4F5A]">
+=======
+
+                        {/* REFERRAL CREDITS */}
+
+                        <div className="mt-3 flex items-center justify-between rounded-2xl bg-purple-50 p-4">
+
+                            <div>
+
+                                <p className="text-xs text-purple-600">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                     Referral Credits
 
                                 </p>
 
+<<<<<<< HEAD
                                 <p className="mt-1 text-2xl font-bold text-[#8F4F5A]">
+=======
+
+                                <p className="mt-1 text-2xl font-bold text-purple-900">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                     {loading
                                         ? "..."
@@ -3584,7 +4420,12 @@ const MyEarning: React.FC = () => {
 
                             </div>
 
+<<<<<<< HEAD
                             <div className="rounded-xl bg-gradient-to-br from-[#8F4F5A] to-[#B76E79] p-3 text-white">
+=======
+
+                            <div className="rounded-xl bg-purple-600 p-3 text-white">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                 <TrendingUp className="h-5 w-5" />
 
@@ -3596,17 +4437,30 @@ const MyEarning: React.FC = () => {
 
                 </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 {/* ================================================= */}
                 {/* WAYS TO GROW */}
                 {/* ================================================= */}
 
+<<<<<<< HEAD
                 <div className="rounded-3xl border border-[#D99AA3]/25 bg-white p-6 shadow-sm sm:p-8">
+=======
+                <div className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm sm:p-8">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                     <div className="mb-6">
 
                         <div className="mb-2 flex items-center gap-2">
 
+<<<<<<< HEAD
                             <Sparkles className="h-5 w-5 text-[#B76E79]" />
+=======
+                            <Sparkles className="h-5 w-5 text-purple-600" />
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                             <h2 className="text-xl font-bold text-gray-900">
 
@@ -3616,6 +4470,10 @@ const MyEarning: React.FC = () => {
 
                         </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         <p className="text-sm text-gray-500">
 
                             Stay active and explore the available earning opportunities.
@@ -3624,6 +4482,10 @@ const MyEarning: React.FC = () => {
 
                     </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
 
                         {earningPoints.map(
@@ -3635,22 +4497,38 @@ const MyEarning: React.FC = () => {
                                 const Icon =
                                     item.icon;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 return (
 
                                     <div
                                         key={index}
 
+<<<<<<< HEAD
                                         className="group rounded-2xl border border-[#F3E2E5] bg-[#FFF9FA] p-5 transition duration-300 hover:border-[#D99AA3]/50 hover:bg-[#FFF5F6]"
+=======
+                                        className="group rounded-2xl border border-gray-100 bg-gray-50 p-5 transition duration-300 hover:border-purple-200 hover:bg-purple-50"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                     >
 
                                         <div className="flex gap-4">
 
+<<<<<<< HEAD
                                             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white text-[#B76E79] shadow-sm transition group-hover:bg-gradient-to-br group-hover:from-[#8F4F5A] group-hover:to-[#B76E79] group-hover:text-white">
+=======
+                                            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white text-purple-600 shadow-sm transition group-hover:bg-purple-600 group-hover:text-white">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                                 <Icon className="h-6 w-6" />
 
                                             </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                             <div>
 
                                                 <h3 className="font-bold text-gray-900">
@@ -3659,6 +4537,10 @@ const MyEarning: React.FC = () => {
 
                                                 </h3>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                                 <p className="mt-1 text-sm leading-6 text-gray-500">
 
                                                     {item.description}
@@ -3678,18 +4560,33 @@ const MyEarning: React.FC = () => {
 
                 </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 {/* ================================================= */}
                 {/* RECENT ACTIVITY */}
                 {/* ================================================= */}
 
+<<<<<<< HEAD
                 <div className="rounded-3xl border border-[#D99AA3]/25 bg-white shadow-sm">
                 </div>
 
+=======
+                <div className="rounded-3xl border border-gray-200 bg-white shadow-sm">
+                </div>
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 {/* ================================================= */}
                 {/* BOTTOM CTA */}
                 {/* ================================================= */}
 
+<<<<<<< HEAD
                 <div className="rounded-3xl border border-[#D99AA3]/35 bg-gradient-to-r from-[#FFF5F6] via-[#FFECEF] to-[#FFF9FA] p-6 sm:p-8">
+=======
+                <div className="rounded-3xl border border-purple-100 bg-purple-50 p-6 sm:p-8">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                     <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
 
@@ -3697,9 +4594,16 @@ const MyEarning: React.FC = () => {
 
                             <div className="mb-2 flex items-center gap-2">
 
+<<<<<<< HEAD
                                 <Gift className="h-5 w-5 text-[#B76E79]" />
 
                                 <h2 className="text-xl font-bold text-[#8F4F5A]">
+=======
+                                <Gift className="h-5 w-5 text-purple-600" />
+
+
+                                <h2 className="text-xl font-bold text-purple-900">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                     Keep Growing Your Network
 
@@ -3707,7 +4611,12 @@ const MyEarning: React.FC = () => {
 
                             </div>
 
+<<<<<<< HEAD
                             <p className="max-w-2xl text-sm leading-6 text-[#8F4F5A]/75">
+=======
+
+                            <p className="max-w-2xl text-sm leading-6 text-purple-700">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                                 Watch eligible advertisements, stay active and invite new
                                 members to explore the available reward opportunities.
@@ -3716,9 +4625,14 @@ const MyEarning: React.FC = () => {
 
                         </div>
 
+<<<<<<< HEAD
                         <button
                             className="flex shrink-0 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[#8F4F5A] via-[#B76E79] to-[#D99AA3] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-[#B76E79]/20 transition hover:from-[#7C414B] hover:via-[#A85F6B] hover:to-[#C9828C]"
                         >
+=======
+
+                        <button className="flex shrink-0 items-center justify-center gap-2 rounded-xl bg-purple-600 px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-purple-200 transition hover:bg-purple-700">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                             <UserPlus className="h-4 w-4" />
 
@@ -3738,4 +4652,8 @@ const MyEarning: React.FC = () => {
     );
 };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 export default MyEarning;

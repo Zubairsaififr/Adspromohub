@@ -28,6 +28,7 @@ export const FAQ: React.FC = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <section
       id="faq"
       className="
@@ -286,8 +287,60 @@ export const FAQ: React.FC = () => {
           blur-[100px]
         "
       />
+=======
+    <section id="faq" className="py-20 sm:py-28 relative">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <div className="text-center mb-14">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/30 text-purple-400 text-xs font-semibold mb-3">
+            <HelpCircle className="w-3.5 h-3.5" />
+            <span>COMMONLY ASKED QUESTIONS</span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl font-black tracking-tight">
+            Frequently Asked <span className="text-brand-gradient">Questions</span>
+          </h2>
+          <p className="mt-2 text-sm text-gray-400">
+            Everything you need to know about watching ads, referral commissions, and payouts.
+          </p>
+        </div>
+
+        <div className="space-y-3.5">
+          {faqs.map((faq, idx) => {
+            const isOpen = openIndex === idx;
+            return (
+              <div
+                key={faq.q}
+                className="rounded-2xl bg-slate-900/60 dark:bg-slate-900/60 light:bg-white border border-white/10 overflow-hidden transition-all duration-200"
+              >
+                <button
+                  onClick={() => setOpenIndex(isOpen ? null : idx)}
+                  className="w-full px-6 py-4.5 text-left flex items-center justify-between gap-4 transition-colors hover:bg-white/5"
+                >
+                  <span className="text-sm sm:text-base font-bold text-white dark:text-white light:text-slate-900">
+                    {faq.q}
+                  </span>
+                  <ChevronDown
+                    className={`w-4 h-4 text-purple-400 transition-transform duration-300 shrink-0 ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                  />
+                </button>
+                {isOpen && (
+                  <div className="px-6 pb-5 pt-1 text-xs sm:text-sm text-gray-400 leading-relaxed border-t border-white/5">
+                    {faq.a}
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     </section>
   );
 };
 
+<<<<<<< HEAD
 export default FAQ;
+=======
+export default FAQ;
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d

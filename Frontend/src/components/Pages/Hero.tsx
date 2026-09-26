@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 import React, { useRef } from "react";
 import {
   ChevronRight,
@@ -105,6 +109,13 @@ const trending = [
 ========================================================= */
 
 const Hero: React.FC = () => {
+<<<<<<< HEAD
+=======
+  /*
+   * IMPORTANT:
+   * useNavigate MUST be inside the component.
+   */
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   const navigate = useNavigate();
 
   const sliderRef = useRef<HTMLDivElement>(null);
@@ -150,6 +161,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="services"
+<<<<<<< HEAD
       className="
         relative
         min-h-screen
@@ -157,12 +169,16 @@ const Hero: React.FC = () => {
         bg-[#120B0D]
         text-white
       "
+=======
+      className="relative min-h-screen overflow-hidden bg-[#05020d] text-white"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     >
       {/* =====================================================
           BACKGROUND
       ===================================================== */}
 
       <div className="absolute inset-0 overflow-hidden">
+<<<<<<< HEAD
 
         {/* Poster Collage */}
         <div
@@ -175,6 +191,18 @@ const Hero: React.FC = () => {
             scale-110
             rotate-[-5deg]
             opacity-35
+=======
+        {/* Poster Collage */}
+
+        <div
+          className="
+            absolute inset-0
+            grid grid-cols-3
+            gap-2
+            scale-110
+            rotate-[-5deg]
+            opacity-40
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             sm:grid-cols-4
             lg:grid-cols-5
           "
@@ -194,17 +222,22 @@ const Hero: React.FC = () => {
                 <img
                   src={poster}
                   alt=""
+<<<<<<< HEAD
                   className="
                     h-full
                     w-full
                     object-cover
                   "
+=======
+                  className="h-full w-full object-cover"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 />
               </div>
             )
           )}
         </div>
 
+<<<<<<< HEAD
         {/* Dark Rose Overlay */}
         <div
           className="
@@ -229,10 +262,23 @@ const Hero: React.FC = () => {
             absolute
             inset-0
             bg-[radial-gradient(circle_at_15%_70%,rgba(217,154,163,0.14),transparent_35%)]
+=======
+        {/* Dark Overlay */}
+
+        <div className="absolute inset-0 bg-black/75" />
+
+        {/* Purple Gradient */}
+
+        <div
+          className="
+            absolute inset-0
+            bg-[radial-gradient(circle_at_50%_40%,rgba(139,92,246,0.35),transparent_45%)]
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
           "
         />
 
         {/* Bottom Gradient */}
+<<<<<<< HEAD
         <div
           className="
             absolute
@@ -245,6 +291,21 @@ const Hero: React.FC = () => {
         />
 
         {/* Rose Gold Glow */}
+=======
+
+        <div
+          className="
+            absolute inset-0
+            bg-gradient-to-b
+            from-black/80
+            via-black/40
+            to-[#05020d]
+          "
+        />
+
+        {/* Glow */}
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         <div
           className="
             absolute
@@ -254,7 +315,11 @@ const Hero: React.FC = () => {
             w-[400px]
             -translate-x-1/2
             rounded-full
+<<<<<<< HEAD
             bg-[#B76E79]/20
+=======
+            bg-purple-600/20
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             blur-[140px]
           "
         />
@@ -278,12 +343,23 @@ const Hero: React.FC = () => {
         "
       >
         {/* Left side */}
+<<<<<<< HEAD
         <div />
 
         {/* Right Navbar */}
         <div className="flex items-center gap-2 sm:gap-4">
 
           {/* Mobile Language */}
+=======
+
+        <div />
+
+        {/* Right Navbar */}
+
+        <div className="flex items-center gap-2 sm:gap-4">
+          {/* Mobile Language */}
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
           <button
             type="button"
             className="
@@ -294,6 +370,7 @@ const Hero: React.FC = () => {
               justify-center
               rounded-lg
               border
+<<<<<<< HEAD
               border-[#D99AA3]/25
               bg-[#B76E79]/10
               text-[#F1C7CD]
@@ -301,6 +378,10 @@ const Hero: React.FC = () => {
               transition
               hover:border-[#D99AA3]/50
               hover:bg-[#B76E79]/20
+=======
+              border-white/20
+              bg-black/30
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
               sm:hidden
             "
           >
@@ -329,8 +410,13 @@ const Hero: React.FC = () => {
         "
       >
         <div className="mx-auto w-full max-w-4xl text-center">
+<<<<<<< HEAD
 
           {/* Badge */}
+=======
+          {/* Badge */}
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
           <div
             className="
               mb-6
@@ -339,13 +425,22 @@ const Hero: React.FC = () => {
               gap-2
               rounded-full
               border
+<<<<<<< HEAD
               border-[#D99AA3]/30
               bg-[#B76E79]/10
+=======
+              border-purple-400/30
+              bg-purple-500/10
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
               px-4
               py-2
               text-xs
               font-semibold
+<<<<<<< HEAD
               text-[#F1C7CD]
+=======
+              text-purple-200
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
               backdrop-blur-md
               sm:text-sm
             "
@@ -356,7 +451,11 @@ const Hero: React.FC = () => {
                 w-2
                 animate-pulse
                 rounded-full
+<<<<<<< HEAD
                 bg-[#D99AA3]
+=======
+                bg-purple-400
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
               "
             />
 
@@ -364,6 +463,10 @@ const Hero: React.FC = () => {
           </div>
 
           {/* Heading */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
           <h1
             className="
               text-4xl
@@ -381,9 +484,15 @@ const Hero: React.FC = () => {
             <span
               className="
                 bg-gradient-to-r
+<<<<<<< HEAD
                 from-[#8F4F5A]
                 via-[#D99AA3]
                 to-[#FFE5E8]
+=======
+                from-purple-300
+                via-fuchsia-400
+                to-white
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 bg-clip-text
                 text-transparent
               "
@@ -393,6 +502,10 @@ const Hero: React.FC = () => {
           </h1>
 
           {/* Description */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
           <p
             className="
               mx-auto
@@ -446,6 +559,7 @@ const Hero: React.FC = () => {
                 justify-center
                 gap-3
                 rounded-xl
+<<<<<<< HEAD
 
                 bg-gradient-to-r
                 from-[#8F4F5A]
@@ -464,6 +578,19 @@ const Hero: React.FC = () => {
                 hover:-translate-y-1
                 hover:shadow-[#B76E79]/40
 
+=======
+                bg-gradient-to-r
+                from-purple-600
+                to-fuchsia-600
+                px-7
+                font-bold
+                shadow-xl
+                shadow-purple-900/40
+                transition
+                duration-300
+                hover:-translate-y-1
+                hover:shadow-purple-500/30
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 sm:w-auto
               "
             >
@@ -497,7 +624,11 @@ const Hero: React.FC = () => {
               font-medium
               text-white/70
               transition
+<<<<<<< HEAD
               hover:text-[#D99AA3]
+=======
+              hover:text-purple-300
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             "
           >
             <span
@@ -509,8 +640,13 @@ const Hero: React.FC = () => {
                 justify-center
                 rounded-full
                 border
+<<<<<<< HEAD
                 border-[#B76E79]/50
                 bg-[#B76E79]/10
+=======
+                border-purple-400/50
+                bg-purple-500/10
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
               "
             >
               <Play
@@ -538,7 +674,12 @@ const Hero: React.FC = () => {
           pb-10
         "
       >
+<<<<<<< HEAD
         {/* Rose Gold curved line */}
+=======
+        {/* Purple curved line */}
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         <div
           className="
             absolute
@@ -558,8 +699,13 @@ const Hero: React.FC = () => {
               w-[110%]
               rounded-[50%]
               border-t-4
+<<<<<<< HEAD
               border-[#B76E79]
               shadow-[0_-5px_30px_rgba(183,110,121,0.35)]
+=======
+              border-purple-500
+              shadow-[0_-5px_30px_rgba(168,85,247,0.35)]
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             "
           />
         </div>
@@ -576,6 +722,10 @@ const Hero: React.FC = () => {
           "
         >
           {/* Section Header */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
           <div className="mb-5 flex items-center justify-between">
             <div>
               <p
@@ -585,7 +735,11 @@ const Hero: React.FC = () => {
                   font-semibold
                   uppercase
                   tracking-[3px]
+<<<<<<< HEAD
                   text-[#D99AA3]
+=======
+                  text-purple-400
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 "
               >
                 Discover
@@ -603,6 +757,10 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Arrows */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             <div className="hidden gap-2 sm:flex">
               <button
                 type="button"
@@ -615,12 +773,20 @@ const Hero: React.FC = () => {
                   justify-center
                   rounded-full
                   border
+<<<<<<< HEAD
                   border-[#D99AA3]/20
                   bg-[#B76E79]/5
                   transition
 
                   hover:border-[#B76E79]
                   hover:bg-[#B76E79]/20
+=======
+                  border-white/20
+                  bg-white/5
+                  transition
+                  hover:border-purple-400
+                  hover:bg-purple-500/20
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 "
               >
                 <ChevronLeft size={20} />
@@ -637,12 +803,20 @@ const Hero: React.FC = () => {
                   justify-center
                   rounded-full
                   border
+<<<<<<< HEAD
                   border-[#D99AA3]/20
                   bg-[#B76E79]/5
                   transition
 
                   hover:border-[#B76E79]
                   hover:bg-[#B76E79]/20
+=======
+                  border-white/20
+                  bg-white/5
+                  transition
+                  hover:border-purple-400
+                  hover:bg-purple-500/20
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 "
               >
                 <ChevronRight size={20} />
@@ -676,6 +850,10 @@ const Hero: React.FC = () => {
                 "
               >
                 {/* Poster */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 <div
                   className="
                     relative
@@ -684,6 +862,7 @@ const Hero: React.FC = () => {
                     rounded-xl
                     border
                     border-white/10
+<<<<<<< HEAD
                     bg-[#8F4F5A]/20
                     shadow-2xl
                     transition
@@ -693,6 +872,15 @@ const Hero: React.FC = () => {
                     group-hover:border-[#D99AA3]/50
                     group-hover:shadow-[#8F4F5A]/40
 
+=======
+                    bg-purple-950/30
+                    shadow-2xl
+                    transition
+                    duration-500
+                    group-hover:-translate-y-2
+                    group-hover:border-purple-400/50
+                    group-hover:shadow-purple-900/40
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     sm:h-[270px]
                     lg:h-[310px]
                   "
@@ -711,6 +899,10 @@ const Hero: React.FC = () => {
                   />
 
                   {/* Image Overlay */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                   <div
                     className="
                       absolute
@@ -723,6 +915,7 @@ const Hero: React.FC = () => {
                     "
                   />
 
+<<<<<<< HEAD
                   {/* Rose Gold Image Glow */}
                   <div
                     className="
@@ -740,6 +933,10 @@ const Hero: React.FC = () => {
                   />
 
                   {/* Rank */}
+=======
+                  {/* Rank */}
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                   <div
                     className="
                       absolute
@@ -749,7 +946,11 @@ const Hero: React.FC = () => {
                       font-black
                       leading-none
                       text-transparent
+<<<<<<< HEAD
                       [-webkit-text-stroke:2px_#D99AA3]
+=======
+                      [-webkit-text-stroke:2px_white]
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       drop-shadow-xl
                       sm:text-[110px]
                     "
@@ -758,6 +959,10 @@ const Hero: React.FC = () => {
                   </div>
 
                   {/* Play */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                   <div
                     className="
                       absolute
@@ -770,6 +975,7 @@ const Hero: React.FC = () => {
                       items-center
                       justify-center
                       rounded-full
+<<<<<<< HEAD
                       bg-[#B76E79]
                       text-white
                       opacity-0
@@ -778,6 +984,14 @@ const Hero: React.FC = () => {
                       transition
                       duration-300
 
+=======
+                      bg-purple-600
+                      text-white
+                      opacity-0
+                      shadow-lg
+                      transition
+                      duration-300
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       group-hover:scale-100
                       group-hover:opacity-100
                     "
@@ -790,6 +1004,10 @@ const Hero: React.FC = () => {
                 </div>
 
                 {/* Title */}
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 <h3
                   className="
                     mt-3
@@ -809,7 +1027,11 @@ const Hero: React.FC = () => {
       </div>
 
       {/* =====================================================
+<<<<<<< HEAD
           BOTTOM ROSE GOLD GLOW
+=======
+          BOTTOM PURPLE GLOW
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       ===================================================== */}
 
       <div
@@ -822,7 +1044,11 @@ const Hero: React.FC = () => {
           w-[70%]
           -translate-x-1/2
           rounded-full
+<<<<<<< HEAD
           bg-[#B76E79]/20
+=======
+          bg-purple-700/20
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
           blur-[100px]
         "
       />
@@ -830,4 +1056,8 @@ const Hero: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Hero;
+=======
+export default Hero;
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d

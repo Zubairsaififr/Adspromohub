@@ -382,7 +382,10 @@ interface IncomeActivityItem {
     | "Daily Ads Income"
     | "Level Profit"
     | "Rank Bonus"
+<<<<<<< HEAD
     | "Rank Hierarchy"
+=======
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     | "Team Rank Bonus"
     | "Royalty"
     | "Rank Achiever";
@@ -1966,6 +1969,7 @@ export default function IncomeWallet() {
     );
 
 
+<<<<<<< HEAD
   const rankHierarchyActivities:
     IncomeActivityItem[] =
     walletTransactions
@@ -1993,6 +1997,8 @@ export default function IncomeWallet() {
       );
 
 
+=======
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   const teamRankBonusActivities:
     IncomeActivityItem[] =
     teamRankBonusHistory.map(
@@ -2151,8 +2157,11 @@ export default function IncomeWallet() {
 
       ...rankBonusActivities,
 
+<<<<<<< HEAD
       ...rankHierarchyActivities,
 
+=======
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       ...teamRankBonusActivities,
 
       ...royaltyActivities,
@@ -2840,6 +2849,7 @@ export default function IncomeWallet() {
 
               {/* RANK HIERARCHY */}
 
+<<<<<<< HEAD
               <div className="rounded-xl border border-sky-200 bg-sky-50 p-4">
 
                 <div className="flex items-start justify-between gap-3">
@@ -2869,16 +2879,44 @@ export default function IncomeWallet() {
                 </div>
 
                 <p className="mt-4 text-2xl font-bold text-sky-700">
+=======
+              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+
+                <p className="text-sm font-medium text-slate-900">
+
+                  Rank Hierarchy
+
+                </p>
+
+
+                <p className="mt-1 text-xs text-slate-500">
+
+                  Rank hierarchy income
+
+                </p>
+
+
+                <p className="mt-4 text-2xl font-bold text-slate-700">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                   ${rankHierarchyIncome.toFixed(2)}
 
                 </p>
 
+<<<<<<< HEAD
                 <p className="mt-1 text-xs text-slate-500">
 
                   Current Rank: {currentRank}
 
                 </p>
+=======
+
+                <span className="mt-2 inline-block rounded-full border border-slate-200 bg-white px-2 py-1 text-[10px] text-slate-500">
+
+                  Coming Soon
+
+                </span>
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
               </div>
 
@@ -3199,7 +3237,11 @@ export default function IncomeWallet() {
               <p className="mt-1 text-sm text-slate-500">
 
                 Daily Ads Income, Referral, Level Profit, Rank Bonus,
+<<<<<<< HEAD
                 Rank Hierarchy, Team Rank Bonus, Royalty and Rank Achiever credits to your wallet.
+=======
+                Team Rank Bonus, Royalty and Rank Achiever credits to your wallet.
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
               </p>
 

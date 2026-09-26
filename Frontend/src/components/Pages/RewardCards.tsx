@@ -63,7 +63,11 @@ const RewardCard = ({
         zIndex: rewards.length - index,
       }}
     >
+<<<<<<< HEAD
       {/* Bottom / Drop Shadow */}
+=======
+      {/* Bottom/drop shadow */}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       <div
         className="
           absolute
@@ -72,7 +76,11 @@ const RewardCard = ({
           right-[10%]
           h-8
           rounded-full
+<<<<<<< HEAD
           bg-[#B76E79]/20
+=======
+          bg-purple-500/20
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
           blur-xl
         "
       />
@@ -82,6 +90,7 @@ const RewardCard = ({
         className="
           relative overflow-hidden
           rounded-[20px]
+<<<<<<< HEAD
           border border-[#D99AA3]/30
           bg-white
 
@@ -93,6 +102,19 @@ const RewardCard = ({
         "
       >
         {/* Background Glow */}
+=======
+          border border-purple-100
+          bg-white
+
+          shadow-[0_14px_30px_rgba(91,33,182,0.14)]
+
+          transition-all duration-500
+
+          group-hover:shadow-[0_22px_45px_rgba(91,33,182,0.25)]
+        "
+      >
+        {/* Background glow */}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         <div
           className="
             pointer-events-none
@@ -102,7 +124,11 @@ const RewardCard = ({
             h-28
             w-28
             rounded-full
+<<<<<<< HEAD
             bg-[#FFE5E8]
+=======
+            bg-purple-100
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             blur-2xl
           "
         />
@@ -114,7 +140,11 @@ const RewardCard = ({
             absolute
             right-4
             top-4
+<<<<<<< HEAD
             text-[#D99AA3]
+=======
+            text-purple-300
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             transition-transform
             duration-500
             group-hover:rotate-45
@@ -135,14 +165,23 @@ const RewardCard = ({
               rounded-xl
 
               bg-gradient-to-br
+<<<<<<< HEAD
               from-[#8F4F5A]
               via-[#B76E79]
               to-[#D99AA3]
+=======
+              from-violet-600
+              to-purple-500
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
               text-white
 
               shadow-lg
+<<<<<<< HEAD
               shadow-[#B76E79]/30
+=======
+              shadow-purple-300/40
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
               transition-all
               duration-500
@@ -164,7 +203,11 @@ const RewardCard = ({
               font-black
               leading-tight
               tracking-tight
+<<<<<<< HEAD
               text-[#5A3038]
+=======
+              text-purple-950
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
               sm:text-[21px]
             "
@@ -177,10 +220,15 @@ const RewardCard = ({
             <span
               className="
                 bg-gradient-to-r
+<<<<<<< HEAD
                 from-[#8F4F5A]
                 via-[#B76E79]
                 to-[#D99AA3]
 
+=======
+                from-violet-600
+                to-purple-500
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 bg-clip-text
                 text-3xl
                 font-black
@@ -223,13 +271,22 @@ const RewardCard = ({
               justify-center
 
               rounded-full
+<<<<<<< HEAD
               bg-[#FFE5E8]
               text-[#8F4F5A]
+=======
+              bg-purple-50
+              text-purple-600
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
               transition-all
               duration-300
 
+<<<<<<< HEAD
               group-hover:bg-[#B76E79]
+=======
+              group-hover:bg-purple-600
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
               group-hover:text-white
 
               sm:right-5
@@ -249,9 +306,15 @@ const RewardCard = ({
             overflow-hidden
 
             bg-gradient-to-r
+<<<<<<< HEAD
             from-[#8F4F5A]
             via-[#B76E79]
             to-[#D99AA3]
+=======
+            from-violet-700
+            via-purple-600
+            to-fuchsia-500
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
             sm:h-10
           "
@@ -303,16 +366,24 @@ export default function RewardCards() {
       className="
         relative
         overflow-hidden
+<<<<<<< HEAD
         bg-gradient-to-br
         from-[#FFF9FA]
         via-[#FDF3F5]
         to-white
+=======
+        bg-[#fcfaff]
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         py-14
 
         sm:py-20
       "
     >
+<<<<<<< HEAD
       {/* Background Glow */}
+=======
+      {/* Background glow */}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       <div
         className="
           pointer-events-none
@@ -325,7 +396,11 @@ export default function RewardCards() {
           -translate-x-1/2
 
           rounded-full
+<<<<<<< HEAD
           bg-[#D99AA3]/20
+=======
+          bg-purple-200/30
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
           blur-[100px]
         "
       />
@@ -358,8 +433,13 @@ export default function RewardCards() {
 
               rounded-full
               border
+<<<<<<< HEAD
               border-[#D99AA3]/40
               bg-white/80
+=======
+              border-purple-100
+              bg-white
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
               px-3
               py-1.5
@@ -368,7 +448,11 @@ export default function RewardCards() {
               font-bold
               uppercase
               tracking-[0.15em]
+<<<<<<< HEAD
               text-[#8F4F5A]
+=======
+              text-purple-600
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
               shadow-sm
 
@@ -383,7 +467,11 @@ export default function RewardCards() {
                 w-1.5
                 animate-pulse
                 rounded-full
+<<<<<<< HEAD
                 bg-[#B76E79]
+=======
+                bg-purple-500
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                 sm:h-2
                 sm:w-2
@@ -399,7 +487,11 @@ export default function RewardCards() {
               font-black
               leading-tight
               tracking-tight
+<<<<<<< HEAD
               text-[#4A252D]
+=======
+              text-purple-950
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
               sm:text-5xl
             "
@@ -410,9 +502,15 @@ export default function RewardCards() {
               className="
                 block
                 bg-gradient-to-r
+<<<<<<< HEAD
                 from-[#8F4F5A]
                 via-[#B76E79]
                 to-[#D99AA3]
+=======
+                from-violet-600
+                via-purple-600
+                to-fuchsia-500
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                 bg-clip-text
                 text-transparent

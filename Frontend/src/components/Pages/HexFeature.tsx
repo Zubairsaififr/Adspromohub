@@ -39,7 +39,11 @@ const Hexagon = ({ Icon }: { Icon: React.ElementType }) => {
       <div
         className="
           absolute inset-[8px]
+<<<<<<< HEAD
           bg-[#D99AA3]/30
+=======
+          bg-violet-300/30
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
           blur-[14px]
           [clip-path:polygon(25%_3%,75%_3%,100%_50%,75%_97%,25%_97%,0_50%)]
         "
@@ -50,11 +54,16 @@ const Hexagon = ({ Icon }: { Icon: React.ElementType }) => {
         className="
           absolute inset-[7px]
           translate-y-3
+<<<<<<< HEAD
           bg-[#FFE5E8]
+=======
+          bg-violet-100
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
           [clip-path:polygon(25%_3%,75%_3%,100%_50%,75%_97%,25%_97%,0_50%)]
         "
       />
 
+<<<<<<< HEAD
       {/* Rose Gold border hexagon */}
       <div
         className="
@@ -66,6 +75,15 @@ const Hexagon = ({ Icon }: { Icon: React.ElementType }) => {
           [clip-path:polygon(25%_0%,75%_0%,100%_50%,75%_100%,25%_100%,0_50%)]
           shadow-2xl
           shadow-[#B76E79]/40
+=======
+      {/* Purple border hexagon */}
+      <div
+        className="
+          absolute inset-0
+          bg-gradient-to-br from-violet-400 via-purple-500 to-violet-600
+          [clip-path:polygon(25%_0%,75%_0%,100%_50%,75%_100%,25%_100%,0_50%)]
+          shadow-2xl shadow-violet-400/40
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         "
       />
 
@@ -74,16 +92,21 @@ const Hexagon = ({ Icon }: { Icon: React.ElementType }) => {
         className="
           absolute inset-[2px]
           flex items-center justify-center
+<<<<<<< HEAD
           bg-gradient-to-br
           from-white
           via-[#FFF9FA]
           to-[#FFE5E8]
+=======
+          bg-gradient-to-br from-white via-violet-50 to-purple-50
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
           [clip-path:polygon(25%_0%,75%_0%,100%_50%,75%_100%,25%_100%,0_50%)]
         "
       >
         {/* Inner hexagon */}
         <div
           className="
+<<<<<<< HEAD
             flex
             h-20
             w-20
@@ -98,6 +121,13 @@ const Hexagon = ({ Icon }: { Icon: React.ElementType }) => {
             shadow-[#B76E79]/40
             transition-all
             duration-500
+=======
+            flex h-20 w-20 items-center justify-center
+            bg-gradient-to-br from-violet-600 to-purple-500
+            text-white
+            shadow-xl shadow-violet-400/40
+            transition-all duration-500
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             group-hover:scale-110
             group-hover:rotate-6
             [clip-path:polygon(25%_0%,75%_0%,100%_50%,75%_100%,25%_100%,0_50%)]
@@ -110,6 +140,7 @@ const Hexagon = ({ Icon }: { Icon: React.ElementType }) => {
       {/* Small decorative dot */}
       <span
         className="
+<<<<<<< HEAD
           absolute
           right-[10px]
           top-[28px]
@@ -118,6 +149,12 @@ const Hexagon = ({ Icon }: { Icon: React.ElementType }) => {
           rounded-full
           bg-[#D99AA3]
           shadow-[0_0_15px_rgba(183,110,121,0.8)]
+=======
+          absolute right-[10px] top-[28px]
+          h-3 w-3 rounded-full
+          bg-purple-400
+          shadow-[0_0_15px_rgba(168,85,247,0.8)]
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         "
       />
     </div>
@@ -132,6 +169,7 @@ const HexFeature = ({ feature }: { feature: Feature }) => {
       <Hexagon Icon={Icon} />
 
       {/* Connector */}
+<<<<<<< HEAD
       <div
         className="
           hidden
@@ -143,12 +181,16 @@ const HexFeature = ({ feature }: { feature: Feature }) => {
           sm:block
         "
       />
+=======
+      <div className="hidden h-px w-6 bg-gradient-to-r from-violet-300 to-transparent sm:block" />
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
       {/* Text - NOT inside a card */}
       <div className="max-w-[330px]">
         <div className="mb-2 flex items-start gap-2">
           <span
             className="
+<<<<<<< HEAD
               mt-1
               flex
               h-5
@@ -162,6 +204,13 @@ const HexFeature = ({ feature }: { feature: Feature }) => {
               text-white
               shadow-md
               shadow-[#B76E79]/30
+=======
+              mt-1 flex h-5 w-5 shrink-0
+              items-center justify-center
+              rounded-full bg-violet-700
+              text-[10px] text-white
+              shadow-md shadow-violet-300
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             "
           >
             →
@@ -169,11 +218,16 @@ const HexFeature = ({ feature }: { feature: Feature }) => {
 
           <h3
             className="
+<<<<<<< HEAD
               text-lg
               font-black
               leading-tight
               tracking-wide
               text-[#8F4F5A]
+=======
+              text-lg font-black leading-tight
+              tracking-wide text-violet-700
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
               sm:text-xl
             "
           >
@@ -181,6 +235,7 @@ const HexFeature = ({ feature }: { feature: Feature }) => {
           </h3>
         </div>
 
+<<<<<<< HEAD
         <p
           className="
             text-sm
@@ -189,6 +244,9 @@ const HexFeature = ({ feature }: { feature: Feature }) => {
             sm:text-[15px]
           "
         >
+=======
+        <p className="text-sm leading-6 text-slate-600 sm:text-[15px]">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
           {feature.description}
         </p>
       </div>
@@ -198,6 +256,7 @@ const HexFeature = ({ feature }: { feature: Feature }) => {
 
 export default function HexFeatures() {
   return (
+<<<<<<< HEAD
     <section
       className="
         overflow-hidden
@@ -213,10 +272,15 @@ export default function HexFeatures() {
     >
       <div className="mx-auto max-w-7xl">
 
+=======
+    <section className="overflow-hidden bg-[#fcfbff] px-5 py-20 sm:px-8 lg:px-12">
+      <div className="mx-auto max-w-7xl">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         {/* Heading */}
         <div className="mb-20 text-center">
           <span
             className="
+<<<<<<< HEAD
               inline-flex
               items-center
               gap-2
@@ -260,6 +324,20 @@ export default function HexFeatures() {
                 text-transparent
               "
             >
+=======
+              inline-flex items-center gap-2
+              text-sm font-bold uppercase tracking-[0.2em]
+              text-violet-600
+            "
+          >
+            <span className="h-2 w-2 rounded-full bg-violet-500" />
+            Powerful Features
+          </span>
+
+          <h2 className="mt-4 text-4xl font-black text-slate-950 sm:text-5xl">
+            Earn More with{" "}
+            <span className="bg-gradient-to-r from-violet-600 to-purple-500 bg-clip-text text-transparent">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
               Ads & Referrals
             </span>
           </h2>
@@ -268,9 +346,13 @@ export default function HexFeatures() {
         {/* Hexagon layout */}
         <div
           className="
+<<<<<<< HEAD
             grid
             gap-x-14
             gap-y-20
+=======
+            grid gap-x-14 gap-y-20
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             md:grid-cols-2
             xl:grid-cols-3
           "

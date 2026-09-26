@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // 'use client';
 
 // import React, { useEffect, useState } from 'react';
@@ -1671,6 +1672,8 @@
 
 
 
+=======
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 'use client';
 
 import React, { useEffect, useState } from 'react';
@@ -2503,7 +2506,11 @@ export function SignIn() {
           BACKGROUND
       ================================================== */}
 
+<<<<<<< HEAD
       <div className="absolute inset-0 bg-gradient-to-b from-[#B76E79]/40 via-[#8F4F5A]/50 to-black" />
+=======
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-500/40 via-purple-700/50 to-black" />
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
 
       {/* =================================================
@@ -2525,11 +2532,19 @@ export function SignIn() {
           TOP GLOW
       ================================================== */}
 
+<<<<<<< HEAD
       <div className="absolute top-0 left-1/2 h-[60vh] w-[120vh] -translate-x-1/2 rounded-b-[50%] bg-[#B76E79]/20 blur-[80px]" />
 
 
       <motion.div
         className="absolute top-0 left-1/2 h-[60vh] w-[100vh] -translate-x-1/2 rounded-b-full bg-[#D99AA3]/20 blur-[60px]"
+=======
+      <div className="absolute top-0 left-1/2 h-[60vh] w-[120vh] -translate-x-1/2 rounded-b-[50%] bg-purple-400/20 blur-[80px]" />
+
+
+      <motion.div
+        className="absolute top-0 left-1/2 h-[60vh] w-[100vh] -translate-x-1/2 rounded-b-full bg-purple-300/20 blur-[60px]"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         animate={{
           opacity: [
             0.15,
@@ -2552,7 +2567,11 @@ export function SignIn() {
 
 
       <motion.div
+<<<<<<< HEAD
         className="absolute bottom-0 left-1/2 h-[90vh] w-[90vh] -translate-x-1/2 rounded-t-full bg-[#B76E79]/20 blur-[60px]"
+=======
+        className="absolute bottom-0 left-1/2 h-[90vh] w-[90vh] -translate-x-1/2 rounded-t-full bg-purple-400/20 blur-[60px]"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         animate={{
           opacity: [
             0.3,
@@ -2617,7 +2636,11 @@ export function SignIn() {
 
         {/* CARD GLOW */}
 
+<<<<<<< HEAD
         <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-[#B76E79]/30 via-white/10 to-[#B76E79]/30 opacity-60 blur-xl" />
+=======
+        <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-purple-500/30 via-white/10 to-purple-500/30 opacity-60 blur-xl" />
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
 
         {/* CARD */}
@@ -2771,7 +2794,11 @@ export function SignIn() {
                     className={`absolute left-3 h-4 w-4 transition-all duration-300 ${
                       focusedInput ===
                       'email'
+<<<<<<< HEAD
                         ? 'text-[#D99AA3]'
+=======
+                        ? 'text-white'
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         : 'text-white/40'
                     }`}
                   />
@@ -2806,7 +2833,11 @@ export function SignIn() {
                     disabled={
                       isLoading
                     }
+<<<<<<< HEAD
                     className="h-10 w-full border-transparent bg-white/5 pl-10 pr-3 text-white placeholder:text-white/30 transition-all duration-300 focus:border-[#B76E79]/60 focus:bg-white/10 disabled:cursor-not-allowed disabled:opacity-60"
+=======
+                    className="h-10 w-full border-transparent bg-white/5 pl-10 pr-3 text-white placeholder:text-white/30 transition-all duration-300 focus:border-white/20 focus:bg-white/10 disabled:cursor-not-allowed disabled:opacity-60"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                   />
 
                 </div>
@@ -2845,7 +2876,11 @@ export function SignIn() {
                     className={`absolute left-3 h-4 w-4 transition-all duration-300 ${
                       focusedInput ===
                       'password'
+<<<<<<< HEAD
                         ? 'text-[#D99AA3]'
+=======
+                        ? 'text-white'
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         : 'text-white/40'
                     }`}
                   />
@@ -2884,7 +2919,11 @@ export function SignIn() {
                     disabled={
                       isLoading
                     }
+<<<<<<< HEAD
                     className="h-10 w-full border-transparent bg-white/5 pl-10 pr-10 text-white placeholder:text-white/30 transition-all duration-300 focus:border-[#B76E79]/60 focus:bg-white/10 disabled:cursor-not-allowed disabled:opacity-60"
+=======
+                    className="h-10 w-full border-transparent bg-white/5 pl-10 pr-10 text-white placeholder:text-white/30 transition-all duration-300 focus:border-white/20 focus:bg-white/10 disabled:cursor-not-allowed disabled:opacity-60"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                   />
 
 
@@ -2910,11 +2949,19 @@ export function SignIn() {
 
                     {showPassword ? (
                       <Eye
+<<<<<<< HEAD
                         className="h-4 w-4 text-white/40 transition-colors duration-300 hover:text-[#D99AA3]"
                       />
                     ) : (
                       <EyeClosed
                         className="h-4 w-4 text-white/40 transition-colors duration-300 hover:text-[#D99AA3]"
+=======
+                        className="h-4 w-4 text-white/40 transition-colors duration-300 hover:text-white"
+                      />
+                    ) : (
+                      <EyeClosed
+                        className="h-4 w-4 text-white/40 transition-colors duration-300 hover:text-white"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       />
                     )}
 
@@ -2993,7 +3040,11 @@ export function SignIn() {
 
                 <Link
                   to="/forgotpassword"
+<<<<<<< HEAD
                   className="text-xs text-white/60 transition-colors duration-200 hover:text-[#D99AA3]"
+=======
+                  className="text-xs text-white/60 transition-colors duration-200 hover:text-white"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 >
                   Forgot password?
                 </Link>
@@ -3025,16 +3076,27 @@ export function SignIn() {
                 className="group/button relative mt-5 w-full disabled:cursor-not-allowed"
               >
 
+<<<<<<< HEAD
                 <div className="absolute inset-0 rounded-lg bg-[#B76E79]/30 opacity-0 blur-lg transition-opacity duration-300 group-hover/button:opacity-70" />
 
 
                 <div className="relative flex h-10 items-center justify-center overflow-hidden rounded-lg bg-[#B76E79] font-medium text-white transition-all duration-300 disabled:opacity-60">
+=======
+                <div className="absolute inset-0 rounded-lg bg-white/10 opacity-0 blur-lg transition-opacity duration-300 group-hover/button:opacity-70" />
+
+
+                <div className="relative flex h-10 items-center justify-center overflow-hidden rounded-lg bg-white font-medium text-black transition-all duration-300 disabled:opacity-60">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
 
                   {/* LOADING SHINE */}
 
                   <motion.div
+<<<<<<< HEAD
                     className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0"
+=======
+                    className="absolute inset-0 bg-gradient-to-r from-white/0 via-black/10 to-white/0"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     animate={{
                       x: [
                         '-100%',
@@ -3078,7 +3140,11 @@ export function SignIn() {
                         className="flex items-center justify-center gap-2"
                       >
 
+<<<<<<< HEAD
                         <div className="h-4 w-4 animate-spin rounded-full border-2 border-white/80 border-t-transparent" />
+=======
+                        <div className="h-4 w-4 animate-spin rounded-full border-2 border-black/70 border-t-transparent" />
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                         <span className="text-sm">
                           Signing In...
@@ -3109,7 +3175,10 @@ export function SignIn() {
                         />
 
                       </motion.span>
+<<<<<<< HEAD
 
+=======
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     )}
 
                   </AnimatePresence>
@@ -3143,11 +3212,19 @@ export function SignIn() {
                   className="group/signup relative inline-block"
                 >
 
+<<<<<<< HEAD
                   <span className="relative z-10 font-medium text-[#D99AA3] transition-colors duration-300 group-hover/signup:text-white">
                     Sign up
                   </span>
 
                   <span className="absolute bottom-0 left-0 h-[1px] w-0 bg-[#B76E79] transition-all duration-300 group-hover/signup:w-full" />
+=======
+                  <span className="relative z-10 font-medium text-white transition-colors duration-300 group-hover/signup:text-white/70">
+                    Sign up
+                  </span>
+
+                  <span className="absolute bottom-0 left-0 h-[1px] w-0 bg-white transition-all duration-300 group-hover/signup:w-full" />
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                 </Link>
 
@@ -3167,16 +3244,23 @@ export function SignIn() {
       ================================================== */}
 
       <AnimatePresence>
+<<<<<<< HEAD
 
         {showSetupPopup && (
 
+=======
+        {showSetupPopup && (
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
           <motion.div
             className="fixed inset-0 z-[100] flex items-center justify-center bg-black/75 px-4 backdrop-blur-md"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
+<<<<<<< HEAD
 
+=======
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             <motion.div
               initial={{
                 opacity: 0,
@@ -3198,11 +3282,17 @@ export function SignIn() {
                 stiffness: 280,
                 damping: 24,
               }}
+<<<<<<< HEAD
               className="relative w-full max-w-md overflow-hidden rounded-2xl border border-[#B76E79]/20 bg-[#0b0710] shadow-2xl"
             >
 
               <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-[#B76E79]/20 to-transparent" />
 
+=======
+              className="relative w-full max-w-md overflow-hidden rounded-2xl border border-purple-400/20 bg-[#0b0710] shadow-2xl"
+            >
+              <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-purple-500/20 to-transparent" />
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
               <button
                 type="button"
@@ -3219,6 +3309,7 @@ export function SignIn() {
                 <X className="h-4 w-4" />
               </button>
 
+<<<<<<< HEAD
 
               <div className="relative p-6 sm:p-7">
 
@@ -3227,16 +3318,27 @@ export function SignIn() {
                 </div>
 
 
+=======
+              <div className="relative p-6 sm:p-7">
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-xl border border-purple-400/20 bg-purple-500/10">
+                  <UserRound className="h-6 w-6 text-purple-300" />
+                </div>
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 <h2 className="text-xl font-semibold text-white sm:text-2xl">
                   Complete Your Account Setup
                 </h2>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 <p className="mt-2 text-sm leading-6 text-white/55">
                   Welcome to AdsPromoHub. Please complete your account details
                   to keep your profile ready for platform activities.
                 </p>
 
+<<<<<<< HEAD
 
                 <div className="mt-6 space-y-3">
 
@@ -3244,11 +3346,17 @@ export function SignIn() {
 
                     <div className="flex items-center gap-3">
 
+=======
+                <div className="mt-6 space-y-3">
+                  <div className="flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.04] p-4">
+                    <div className="flex items-center gap-3">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/5">
                         <UserRound className="h-4 w-4 text-white/70" />
                       </div>
 
                       <div>
+<<<<<<< HEAD
 
                         <p className="text-sm font-medium text-white">
                           Personal Profile
@@ -3265,17 +3373,34 @@ export function SignIn() {
 
                     {setupStatus.profileComplete ? (
 
+=======
+                        <p className="text-sm font-medium text-white">
+                          Personal Profile
+                        </p>
+                        <p className="mt-0.5 text-xs text-white/40">
+                          Name, gender and address
+                        </p>
+                      </div>
+                    </div>
+
+                    {setupStatus.profileComplete ? (
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <div className="flex items-center gap-1.5 text-xs font-medium text-green-400">
                         <CheckCircle2 className="h-4 w-4" />
                         Completed
                       </div>
+<<<<<<< HEAD
 
                     ) : (
 
+=======
+                    ) : (
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <div className="flex items-center gap-1.5 text-xs font-medium text-amber-400">
                         <AlertCircle className="h-4 w-4" />
                         Pending
                       </div>
+<<<<<<< HEAD
 
                     )}
 
@@ -3286,11 +3411,19 @@ export function SignIn() {
 
                     <div className="flex items-center gap-3">
 
+=======
+                    )}
+                  </div>
+
+                  <div className="flex items-center justify-between rounded-xl border border-white/10 bg-white/[0.04] p-4">
+                    <div className="flex items-center gap-3">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/5">
                         <Wallet className="h-4 w-4 text-white/70" />
                       </div>
 
                       <div>
+<<<<<<< HEAD
 
                         <p className="text-sm font-medium text-white">
                           BEP20 Wallet Address
@@ -3307,17 +3440,34 @@ export function SignIn() {
 
                     {setupStatus.bep20Complete ? (
 
+=======
+                        <p className="text-sm font-medium text-white">
+                          BEP20 Wallet Address
+                        </p>
+                        <p className="mt-0.5 text-xs text-white/40">
+                          Add your withdrawal wallet
+                        </p>
+                      </div>
+                    </div>
+
+                    {setupStatus.bep20Complete ? (
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <div className="flex items-center gap-1.5 text-xs font-medium text-green-400">
                         <CheckCircle2 className="h-4 w-4" />
                         Completed
                       </div>
+<<<<<<< HEAD
 
                     ) : (
 
+=======
+                    ) : (
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <div className="flex items-center gap-1.5 text-xs font-medium text-amber-400">
                         <AlertCircle className="h-4 w-4" />
                         Pending
                       </div>
+<<<<<<< HEAD
 
                     )}
 
@@ -3328,6 +3478,13 @@ export function SignIn() {
 
                 <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
 
+=======
+                    )}
+                  </div>
+                </div>
+
+                <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                   <button
                     type="button"
                     onClick={() => {
@@ -3335,23 +3492,35 @@ export function SignIn() {
 
                       // Change this route only if your Profile page
                       // uses a different route in App.tsx.
+<<<<<<< HEAD
 
                       navigate(
                         '/update-profile'
                       );
                     }}
                     className="flex h-11 items-center justify-center gap-2 rounded-xl bg-[#B76E79] px-4 text-sm font-semibold text-white transition hover:bg-[#8F4F5A]"
+=======
+                      navigate('/update-profile');
+                    }}
+                    className="flex h-11 items-center justify-center gap-2 rounded-xl bg-white px-4 text-sm font-semibold text-black transition hover:bg-white/90"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                   >
                     Complete Profile
                     <ArrowRight className="h-4 w-4" />
                   </button>
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                   <button
                     type="button"
                     onClick={() => {
                       setShowSetupPopup(false);
+<<<<<<< HEAD
 
+=======
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       navigate(
                         '/newdashboard',
                         { replace: true }
@@ -3361,6 +3530,7 @@ export function SignIn() {
                   >
                     Maybe Later
                   </button>
+<<<<<<< HEAD
 
                 </div>
 
@@ -3372,6 +3542,13 @@ export function SignIn() {
 
         )}
 
+=======
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       </AnimatePresence>
 
     </div>

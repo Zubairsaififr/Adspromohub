@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // "use client";
 
 // import React, { useEffect, useState } from "react";
@@ -1244,6 +1245,8 @@
 
 
 
+=======
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 "use client";
 
 import React, { useEffect, useState } from "react";
@@ -1260,6 +1263,10 @@ import {
 import { useNavigate } from "react-router-dom";
 import UserNavbar from "../UserDashboard/UserNavbar";
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 interface SubscriptionData {
   success: boolean;
   subscription_active: boolean;
@@ -1276,6 +1283,10 @@ interface SubscriptionData {
   expired_at: string | null;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 interface PurchaseResponse {
   success: boolean;
   message: string;
@@ -1296,15 +1307,28 @@ interface PurchaseResponse {
   status: string;
 }
 
+<<<<<<< HEAD
+=======
+
+// const API_URL = "http://127.0.0.1:8000";
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 const API_URL =
   import.meta.env.VITE_API_URL ||
   "http://127.0.0.1:8000";
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 const MIN_AMOUNT = 20;
 const MIN_UPGRADE = 10;
 const MAX_AMOUNT = 200;
 const SUBSCRIPTION_STEP = 10;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 export default function Subscription() {
   const navigate = useNavigate();
 
@@ -1321,6 +1345,10 @@ export default function Subscription() {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ==================================================
   // THEME
   // ==================================================
@@ -1335,6 +1363,10 @@ export default function Subscription() {
     }
   }, []);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   useEffect(() => {
     localStorage.setItem(
       "theme",
@@ -1342,6 +1374,10 @@ export default function Subscription() {
     );
   }, [isDark]);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ==================================================
   // GET TOKEN
   // ==================================================
@@ -1350,6 +1386,10 @@ export default function Subscription() {
     return localStorage.getItem("access_token");
   };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ==================================================
   // AUTH ERROR
   // ==================================================
@@ -1364,6 +1404,10 @@ export default function Subscription() {
     });
   };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ==================================================
   // LOAD CURRENT SUBSCRIPTION
   // ==================================================
@@ -1393,11 +1437,19 @@ export default function Subscription() {
         }
       );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       if (response.status === 401) {
         handleUnauthorized();
         return;
       }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       const data = await response.json();
 
       console.log(
@@ -1405,6 +1457,10 @@ export default function Subscription() {
         data
       );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       if (!response.ok) {
         throw new Error(
           data?.detail ||
@@ -1413,7 +1469,13 @@ export default function Subscription() {
         );
       }
 
+<<<<<<< HEAD
       setSubscription(data);
+=======
+
+      setSubscription(data);
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     } catch (err) {
       console.error(
         "Subscription Load Error:",
@@ -1425,15 +1487,27 @@ export default function Subscription() {
           ? err.message
           : "Unable to load subscription details."
       );
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     } finally {
       setLoading(false);
     }
   };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   useEffect(() => {
     loadSubscription();
   }, []);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ==================================================
   // CURRENT VALUES
   // ==================================================
@@ -1442,21 +1516,37 @@ export default function Subscription() {
     subscription?.current_amount || 0
   );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   const remainingUpgrade = Math.max(
     MAX_AMOUNT - currentAmount,
     0
   );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   const hasActiveSubscription =
     Boolean(
       subscription?.subscription_active
     ) &&
     currentAmount > 0;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   const packageFull =
     hasActiveSubscription &&
     currentAmount >= MAX_AMOUNT;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ==================================================
   // AMOUNT CHANGE
   // ==================================================
@@ -1466,6 +1556,10 @@ export default function Subscription() {
   ) => {
     const value = e.target.value;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     if (value === "") {
       setAmount("");
       setError("");
@@ -1473,16 +1567,28 @@ export default function Subscription() {
       return;
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     // Whole numbers only.
     if (!/^\d+$/.test(value)) {
       return;
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     setAmount(value);
     setError("");
     setSuccess("");
   };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ==================================================
   // PURCHASE / UPGRADE
   // ==================================================
@@ -1491,8 +1597,15 @@ export default function Subscription() {
     setError("");
     setSuccess("");
 
+<<<<<<< HEAD
     const numericAmount = Number(amount);
 
+=======
+
+    const numericAmount = Number(amount);
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     // ------------------------------------------------
     // BASIC VALIDATION
     // ------------------------------------------------
@@ -1508,6 +1621,10 @@ export default function Subscription() {
       return;
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     // ------------------------------------------------
     // $10 MULTIPLE
     // ------------------------------------------------
@@ -1524,6 +1641,10 @@ export default function Subscription() {
       return;
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     // =================================================
     // NEW SUBSCRIPTION
     // =================================================
@@ -1539,6 +1660,10 @@ export default function Subscription() {
         return;
       }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       if (numericAmount > MAX_AMOUNT) {
         setError(
           `Maximum subscription amount is $${MAX_AMOUNT.toFixed(
@@ -1550,6 +1675,10 @@ export default function Subscription() {
       }
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     // =================================================
     // UPGRADE
     // =================================================
@@ -1563,6 +1692,10 @@ export default function Subscription() {
         return;
       }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       if (numericAmount < MIN_UPGRADE) {
         setError(
           `Minimum upgrade amount is $${MIN_UPGRADE.toFixed(
@@ -1573,6 +1706,10 @@ export default function Subscription() {
         return;
       }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       if (
         currentAmount +
           numericAmount >
@@ -1588,6 +1725,10 @@ export default function Subscription() {
       }
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     // ------------------------------------------------
     // TOKEN
     // ------------------------------------------------
@@ -1602,9 +1743,17 @@ export default function Subscription() {
       return;
     }
 
+<<<<<<< HEAD
     try {
       setPurchasing(true);
 
+=======
+
+    try {
+      setPurchasing(true);
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       // =================================================
       // BACKEND PURCHASE
       // =================================================
@@ -1628,19 +1777,35 @@ export default function Subscription() {
         }
       );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       if (response.status === 401) {
         handleUnauthorized();
         return;
       }
 
+<<<<<<< HEAD
       const data: PurchaseResponse =
         await response.json();
 
+=======
+
+      const data: PurchaseResponse =
+        await response.json();
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       console.log(
         "Subscription Purchase Response:",
         data
       );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       if (!response.ok) {
         throw new Error(
           (data as any)?.detail ||
@@ -1649,6 +1814,10 @@ export default function Subscription() {
         );
       }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       // =================================================
       // SUCCESS
       // =================================================
@@ -1662,26 +1831,48 @@ export default function Subscription() {
           )
       );
 
+<<<<<<< HEAD
       setAmount("");
 
       // Reload latest amount/status.
       await loadSubscription();
+=======
+
+      setAmount("");
+
+
+      // Reload latest amount/status.
+      await loadSubscription();
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     } catch (err) {
       console.error(
         "Subscription Purchase Error:",
         err
       );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       setError(
         err instanceof Error
           ? err.message
           : "Something went wrong while processing your subscription."
       );
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     } finally {
       setPurchasing(false);
     }
   };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ==================================================
   // QUICK AMOUNT
   // ==================================================
@@ -1697,6 +1888,10 @@ export default function Subscription() {
     setSuccess("");
   };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ==================================================
   // FORMAT MONEY
   // ==================================================
@@ -1711,6 +1906,10 @@ export default function Subscription() {
     return `$${numeric.toFixed(2)}`;
   };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ==================================================
   // QUICK SELECT OPTIONS
   // ==================================================
@@ -1720,6 +1919,10 @@ export default function Subscription() {
       ? [10, 20, 50, 100, 150]
       : [20, 50, 100, 150, 200];
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ==================================================
   // UI
   // ==================================================
@@ -1753,8 +1956,13 @@ export default function Subscription() {
                 <div
                   className={`flex items-center gap-3 ${
                     isDark
+<<<<<<< HEAD
                       ? "text-[#D99AA3]"
                       : "text-[#B76E79]"
+=======
+                      ? "text-purple-300"
+                      : "text-purple-600"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                   }`}
                 >
                   <Loader2 className="h-6 w-6 animate-spin" />
@@ -1776,19 +1984,33 @@ export default function Subscription() {
                     <div
                       className={`flex h-12 w-12 items-center justify-center rounded-2xl border ${
                         isDark
+<<<<<<< HEAD
                           ? "border-[#B76E79]/30 bg-[#B76E79]/20"
                           : "border-[#D99AA3]/40 bg-[#FFE5E8]"
+=======
+                          ? "border-purple-500/30 bg-purple-600/20"
+                          : "border-purple-200 bg-purple-100"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       }`}
                     >
                       <CreditCard
                         className={`h-6 w-6 ${
                           isDark
+<<<<<<< HEAD
                             ? "text-[#D99AA3]"
                             : "text-[#B76E79]"
+=======
+                            ? "text-purple-400"
+                            : "text-purple-600"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         }`}
                       />
                     </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     <div>
                       <h1
                         className={`text-2xl font-bold md:text-3xl ${
@@ -1800,6 +2022,10 @@ export default function Subscription() {
                         Subscription
                       </h1>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <p
                         className={`mt-1 text-sm ${
                           isDark
@@ -1815,13 +2041,22 @@ export default function Subscription() {
                   </div>
                 </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 {/* CURRENT SUBSCRIPTION */}
                 {subscription && (
                   <div
                     className={`mb-8 rounded-3xl border p-6 shadow-sm ${
                       isDark
+<<<<<<< HEAD
                         ? "border-[#B76E79]/20 bg-gradient-to-br from-[#8F4F5A]/30 via-black/40 to-black/20"
                         : "border-[#D99AA3]/40 bg-gradient-to-br from-[#FFE5E8] via-white to-white"
+=======
+                        ? "border-purple-500/20 bg-gradient-to-br from-purple-950/40 via-black/40 to-black/20"
+                        : "border-purple-200 bg-gradient-to-br from-purple-50 via-white to-white"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     }`}
                   >
                     <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
@@ -1837,6 +2072,10 @@ export default function Subscription() {
                           Current Subscription
                         </p>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         <div className="flex items-center gap-3">
 
                           <h2
@@ -1851,6 +2090,10 @@ export default function Subscription() {
                             )}
                           </h2>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                           <span
                             className={`rounded-full border px-3 py-1 text-xs font-medium ${
                               hasActiveSubscription
@@ -1870,6 +2113,10 @@ export default function Subscription() {
                         </div>
                       </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <div className="grid grid-cols-2 gap-3 md:min-w-[360px]">
 
                         <div
@@ -1890,6 +2137,10 @@ export default function Subscription() {
                             Subscription
                           </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                           <p
                             className={`font-semibold ${
                               isDark
@@ -1903,6 +2154,10 @@ export default function Subscription() {
                           </p>
                         </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         <div
                           className={`rounded-2xl border p-4 ${
                             isDark
@@ -1921,6 +2176,10 @@ export default function Subscription() {
                             Upgrade Left
                           </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                           <p
                             className={`font-semibold ${
                               isDark
@@ -1939,6 +2198,10 @@ export default function Subscription() {
                   </div>
                 )}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 {/* ERROR */}
                 {error && (
                   <div
@@ -1956,6 +2219,10 @@ export default function Subscription() {
                   </div>
                 )}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 {/* SUCCESS */}
                 {success && (
                   <div
@@ -1973,6 +2240,10 @@ export default function Subscription() {
                   </div>
                 )}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 {/* PURCHASE AREA */}
                 <div className="grid gap-6 lg:grid-cols-3">
 
@@ -2000,6 +2271,10 @@ export default function Subscription() {
                           : "Choose Subscription Amount"}
                       </h2>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <p
                         className={`mt-2 text-sm ${
                           isDark
@@ -2013,6 +2288,10 @@ export default function Subscription() {
                       </p>
                     </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     {/* QUICK AMOUNTS */}
                     <div className="mb-6">
 
@@ -2026,6 +2305,10 @@ export default function Subscription() {
                         Quick Select
                       </p>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <div className="grid grid-cols-2 gap-3 sm:grid-cols-5">
 
                         {quickAmounts.map(
@@ -2050,11 +2333,19 @@ export default function Subscription() {
                                   Number(amount) ===
                                   value
                                     ? isDark
+<<<<<<< HEAD
                                       ? "border-[#B76E79] bg-[#B76E79]/20 text-[#E3AAB2]"
                                       : "border-[#B76E79] bg-[#FFE5E8] text-[#8F4F5A]"
                                     : isDark
                                     ? "border-white/10 bg-white/[0.03] text-gray-300 hover:border-[#B76E79]/50 hover:bg-[#B76E79]/10"
                                     : "border-gray-200 bg-white text-gray-700 hover:border-[#D99AA3] hover:bg-[#FFE5E8]"
+=======
+                                      ? "border-purple-500 bg-purple-600/20 text-purple-300"
+                                      : "border-purple-500 bg-purple-50 text-purple-700"
+                                    : isDark
+                                    ? "border-white/10 bg-white/[0.03] text-gray-300 hover:border-purple-500/40 hover:bg-purple-500/10"
+                                    : "border-gray-200 bg-white text-gray-700 hover:border-purple-300 hover:bg-purple-50"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 }`}
                               >
                                 ${value}
@@ -2066,6 +2357,10 @@ export default function Subscription() {
                       </div>
                     </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     {/* AMOUNT INPUT */}
                     <div className="mb-6">
 
@@ -2079,18 +2374,31 @@ export default function Subscription() {
                         Subscription Amount
                       </label>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <div className="relative">
 
                         <span
                           className={`absolute left-5 top-1/2 -translate-y-1/2 text-xl font-semibold ${
                             isDark
+<<<<<<< HEAD
                               ? "text-[#D99AA3]"
                               : "text-[#B76E79]"
+=======
+                              ? "text-purple-400"
+                              : "text-purple-600"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                           }`}
                         >
                           $
                         </span>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         <input
                           type="text"
                           inputMode="numeric"
@@ -2102,13 +2410,22 @@ export default function Subscription() {
                           placeholder="Enter amount"
                           className={`w-full rounded-2xl border py-4 pl-10 pr-5 text-xl font-semibold outline-none transition focus:ring-2 disabled:cursor-not-allowed disabled:opacity-50 ${
                             isDark
+<<<<<<< HEAD
                               ? "border-white/10 bg-black/40 text-white placeholder:text-gray-600 focus:border-[#B76E79]/60 focus:ring-[#B76E79]/10"
                               : "border-gray-200 bg-white text-gray-900 placeholder:text-gray-400 focus:border-[#B76E79] focus:ring-[#B76E79]/20"
+=======
+                              ? "border-white/10 bg-black/40 text-white placeholder:text-gray-600 focus:border-purple-500/60 focus:ring-purple-500/10"
+                              : "border-gray-200 bg-white text-gray-900 placeholder:text-gray-400 focus:border-purple-500 focus:ring-purple-500/20"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                           }`}
                         />
 
                       </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <div
                         className={`mt-2 flex justify-between text-xs ${
                           isDark
@@ -2126,6 +2443,10 @@ export default function Subscription() {
                               )}`}
                         </span>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         <span>
                           {hasActiveSubscription
                             ? `Upgrade Left: $${remainingUpgrade.toFixed(
@@ -2135,8 +2456,15 @@ export default function Subscription() {
                                 2
                               )}`}
                         </span>
+<<<<<<< HEAD
                       </div>
 
+=======
+
+                      </div>
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <p
                         className={`mt-1 text-xs ${
                           isDark
@@ -2149,6 +2477,10 @@ export default function Subscription() {
 
                     </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     {/* PURCHASE BUTTON */}
                     <button
                       type="button"
@@ -2157,7 +2489,11 @@ export default function Subscription() {
                         purchasing ||
                         packageFull
                       }
+<<<<<<< HEAD
                       className="flex w-full items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-[#8F4F5A] via-[#B76E79] to-[#D99AA3] px-6 py-4 font-semibold text-white shadow-lg shadow-[#8F4F5A]/20 transition hover:from-[#B76E79] hover:to-[#E3AAB2] disabled:cursor-not-allowed disabled:opacity-50"
+=======
+                      className="flex w-full items-center justify-center gap-3 rounded-2xl bg-gradient-to-r from-purple-600 to-fuchsia-600 px-6 py-4 font-semibold text-white shadow-lg shadow-purple-900/20 transition hover:from-purple-500 hover:to-fuchsia-500 disabled:cursor-not-allowed disabled:opacity-50"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     >
 
                       {purchasing ? (
@@ -2182,6 +2518,10 @@ export default function Subscription() {
 
                     </button>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     {/* PAYMENT NOTE */}
                     <p
                       className={`mt-4 text-center text-xs ${
@@ -2196,31 +2536,54 @@ export default function Subscription() {
 
                   </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                   {/* RIGHT - INFO */}
                   <div
                     className={`rounded-3xl border p-6 shadow-sm ${
                       isDark
+<<<<<<< HEAD
                         ? "border-white/10 bg-gradient-to-b from-[#8F4F5A]/25 to-black/20"
                         : "border-gray-200 bg-gradient-to-b from-[#FFE5E8] to-white"
+=======
+                        ? "border-white/10 bg-gradient-to-b from-purple-950/30 to-black/20"
+                        : "border-gray-200 bg-gradient-to-b from-purple-50 to-white"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     }`}
                   >
 
                     <div
                       className={`mb-5 flex h-11 w-11 items-center justify-center rounded-xl border ${
                         isDark
+<<<<<<< HEAD
                           ? "border-[#B76E79]/25 bg-[#B76E79]/10"
                           : "border-[#D99AA3]/40 bg-[#FFE5E8]"
+=======
+                          ? "border-purple-500/20 bg-purple-500/10"
+                          : "border-purple-200 bg-purple-100"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       }`}
                     >
                       <TrendingUp
                         className={`h-5 w-5 ${
                           isDark
+<<<<<<< HEAD
                             ? "text-[#D99AA3]"
                             : "text-[#B76E79]"
+=======
+                            ? "text-purple-400"
+                            : "text-purple-600"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         }`}
                       />
                     </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     <h3
                       className={`mb-3 text-lg font-semibold ${
                         isDark
@@ -2231,6 +2594,10 @@ export default function Subscription() {
                       Subscription Benefits
                     </h3>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     <div className="space-y-4">
 
                       <div className="flex gap-3">
@@ -2266,6 +2633,10 @@ export default function Subscription() {
                         </div>
                       </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <div className="flex gap-3">
                         <CheckCircle2
                           className={`h-5 w-5 shrink-0 ${
@@ -2299,6 +2670,10 @@ export default function Subscription() {
                         </div>
                       </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <div className="flex gap-3">
                         <CheckCircle2
                           className={`h-5 w-5 shrink-0 ${
@@ -2334,6 +2709,10 @@ export default function Subscription() {
 
                     </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     {/* REFRESH */}
                     <button
                       type="button"
@@ -2358,16 +2737,27 @@ export default function Subscription() {
           </main>
         </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         {/* GRADIENT ANIMATION */}
         <style>
           {`
             .animated-gradient {
               background: linear-gradient(
                 90deg,
+<<<<<<< HEAD
                 #8F4F5A,
                 #B76E79,
                 #D99AA3,
                 #8F4F5A
+=======
+                #60a5fa,
+                #a78bfa,
+                #f472b6,
+                #60a5fa
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
               );
               background-size: 300% 300%;
               animation: gradientMove 10s ease infinite;

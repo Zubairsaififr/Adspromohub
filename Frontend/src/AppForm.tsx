@@ -5,6 +5,10 @@ import MarqueeSliders from "./components/MarqueeSliders";
 
 import LiveCampaigns from "./components/LiveCampaigns";
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 import Referral from "./components/Referral";
 import FAQ from "./components/FAQ";
 import HoverFooter from "./components/HoverFooter";
@@ -18,6 +22,10 @@ export function AppForm() {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
 
   const [balance, setBalance] = useState<number>(0.0);
+<<<<<<< HEAD
+=======
+  
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
   // Modal states
   const [adSimulatorOpen, setAdSimulatorOpen] = useState(false);
@@ -33,9 +41,13 @@ export function AppForm() {
   // Toggle Theme
   const handleToggleTheme = () => {
     const next = theme === "dark" ? "light" : "dark";
+<<<<<<< HEAD
 
     setTheme(next);
 
+=======
+    setTheme(next);
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     if (next === "light") {
       document.documentElement.classList.add("light");
       document.documentElement.classList.remove("dark");
@@ -50,6 +62,7 @@ export function AppForm() {
   }, []);
 
   const handleAdRewardClaimed = (amount: number) => {
+<<<<<<< HEAD
     setBalance((prev) => prev + amount);
 
     showToast(
@@ -57,6 +70,10 @@ export function AppForm() {
         2
       )} USD added to your wallet!`
     );
+=======
+    setBalance(prev => prev + amount);
+    showToast(`dYZ% Reward Claimed: +$${amount.toFixed(2)} USD added to your wallet!`);
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   };
 
   const handleWatchCampaign = (_camp: AdCampaign) => {
@@ -78,6 +95,10 @@ export function AppForm() {
           variant: "primary",
           actionType: "watchAd",
         },
+<<<<<<< HEAD
+=======
+       
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       ],
     },
     {
@@ -112,6 +133,7 @@ export function AppForm() {
       features: [
         {
           title: "Watch & Earn",
+<<<<<<< HEAD
           description:
             "Earn up to $0.85 per sponsored video view with instant credit.",
         },
@@ -124,6 +146,17 @@ export function AppForm() {
           title: "Ranks & Pools",
           description:
             "Attain Diamond Leader status to unlock 2% global revenue sharing.",
+=======
+          description: "Earn up to $0.85 per sponsored video view with instant credit.",
+        },
+        {
+          title: "Refer & Grow",
+          description: "Earn 15% Level 1 and down to 5 tiers on all team watch volume.",
+        },
+        {
+          title: "Ranks & Pools",
+          description: "Attain Diamond Leader status to unlock 2% global revenue sharing.",
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         },
       ],
       actions: [
@@ -153,6 +186,7 @@ export function AppForm() {
   ];
 
   return (
+<<<<<<< HEAD
     <div
       className={`
         min-h-screen
@@ -197,6 +231,14 @@ export function AppForm() {
           >
             <Sparkles className="w-4 h-4 text-[#E3AAB2]" />
 
+=======
+    <div className={`min-h-screen selection:bg-purple-500 selection:text-white ${theme}`}>
+      {/* Toast Notification */}
+      {toastMessage && (
+        <div className="fixed top-20 right-4 z-50 animate-bounce">
+          <div className="px-4 py-3 rounded-2xl bg-slate-900/95 border border-purple-500/50 shadow-2xl backdrop-blur-xl text-white text-xs font-semibold flex items-center gap-2.5">
+            <Sparkles className="w-4 h-4 text-amber-400" />
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             <span>{toastMessage}</span>
           </div>
         </div>
@@ -214,6 +256,7 @@ export function AppForm() {
         sections={demoSections}
         onOpenAdSimulator={() => setAdSimulatorOpen(true)}
         onOpenCalculator={() => {
+<<<<<<< HEAD
           document
             .getElementById("calculator")
             ?.scrollIntoView({ behavior: "smooth" });
@@ -226,6 +269,16 @@ export function AppForm() {
       />
 
       {/* Flowing Marquee Sliders */}
+=======
+          document.getElementById("calculator")?.scrollIntoView({ behavior: "smooth" });
+        }}
+        onOpenPlans={() => {
+          document.getElementById("plans")?.scrollIntoView({ behavior: "smooth" });
+        }}
+      />
+
+      {/* Flowing Marquee Sliders (Left-to-Right & Right-to-Left) */}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       <div id="advertisers">
         <MarqueeSliders />
       </div>
@@ -244,10 +297,14 @@ export function AppForm() {
 
       {/* Frequently Asked Questions */}
       <FAQ />
+<<<<<<< HEAD
 
       {/* Hero */}
       <Hero />
 
+=======
+        <Hero/>
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       {/* Interactive Hover Footer */}
       <HoverFooter />
 
@@ -262,4 +319,8 @@ export function AppForm() {
   );
 }
 
+<<<<<<< HEAD
 export default AppForm;
+=======
+export default AppForm;
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d

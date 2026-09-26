@@ -15,6 +15,10 @@ import UserNavbar from "../UserDashboard/UserNavbar";
 
 const API_URL = import.meta.env.VITE_API_URL;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 // ============================================================
 // TYPES
 // ============================================================
@@ -50,6 +54,10 @@ interface Withdrawal {
   cancelled_at?: string | null;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 interface IncomeWalletData {
   success?: boolean;
 
@@ -60,6 +68,10 @@ interface IncomeWalletData {
   total_withdrawn: number | string;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 interface WalletData {
   balance: number;
 
@@ -70,6 +82,10 @@ interface WalletData {
   total_withdrawn: number;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 interface CreateWithdrawalResponse {
   success: boolean;
 
@@ -92,6 +108,10 @@ interface CreateWithdrawalResponse {
   dev_otp?: string;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 interface VerifyOTPResponse {
   success: boolean;
 
@@ -114,6 +134,10 @@ interface VerifyOTPResponse {
   net_amount: number;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 // ============================================================
 // COMPONENT
 // ============================================================
@@ -169,6 +193,10 @@ export default function Withdrawal() {
     null
   );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ============================================================
   // AUTH
   // ============================================================
@@ -176,8 +204,15 @@ export default function Withdrawal() {
   const token =
     localStorage.getItem("access_token");
 
+<<<<<<< HEAD
   // ============================================================
   // AMOUNT CALCULATION
+=======
+
+  // ============================================================
+  // AMOUNT CALCULATION
+  //
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // UI preview only.
   // Backend is still source of truth.
   // ============================================================
@@ -191,6 +226,10 @@ export default function Withdrawal() {
   const netAmount =
     numericAmount - fee;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ============================================================
   // THEME
   // ============================================================
@@ -204,6 +243,10 @@ export default function Withdrawal() {
     );
   }, []);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   useEffect(() => {
     localStorage.setItem(
       "theme",
@@ -211,6 +254,10 @@ export default function Withdrawal() {
     );
   }, [isDark]);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ============================================================
   // AUTH HEADERS
   // ============================================================
@@ -219,8 +266,22 @@ export default function Withdrawal() {
     Authorization: `Bearer ${token}`,
   });
 
+<<<<<<< HEAD
   // ============================================================
   // CALCULATE PENDING BALANCE
+=======
+
+  // ============================================================
+  // CALCULATE PENDING BALANCE
+  //
+  // Reserved withdrawals:
+  //
+  // otp_pending
+  // pending
+  // approved
+  //
+  // Paid/rejected/cancelled are NOT pending.
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ============================================================
 
   const calculatePendingBalance = (
@@ -251,6 +312,10 @@ export default function Withdrawal() {
     );
   };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ============================================================
   // LOAD WITHDRAWALS
   // ============================================================
@@ -300,9 +365,18 @@ export default function Withdrawal() {
     }
   };
 
+<<<<<<< HEAD
   // ============================================================
   // LOAD WALLET
   // Existing backend:
+=======
+
+  // ============================================================
+  // LOAD WALLET
+  //
+  // Existing backend:
+  //
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // GET /api/income-wallet
   // ============================================================
 
@@ -389,6 +463,10 @@ export default function Withdrawal() {
     }
   };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ============================================================
   // REFRESH PAGE DATA
   // ============================================================
@@ -400,6 +478,10 @@ export default function Withdrawal() {
     await loadWallet(history);
   };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ============================================================
   // INITIAL LOAD
   // ============================================================
@@ -419,6 +501,10 @@ export default function Withdrawal() {
     refreshData();
   }, []);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ============================================================
   // CREATE WITHDRAWAL
   // ============================================================
@@ -433,6 +519,10 @@ export default function Withdrawal() {
     setDevOtp("");
     setCompletedWithdrawal(null);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     if (!token) {
       setError(
         "Please login again."
@@ -441,6 +531,10 @@ export default function Withdrawal() {
       return;
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     if (
       !amount ||
       !Number.isFinite(numericAmount) ||
@@ -453,6 +547,10 @@ export default function Withdrawal() {
       return;
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     if (numericAmount < 5) {
       setError(
         "Minimum withdrawal amount is $5.00."
@@ -461,6 +559,10 @@ export default function Withdrawal() {
       return;
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     if (
       wallet &&
       numericAmount > wallet.balance
@@ -474,6 +576,10 @@ export default function Withdrawal() {
       return;
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     try {
       setLoading(true);
 
@@ -496,6 +602,10 @@ export default function Withdrawal() {
         }
       );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       const data:
         CreateWithdrawalResponse &
         {
@@ -503,6 +613,10 @@ export default function Withdrawal() {
         } =
         await response.json();
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       if (!response.ok) {
         throw new Error(
           data.detail ||
@@ -510,6 +624,10 @@ export default function Withdrawal() {
         );
       }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       setWithdrawalId(
         data.withdrawal_id
       );
@@ -518,7 +636,14 @@ export default function Withdrawal() {
         data.phone_number || ""
       );
 
+<<<<<<< HEAD
       // DEVELOPMENT OTP
+=======
+
+      // ========================================================
+      // DEVELOPMENT OTP
+      // ========================================================
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
       if (data.dev_otp) {
         setDevOtp(
@@ -526,8 +651,15 @@ export default function Withdrawal() {
         );
       }
 
+<<<<<<< HEAD
       setStep("otp");
 
+=======
+
+      setStep("otp");
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       if (data.dev_otp) {
         setSuccessMessage(
           "Withdrawal created successfully. Use the development OTP shown below."
@@ -538,6 +670,10 @@ export default function Withdrawal() {
         );
       }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       await refreshData();
     } catch (error: any) {
       setError(
@@ -549,6 +685,10 @@ export default function Withdrawal() {
     }
   };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ============================================================
   // VERIFY OTP
   // ============================================================
@@ -560,6 +700,10 @@ export default function Withdrawal() {
 
     setError("");
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     if (!token) {
       setError(
         "Please login again."
@@ -568,6 +712,10 @@ export default function Withdrawal() {
       return;
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     if (!withdrawalId) {
       setError(
         "Withdrawal request not found."
@@ -576,6 +724,10 @@ export default function Withdrawal() {
       return;
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     if (
       otp.length !== 6 ||
       !/^\d{6}$/.test(otp)
@@ -587,9 +739,17 @@ export default function Withdrawal() {
       return;
     }
 
+<<<<<<< HEAD
     try {
       setLoading(true);
 
+=======
+
+    try {
+      setLoading(true);
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       const response = await fetch(
         `${API_URL}/withdrawals/${withdrawalId}/verify-otp`,
         {
@@ -609,6 +769,10 @@ export default function Withdrawal() {
         }
       );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       const data:
         VerifyOTPResponse &
         {
@@ -616,6 +780,10 @@ export default function Withdrawal() {
         } =
         await response.json();
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       if (!response.ok) {
         throw new Error(
           data.detail ||
@@ -623,13 +791,24 @@ export default function Withdrawal() {
         );
       }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       setCompletedWithdrawal(
         data
       );
 
       setStep("success");
 
+<<<<<<< HEAD
       // $5 - $20
+=======
+
+      // ========================================================
+      // $5 - $20
+      // ========================================================
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
       if (
         data.next_action ===
@@ -640,7 +819,13 @@ export default function Withdrawal() {
         );
       }
 
+<<<<<<< HEAD
       // ABOVE $20
+=======
+      // ========================================================
+      // ABOVE $20
+      // ========================================================
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
       else if (
         data.next_action ===
@@ -658,6 +843,10 @@ export default function Withdrawal() {
         );
       }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       setDevOtp("");
 
       await refreshData();
@@ -671,6 +860,10 @@ export default function Withdrawal() {
     }
   };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ============================================================
   // RESET
   // ============================================================
@@ -695,6 +888,10 @@ export default function Withdrawal() {
     setStep("amount");
   };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ============================================================
   // COPY
   // ============================================================
@@ -714,6 +911,10 @@ export default function Withdrawal() {
     }
   };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ============================================================
   // STATUS STYLE
   // ============================================================
@@ -727,6 +928,7 @@ export default function Withdrawal() {
       case "paid":
       case "completed":
         return isDark
+<<<<<<< HEAD
           ? "bg-[#B76E79]/15 text-[#E3AAB2] border-[#D99AA3]/30"
           : "bg-[#FFF0F2] text-[#8F4F5A] border-[#D99AA3]/40";
 
@@ -744,12 +946,41 @@ export default function Withdrawal() {
         return isDark
           ? "bg-[#B76E79]/15 text-[#D99AA3] border-[#B76E79]/30"
           : "bg-[#FFF5F6] text-[#B76E79] border-[#D99AA3]/40";
+=======
+          ? "bg-green-500/10 text-green-400 border-green-500/20"
+          : "bg-green-50 text-green-700 border-green-200";
+
+
+      case "approved":
+        return isDark
+          ? "bg-blue-500/10 text-blue-300 border-blue-500/20"
+          : "bg-blue-50 text-blue-700 border-blue-200";
+
+
+      case "otp_pending":
+        return isDark
+          ? "bg-orange-500/10 text-orange-300 border-orange-500/20"
+          : "bg-orange-50 text-orange-700 border-orange-200";
+
+
+      case "pending":
+        return isDark
+          ? "bg-yellow-500/10 text-yellow-400 border-yellow-500/20"
+          : "bg-yellow-50 text-yellow-700 border-yellow-200";
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
       case "rejected":
       case "cancelled":
         return isDark
+<<<<<<< HEAD
           ? "bg-[#8F4F5A]/25 text-[#FFE5E8] border-[#D99AA3]/30"
           : "bg-[#FFE5E8] text-[#8F4F5A] border-[#D99AA3]/50";
+=======
+          ? "bg-red-500/10 text-red-400 border-red-500/20"
+          : "bg-red-50 text-red-700 border-red-200";
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
       default:
         return isDark
@@ -758,6 +989,10 @@ export default function Withdrawal() {
     }
   };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ============================================================
   // STATUS LABEL
   // ============================================================
@@ -793,6 +1028,10 @@ export default function Withdrawal() {
     }
   };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ============================================================
   // STATUS MESSAGE
   // ============================================================
@@ -803,12 +1042,20 @@ export default function Withdrawal() {
     const status =
       item.status.toLowerCase();
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     if (status === "otp_pending") {
       return (
         "OTP verification is pending."
       );
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     if (status === "pending") {
       if (
         item.processing_type ===
@@ -824,33 +1071,57 @@ export default function Withdrawal() {
       );
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     if (status === "approved") {
       return (
         "Approved and waiting for payment."
       );
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     if (status === "paid") {
       return (
         "Withdrawal paid successfully."
       );
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     if (status === "rejected") {
       return (
         "Withdrawal was rejected and the reserved amount was returned to your wallet."
       );
     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     if (status === "cancelled") {
       return (
         "Withdrawal was cancelled."
       );
     }
 
+<<<<<<< HEAD
     return "";
   };
 
+=======
+
+    return "";
+  };
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ============================================================
   // FORMAT DATE
   // ============================================================
@@ -867,6 +1138,10 @@ export default function Withdrawal() {
     ).toLocaleString();
   };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ============================================================
   // SUCCESS DATA
   // ============================================================
@@ -883,6 +1158,10 @@ export default function Withdrawal() {
     completedWithdrawal?.net_amount ??
     netAmount;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ============================================================
   // PROCESSING DESCRIPTION
   // ============================================================
@@ -907,6 +1186,10 @@ export default function Withdrawal() {
       return "";
     }, [numericAmount]);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ============================================================
   // UI
   // ============================================================
@@ -919,7 +1202,11 @@ export default function Withdrawal() {
         className={`flex min-h-screen w-full ${
           isDark
             ? "animated-gradient text-white"
+<<<<<<< HEAD
             : "bg-gradient-to-br from-[#FFF9FA] via-[#FDF3F5] to-white text-gray-900"
+=======
+            : "bg-gray-50 text-gray-900"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         }`}
       >
         <div className="flex min-w-0 flex-1 flex-col">
@@ -927,7 +1214,11 @@ export default function Withdrawal() {
             className={`flex-1 p-4 sm:p-6 lg:p-8 ${
               isDark
                 ? "animated-gradient"
+<<<<<<< HEAD
                 : "bg-gradient-to-br from-[#FFF9FA] via-[#FDF3F5] to-white"
+=======
+                : "bg-gray-50"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             }`}
           >
             <div className="mx-auto max-w-6xl">
@@ -941,16 +1232,26 @@ export default function Withdrawal() {
                   <div
                     className={`flex h-12 w-12 items-center justify-center rounded-2xl border ${
                       isDark
+<<<<<<< HEAD
                         ? "border-[#B76E79]/30 bg-[#B76E79]/20"
                         : "border-[#D99AA3]/40 bg-[#FFE5E8]"
+=======
+                        ? "border-purple-500/20 bg-purple-600/20"
+                        : "border-purple-200 bg-purple-100"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     }`}
                   >
                     <ArrowDownToLine
                       size={24}
                       className={
                         isDark
+<<<<<<< HEAD
                           ? "text-[#E3AAB2]"
                           : "text-[#8F4F5A]"
+=======
+                          ? "text-purple-400"
+                          : "text-purple-600"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       }
                     />
                   </div>
@@ -979,6 +1280,10 @@ export default function Withdrawal() {
                 </div>
               </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
               {/* ==================================================
                   WALLET SUMMARY
               ================================================== */}
@@ -991,7 +1296,11 @@ export default function Withdrawal() {
                   className={`rounded-2xl border p-5 shadow-sm ${
                     isDark
                       ? "border-white/10 bg-white/[0.03] backdrop-blur-xl"
+<<<<<<< HEAD
                       : "border-[#E3AAB2]/25 bg-white"
+=======
+                      : "border-gray-200 bg-white"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                   }`}
                 >
                   <p
@@ -1020,13 +1329,21 @@ export default function Withdrawal() {
                   </p>
                 </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 {/* PENDING */}
 
                 <div
                   className={`rounded-2xl border p-5 shadow-sm ${
                     isDark
                       ? "border-white/10 bg-white/[0.03] backdrop-blur-xl"
+<<<<<<< HEAD
                       : "border-[#E3AAB2]/25 bg-white"
+=======
+                      : "border-gray-200 bg-white"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                   }`}
                 >
                   <p
@@ -1042,8 +1359,13 @@ export default function Withdrawal() {
                   <p
                     className={`mt-2 text-3xl font-bold ${
                       isDark
+<<<<<<< HEAD
                         ? "text-[#E3AAB2]"
                         : "text-[#B76E79]"
+=======
+                        ? "text-yellow-400"
+                        : "text-yellow-600"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     }`}
                   >
                     {loadingWallet
@@ -1055,13 +1377,21 @@ export default function Withdrawal() {
                   </p>
                 </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 {/* TOTAL WITHDRAWN */}
 
                 <div
                   className={`rounded-2xl border p-5 shadow-sm ${
                     isDark
                       ? "border-white/10 bg-white/[0.03] backdrop-blur-xl"
+<<<<<<< HEAD
                       : "border-[#E3AAB2]/25 bg-white"
+=======
+                      : "border-gray-200 bg-white"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                   }`}
                 >
                   <p
@@ -1077,8 +1407,13 @@ export default function Withdrawal() {
                   <p
                     className={`mt-2 text-3xl font-bold ${
                       isDark
+<<<<<<< HEAD
                         ? "text-[#D99AA3]"
                         : "text-[#8F4F5A]"
+=======
+                        ? "text-green-400"
+                        : "text-green-600"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     }`}
                   >
                     {loadingWallet
@@ -1091,6 +1426,10 @@ export default function Withdrawal() {
                 </div>
               </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
               {/* ==================================================
                   MAIN GRID
               ================================================== */}
@@ -1105,11 +1444,21 @@ export default function Withdrawal() {
                   className={`rounded-3xl border p-6 shadow-sm md:p-8 ${
                     isDark
                       ? "border-white/10 bg-white/[0.03] backdrop-blur-xl"
+<<<<<<< HEAD
                       : "border-[#E3AAB2]/30 bg-white"
                   }`}
                 >
 
                   {/* AMOUNT STEP */}
+=======
+                      : "border-gray-200 bg-white"
+                  }`}
+                >
+
+                  {/* ===============================================
+                      AMOUNT STEP
+                  =============================================== */}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                   {step === "amount" && (
                     <>
@@ -1135,6 +1484,10 @@ export default function Withdrawal() {
                         </p>
                       </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <form
                         onSubmit={
                           handleCreateWithdrawal
@@ -1176,13 +1529,22 @@ export default function Withdrawal() {
                               placeholder="Enter amount"
                               className={`w-full rounded-xl border py-4 pl-9 pr-4 text-lg outline-none transition ${
                                 isDark
+<<<<<<< HEAD
                                   ? "border-white/10 bg-black/40 text-white focus:border-[#B76E79]"
                                   : "border-[#E3AAB2]/40 bg-white text-gray-900 focus:border-[#B76E79]"
+=======
+                                  ? "border-white/10 bg-black/40 text-white focus:border-purple-500"
+                                  : "border-gray-200 bg-white text-gray-900 focus:border-purple-500"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                               }`}
                             />
                           </div>
                         </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         {/* CALCULATION */}
 
                         {numericAmount > 0 && (
@@ -1190,7 +1552,11 @@ export default function Withdrawal() {
                             className={`space-y-3 rounded-2xl border p-4 ${
                               isDark
                                 ? "border-white/10 bg-black/30"
+<<<<<<< HEAD
                                 : "border-[#E3AAB2]/30 bg-[#FFF9FA]"
+=======
+                                : "border-gray-200 bg-gray-50"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             }`}
                           >
                             <div className="flex justify-between text-sm">
@@ -1218,6 +1584,10 @@ export default function Withdrawal() {
                               </span>
                             </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             <div className="flex justify-between text-sm">
                               <span
                                 className={
@@ -1232,8 +1602,13 @@ export default function Withdrawal() {
                               <span
                                 className={
                                   isDark
+<<<<<<< HEAD
                                     ? "text-[#D99AA3]"
                                     : "text-[#8F4F5A]"
+=======
+                                    ? "text-red-400"
+                                    : "text-red-600"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 }
                               >
                                 -$
@@ -1241,11 +1616,19 @@ export default function Withdrawal() {
                               </span>
                             </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             <div
                               className={`flex justify-between border-t pt-3 ${
                                 isDark
                                   ? "border-white/10"
+<<<<<<< HEAD
                                   : "border-[#E3AAB2]/30"
+=======
+                                  : "border-gray-200"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                               }`}
                             >
                               <span
@@ -1261,8 +1644,13 @@ export default function Withdrawal() {
                               <span
                                 className={`font-bold ${
                                   isDark
+<<<<<<< HEAD
                                     ? "text-[#E3AAB2]"
                                     : "text-[#8F4F5A]"
+=======
+                                    ? "text-green-400"
+                                    : "text-green-600"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 }`}
                               >
                                 $
@@ -1272,12 +1660,20 @@ export default function Withdrawal() {
                               </span>
                             </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             {processingDescription && (
                               <div
                                 className={`border-t pt-3 text-xs leading-5 ${
                                   isDark
                                     ? "border-white/10 text-gray-400"
+<<<<<<< HEAD
                                     : "border-[#E3AAB2]/30 text-gray-500"
+=======
+                                    : "border-gray-200 text-gray-500"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 }`}
                               >
                                 {
@@ -1288,27 +1684,44 @@ export default function Withdrawal() {
                           </div>
                         )}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         {/* ERROR */}
 
                         {error && (
                           <div
                             className={`rounded-xl border px-4 py-3 text-sm ${
                               isDark
+<<<<<<< HEAD
                                 ? "border-[#D99AA3]/30 bg-[#8F4F5A]/20 text-[#FFE5E8]"
                                 : "border-[#D99AA3]/50 bg-[#FFE5E8] text-[#8F4F5A]"
+=======
+                                ? "border-red-500/20 bg-red-500/10 text-red-400"
+                                : "border-red-200 bg-red-50 text-red-700"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             }`}
                           >
                             {error}
                           </div>
                         )}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         <button
                           type="submit"
                           disabled={
                             loading ||
                             loadingWallet
                           }
+<<<<<<< HEAD
                           className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#B76E79] px-5 py-4 font-semibold text-white shadow-lg shadow-[#B76E79]/20 transition hover:bg-[#8F4F5A] disabled:cursor-not-allowed disabled:opacity-50"
+=======
+                          className="flex w-full items-center justify-center gap-2 rounded-xl bg-purple-600 px-5 py-4 font-semibold text-white transition hover:bg-purple-500 disabled:cursor-not-allowed disabled:opacity-50"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         >
                           {loading ? (
                             <>
@@ -1331,21 +1744,35 @@ export default function Withdrawal() {
                         </button>
                       </form>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       {/* SECURITY */}
 
                       <div
                         className={`mt-6 flex gap-3 rounded-xl border p-4 ${
                           isDark
+<<<<<<< HEAD
                             ? "border-[#B76E79]/20 bg-[#B76E79]/10"
                             : "border-[#D99AA3]/35 bg-[#FFF0F2]"
+=======
+                            ? "border-purple-500/10 bg-purple-500/5"
+                            : "border-purple-100 bg-purple-50"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         }`}
                       >
                         <ShieldCheck
                           size={20}
                           className={`mt-0.5 shrink-0 ${
                             isDark
+<<<<<<< HEAD
                               ? "text-[#E3AAB2]"
                               : "text-[#8F4F5A]"
+=======
+                              ? "text-purple-400"
+                              : "text-purple-600"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                           }`}
                         />
 
@@ -1364,9 +1791,16 @@ export default function Withdrawal() {
                     </>
                   )}
 
+<<<<<<< HEAD
                   {/* =================================================
                       OTP STEP
                   ================================================= */}
+=======
+
+                  {/* ===============================================
+                      OTP STEP
+                  =============================================== */}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                   {step === "otp" && (
                     <>
@@ -1374,16 +1808,26 @@ export default function Withdrawal() {
                         <div
                           className={`mb-4 flex h-14 w-14 items-center justify-center rounded-2xl ${
                             isDark
+<<<<<<< HEAD
                               ? "bg-[#B76E79]/15"
                               : "bg-[#FFE5E8]"
+=======
+                              ? "bg-purple-500/10"
+                              : "bg-purple-100"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                           }`}
                         >
                           <ShieldCheck
                             size={28}
                             className={
                               isDark
+<<<<<<< HEAD
                                 ? "text-[#E3AAB2]"
                                 : "text-[#8F4F5A]"
+=======
+                                ? "text-purple-400"
+                                : "text-purple-600"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             }
                           />
                         </div>
@@ -1412,33 +1856,56 @@ export default function Withdrawal() {
                         </p>
                       </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       {successMessage && (
                         <div
                           className={`mb-5 rounded-xl border px-4 py-3 text-sm ${
                             isDark
+<<<<<<< HEAD
                               ? "border-[#D99AA3]/30 bg-[#B76E79]/15 text-[#E3AAB2]"
                               : "border-[#D99AA3]/40 bg-[#FFF0F2] text-[#8F4F5A]"
+=======
+                              ? "border-green-500/20 bg-green-500/10 text-green-400"
+                              : "border-green-200 bg-green-50 text-green-700"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                           }`}
                         >
                           {successMessage}
                         </div>
                       )}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       {/* DEVELOPMENT OTP */}
 
                       {devOtp && (
                         <div
                           className={`mb-5 rounded-2xl border p-4 ${
                             isDark
+<<<<<<< HEAD
                               ? "border-[#D99AA3]/30 bg-[#B76E79]/15"
                               : "border-[#D99AA3]/50 bg-[#FFE5E8]"
+=======
+                              ? "border-yellow-500/20 bg-yellow-500/10"
+                              : "border-yellow-200 bg-yellow-50"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                           }`}
                         >
                           <p
                             className={`text-xs font-semibold uppercase tracking-wider ${
                               isDark
+<<<<<<< HEAD
                                 ? "text-[#E3AAB2]"
                                 : "text-[#8F4F5A]"
+=======
+                                ? "text-yellow-300"
+                                : "text-yellow-700"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             }`}
                           >
                             Development OTP
@@ -1462,8 +1929,13 @@ export default function Withdrawal() {
                               }
                               className={`rounded-lg p-2 ${
                                 isDark
+<<<<<<< HEAD
                                   ? "text-[#E3AAB2] hover:bg-white/5"
                                   : "text-[#8F4F5A] hover:bg-[#FFF0F2]"
+=======
+                                  ? "text-yellow-300 hover:bg-white/5"
+                                  : "text-yellow-700 hover:bg-yellow-100"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                               }`}
                               title="Copy OTP"
                             >
@@ -1474,8 +1946,13 @@ export default function Withdrawal() {
                           <p
                             className={`mt-3 text-xs ${
                               isDark
+<<<<<<< HEAD
                                 ? "text-[#D99AA3]/80"
                                 : "text-[#8F4F5A]"
+=======
+                                ? "text-yellow-200/70"
+                                : "text-yellow-700"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             }`}
                           >
                             Testing only. This value is returned by the backend
@@ -1484,6 +1961,10 @@ export default function Withdrawal() {
                         </div>
                       )}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <form
                         onSubmit={
                           handleVerifyOTP
@@ -1517,28 +1998,50 @@ export default function Withdrawal() {
                             placeholder="123456"
                             className={`w-full rounded-xl border px-4 py-4 text-center text-2xl tracking-[0.5em] outline-none ${
                               isDark
+<<<<<<< HEAD
                                 ? "border-white/10 bg-black/40 text-white focus:border-[#B76E79]"
                                 : "border-[#E3AAB2]/40 bg-white text-gray-900 focus:border-[#B76E79]"
+=======
+                                ? "border-white/10 bg-black/40 text-white focus:border-purple-500"
+                                : "border-gray-200 bg-white text-gray-900 focus:border-purple-500"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             }`}
                           />
                         </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         {error && (
                           <div
                             className={`rounded-xl border px-4 py-3 text-sm ${
                               isDark
+<<<<<<< HEAD
                                 ? "border-[#D99AA3]/30 bg-[#8F4F5A]/20 text-[#FFE5E8]"
                                 : "border-[#D99AA3]/50 bg-[#FFE5E8] text-[#8F4F5A]"
+=======
+                                ? "border-red-500/20 bg-red-500/10 text-red-400"
+                                : "border-red-200 bg-red-50 text-red-700"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             }`}
                           >
                             {error}
                           </div>
                         )}
 
+<<<<<<< HEAD
                         <button
                           type="submit"
                           disabled={loading}
                           className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#B76E79] px-5 py-4 font-semibold text-white shadow-lg shadow-[#B76E79]/20 hover:bg-[#8F4F5A] disabled:cursor-not-allowed disabled:opacity-50"
+=======
+
+                        <button
+                          type="submit"
+                          disabled={loading}
+                          className="flex w-full items-center justify-center gap-2 rounded-xl bg-purple-600 px-5 py-4 font-semibold text-white hover:bg-purple-500 disabled:cursor-not-allowed disabled:opacity-50"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         >
                           {loading ? (
                             <>
@@ -1561,6 +2064,10 @@ export default function Withdrawal() {
                         </button>
                       </form>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <button
                         type="button"
                         onClick={
@@ -1569,7 +2076,11 @@ export default function Withdrawal() {
                         className={`mt-4 w-full rounded-xl border px-5 py-3 text-sm transition ${
                           isDark
                             ? "border-white/10 text-gray-400 hover:bg-white/5 hover:text-white"
+<<<<<<< HEAD
                             : "border-[#E3AAB2]/40 text-gray-600 hover:bg-[#FFF9FA] hover:text-[#8F4F5A]"
+=======
+                            : "border-gray-200 text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         }`}
                       >
                         Back
@@ -1577,29 +2088,50 @@ export default function Withdrawal() {
                     </>
                   )}
 
+<<<<<<< HEAD
                   {/* =================================================
                       VERIFIED STEP
                   ================================================= */}
+=======
+
+                  {/* ===============================================
+                      VERIFIED STEP
+                  =============================================== */}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                   {step === "success" && (
                     <div className="text-center">
                       <div
                         className={`mx-auto mb-5 flex h-20 w-20 items-center justify-center rounded-full border ${
                           isDark
+<<<<<<< HEAD
                             ? "border-[#D99AA3]/30 bg-[#B76E79]/15"
                             : "border-[#D99AA3]/50 bg-[#FFE5E8]"
+=======
+                            ? "border-green-500/20 bg-green-500/10"
+                            : "border-green-200 bg-green-50"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         }`}
                       >
                         <CheckCircle2
                           size={42}
                           className={
                             isDark
+<<<<<<< HEAD
                               ? "text-[#E3AAB2]"
                               : "text-[#8F4F5A]"
+=======
+                              ? "text-green-400"
+                              : "text-green-600"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                           }
                         />
                       </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <h2
                         className={`text-2xl font-bold ${
                           isDark
@@ -1610,6 +2142,10 @@ export default function Withdrawal() {
                         Withdrawal Verified
                       </h2>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <p
                         className={`mt-2 text-sm leading-6 ${
                           isDark
@@ -1620,11 +2156,19 @@ export default function Withdrawal() {
                         {successMessage}
                       </p>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <div
                         className={`mt-6 rounded-2xl border p-5 text-left ${
                           isDark
                             ? "border-white/10 bg-black/30"
+<<<<<<< HEAD
                             : "border-[#E3AAB2]/30 bg-[#FFF9FA]"
+=======
+                            : "border-gray-200 bg-gray-50"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         }`}
                       >
                         <div className="flex justify-between py-2">
@@ -1652,6 +2196,10 @@ export default function Withdrawal() {
                           </span>
                         </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         <div className="flex justify-between py-2">
                           <span
                             className={
@@ -1666,8 +2214,13 @@ export default function Withdrawal() {
                           <span
                             className={
                               isDark
+<<<<<<< HEAD
                                 ? "text-[#D99AA3]"
                                 : "text-[#8F4F5A]"
+=======
+                                ? "text-red-400"
+                                : "text-red-600"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             }
                           >
                             -$
@@ -1677,11 +2230,19 @@ export default function Withdrawal() {
                           </span>
                         </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         <div
                           className={`flex justify-between border-t pt-3 ${
                             isDark
                               ? "border-white/10"
+<<<<<<< HEAD
                               : "border-[#E3AAB2]/30"
+=======
+                              : "border-gray-200"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                           }`}
                         >
                           <span
@@ -1697,8 +2258,13 @@ export default function Withdrawal() {
                           <span
                             className={`font-bold ${
                               isDark
+<<<<<<< HEAD
                                 ? "text-[#E3AAB2]"
                                 : "text-[#8F4F5A]"
+=======
+                                ? "text-green-400"
+                                : "text-green-600"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             }`}
                           >
                             $
@@ -1708,13 +2274,21 @@ export default function Withdrawal() {
                           </span>
                         </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         {completedWithdrawal && (
                           <>
                             <div
                               className={`mt-3 flex justify-between border-t pt-3 text-sm ${
                                 isDark
                                   ? "border-white/10"
+<<<<<<< HEAD
                                   : "border-[#E3AAB2]/30"
+=======
+                                  : "border-gray-200"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                               }`}
                             >
                               <span
@@ -1741,6 +2315,10 @@ export default function Withdrawal() {
                               </span>
                             </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             <div className="mt-3 flex justify-between text-sm">
                               <span
                                 className={
@@ -1766,12 +2344,20 @@ export default function Withdrawal() {
                         )}
                       </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <button
                         type="button"
                         onClick={
                           startNewWithdrawal
                         }
+<<<<<<< HEAD
                         className="mt-6 w-full rounded-xl bg-[#B76E79] px-5 py-4 font-semibold text-white shadow-lg shadow-[#B76E79]/20 hover:bg-[#8F4F5A]"
+=======
+                        className="mt-6 w-full rounded-xl bg-purple-600 px-5 py-4 font-semibold text-white hover:bg-purple-500"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       >
                         New Withdrawal
                       </button>
@@ -1779,6 +2365,10 @@ export default function Withdrawal() {
                   )}
                 </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 {/* =================================================
                     WITHDRAWAL INFORMATION
                 ================================================= */}
@@ -1787,7 +2377,11 @@ export default function Withdrawal() {
                   className={`rounded-3xl border p-6 shadow-sm md:p-8 ${
                     isDark
                       ? "border-white/10 bg-white/[0.03] backdrop-blur-xl"
+<<<<<<< HEAD
                       : "border-[#E3AAB2]/30 bg-white"
+=======
+                      : "border-gray-200 bg-white"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                   }`}
                 >
                   <div className="mb-6">
@@ -1812,6 +2406,10 @@ export default function Withdrawal() {
                     </p>
                   </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                   <div className="space-y-5">
 
                     <InfoItem
@@ -1820,36 +2418,60 @@ export default function Withdrawal() {
                       description="$5.00 minimum withdrawal amount."
                     />
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     <InfoItem
                       isDark={isDark}
                       title="Withdrawal Fee"
                       description="A 5% fee is deducted from every withdrawal."
                     />
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     <InfoItem
                       isDark={isDark}
                       title="$5 – $20"
                       description="Eligible for automatic processing after successful OTP verification."
                     />
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     <InfoItem
                       isDark={isDark}
                       title="Above $20"
                       description="Requires admin approval after successful OTP verification."
                     />
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     <InfoItem
                       isDark={isDark}
                       title="OTP Verification"
                       description="OTP verification is required for every withdrawal."
                     />
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     <InfoItem
                       isDark={isDark}
                       title="BEP20 Address"
                       description="Payment is processed to the BEP20 address saved in your profile."
                     />
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     <InfoItem
                       isDark={isDark}
                       title="Secure Reservation"
@@ -1859,6 +2481,10 @@ export default function Withdrawal() {
                 </div>
               </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
               {/* ==================================================
                   HISTORY
               ================================================== */}
@@ -1867,27 +2493,45 @@ export default function Withdrawal() {
                 className={`mt-8 rounded-3xl border p-6 shadow-sm md:p-8 ${
                   isDark
                     ? "border-white/10 bg-white/[0.03] backdrop-blur-xl"
+<<<<<<< HEAD
                     : "border-[#E3AAB2]/30 bg-white"
+=======
+                    : "border-gray-200 bg-white"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 }`}
               >
                 <div className="mb-6 flex items-center gap-3">
                   <div
                     className={`flex h-10 w-10 items-center justify-center rounded-xl ${
                       isDark
+<<<<<<< HEAD
                         ? "bg-[#B76E79]/15"
                         : "bg-[#FFE5E8]"
+=======
+                        ? "bg-purple-500/10"
+                        : "bg-purple-100"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     }`}
                   >
                     <History
                       size={21}
                       className={
                         isDark
+<<<<<<< HEAD
                           ? "text-[#E3AAB2]"
                           : "text-[#8F4F5A]"
+=======
+                          ? "text-purple-400"
+                          : "text-purple-600"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       }
                     />
                   </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                   <div>
                     <h2
                       className={`text-xl font-semibold ${
@@ -1911,14 +2555,23 @@ export default function Withdrawal() {
                   </div>
                 </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 {loadingHistory ? (
                   <div className="flex items-center justify-center py-10">
                     <Loader2
                       size={25}
                       className={`animate-spin ${
                         isDark
+<<<<<<< HEAD
                           ? "text-[#E3AAB2]"
                           : "text-[#B76E79]"
+=======
+                          ? "text-purple-400"
+                          : "text-purple-600"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       }`}
                     />
                   </div>
@@ -1930,7 +2583,11 @@ export default function Withdrawal() {
                       className={`mx-auto mb-3 ${
                         isDark
                           ? "text-gray-600"
+<<<<<<< HEAD
                           : "text-[#D99AA3]"
+=======
+                          : "text-gray-300"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       }`}
                     />
 
@@ -1959,7 +2616,11 @@ export default function Withdrawal() {
                             className={`rounded-2xl border p-4 ${
                               isDark
                                 ? "border-white/10 bg-black/20"
+<<<<<<< HEAD
                                 : "border-[#E3AAB2]/30 bg-[#FFF9FA]"
+=======
+                                : "border-gray-200 bg-gray-50"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             }`}
                           >
                             <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
@@ -1991,12 +2652,20 @@ export default function Withdrawal() {
                                     )}
                                   </span>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                   {item.processing_type && (
                                     <span
                                       className={`rounded-full border px-3 py-1 text-xs ${
                                         isDark
                                           ? "border-white/10 text-gray-300"
+<<<<<<< HEAD
                                           : "border-[#E3AAB2]/30 text-[#8F4F5A]"
+=======
+                                          : "border-gray-200 text-gray-600"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                       }`}
                                     >
                                       {item.processing_type ===
@@ -2007,6 +2676,10 @@ export default function Withdrawal() {
                                   )}
                                 </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 <p
                                   className={`mt-1 text-xs ${
                                     isDark
@@ -2022,6 +2695,10 @@ export default function Withdrawal() {
                                 </p>
                               </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                               <div className="text-left md:text-right">
                                 <p
                                   className={`text-sm ${
@@ -2041,8 +2718,13 @@ export default function Withdrawal() {
                                 <p
                                   className={`font-semibold ${
                                     isDark
+<<<<<<< HEAD
                                       ? "text-[#E3AAB2]"
                                       : "text-[#8F4F5A]"
+=======
+                                      ? "text-green-400"
+                                      : "text-green-600"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                   }`}
                                 >
                                   Net: $
@@ -2055,6 +2737,10 @@ export default function Withdrawal() {
                               </div>
                             </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             {/* STATUS MESSAGE */}
 
                             {statusMessage && (
@@ -2063,6 +2749,7 @@ export default function Withdrawal() {
                                   item.status.toLowerCase() ===
                                   "rejected"
                                     ? isDark
+<<<<<<< HEAD
                                       ? "text-[#E3AAB2]"
                                       : "text-[#8F4F5A]"
                                     : item.status.toLowerCase() ===
@@ -2073,6 +2760,18 @@ export default function Withdrawal() {
                                     : isDark
                                     ? "text-[#D99AA3]"
                                     : "text-[#B76E79]"
+=======
+                                      ? "text-red-400"
+                                      : "text-red-600"
+                                    : item.status.toLowerCase() ===
+                                      "paid"
+                                    ? isDark
+                                      ? "text-green-400"
+                                      : "text-green-600"
+                                    : isDark
+                                    ? "text-yellow-300"
+                                    : "text-yellow-700"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 }`}
                               >
                                 {item.status.toLowerCase() ===
@@ -2102,6 +2801,10 @@ export default function Withdrawal() {
                               </div>
                             )}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             {/* BEP20 */}
 
                             {item.bep20_address && (
@@ -2109,7 +2812,11 @@ export default function Withdrawal() {
                                 className={`mt-3 flex items-center justify-between rounded-xl border px-3 py-2 ${
                                   isDark
                                     ? "border-white/5 bg-black/30"
+<<<<<<< HEAD
                                     : "border-[#E3AAB2]/30 bg-white"
+=======
+                                    : "border-gray-200 bg-white"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 }`}
                               >
                                 <div className="flex min-w-0 items-center gap-2">
@@ -2117,8 +2824,13 @@ export default function Withdrawal() {
                                     size={14}
                                     className={
                                       isDark
+<<<<<<< HEAD
                                         ? "text-[#D99AA3]"
                                         : "text-[#B76E79]"
+=======
+                                        ? "text-gray-500"
+                                        : "text-gray-400"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                     }
                                   />
 
@@ -2135,6 +2847,10 @@ export default function Withdrawal() {
                                   </span>
                                 </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 <button
                                   type="button"
                                   onClick={() =>
@@ -2144,8 +2860,13 @@ export default function Withdrawal() {
                                   }
                                   className={`ml-3 shrink-0 rounded-lg p-2 transition ${
                                     isDark
+<<<<<<< HEAD
                                       ? "text-gray-400 hover:bg-[#B76E79]/10 hover:text-[#E3AAB2]"
                                       : "text-[#B76E79] hover:bg-[#FFE5E8] hover:text-[#8F4F5A]"
+=======
+                                      ? "text-gray-400 hover:bg-white/5 hover:text-white"
+                                      : "text-gray-500 hover:bg-gray-100 hover:text-gray-900"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                   }`}
                                   title="Copy BEP20 address"
                                 >
@@ -2156,6 +2877,10 @@ export default function Withdrawal() {
                               </div>
                             )}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             {/* PAYMENT REFERENCE */}
 
                             {item.payment_reference && (
@@ -2163,7 +2888,11 @@ export default function Withdrawal() {
                                 className={`mt-3 flex items-center justify-between rounded-xl border px-3 py-2 ${
                                   isDark
                                     ? "border-white/5 bg-black/30"
+<<<<<<< HEAD
                                     : "border-[#E3AAB2]/30 bg-white"
+=======
+                                    : "border-gray-200 bg-white"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 }`}
                               >
                                 <div className="flex min-w-0 items-center gap-2">
@@ -2190,6 +2919,10 @@ export default function Withdrawal() {
                                   </span>
                                 </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 <button
                                   type="button"
                                   onClick={() =>
@@ -2199,8 +2932,13 @@ export default function Withdrawal() {
                                   }
                                   className={`ml-3 shrink-0 rounded-lg p-2 transition ${
                                     isDark
+<<<<<<< HEAD
                                       ? "text-gray-400 hover:bg-[#B76E79]/10 hover:text-[#E3AAB2]"
                                       : "text-[#B76E79] hover:bg-[#FFE5E8] hover:text-[#8F4F5A]"
+=======
+                                      ? "text-gray-400 hover:bg-white/5 hover:text-white"
+                                      : "text-gray-500 hover:bg-gray-100 hover:text-gray-900"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                   }`}
                                   title="Copy payment reference"
                                 >
@@ -2221,6 +2959,10 @@ export default function Withdrawal() {
           </main>
         </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         {/* ======================================================
             GRADIENT
         ====================================================== */}
@@ -2230,10 +2972,17 @@ export default function Withdrawal() {
             .animated-gradient {
               background: linear-gradient(
                 90deg,
+<<<<<<< HEAD
                 #8F4F5A,
                 #B76E79,
                 #D99AA3,
                 #8F4F5A
+=======
+                #60a5fa,
+                #a78bfa,
+                #f472b6,
+                #60a5fa
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
               );
 
               background-size: 300% 300%;
@@ -2261,6 +3010,10 @@ export default function Withdrawal() {
   );
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 // ============================================================
 // INFO ITEM
 // ============================================================
@@ -2279,8 +3032,13 @@ function InfoItem({
       <div
         className={`mt-2 h-2 w-2 shrink-0 rounded-full ${
           isDark
+<<<<<<< HEAD
             ? "bg-[#D99AA3]"
             : "bg-[#B76E79]"
+=======
+            ? "bg-purple-400"
+            : "bg-purple-600"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         }`}
       />
 
@@ -2307,4 +3065,8 @@ function InfoItem({
       </div>
     </div>
   );
+<<<<<<< HEAD
 } 
+=======
+}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React, { useMemo, useState } from 'react';
 
 // import {
@@ -1814,6 +1815,8 @@
 
 
 
+=======
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 import React, { useMemo, useState } from 'react';
 
 import {
@@ -2684,7 +2687,11 @@ export function SignUp() {
   // =====================================================
 
   const inputClass =
+<<<<<<< HEAD
     'w-full bg-white/5 border-transparent focus:border-[#B76E79]/70 text-white placeholder:text-white/30 h-11 transition-all duration-300 pl-10 pr-3 focus:bg-white/10';
+=======
+    'w-full bg-white/5 border-transparent focus:border-white/20 text-white placeholder:text-white/30 h-11 transition-all duration-300 pl-10 pr-3 focus:bg-white/10';
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
 
   // =====================================================
@@ -2698,7 +2705,11 @@ export function SignUp() {
           BACKGROUND
       ================================================= */}
 
+<<<<<<< HEAD
       <div className="absolute inset-0 bg-gradient-to-b from-[#B76E79]/40 via-[#8F4F5A]/50 to-black" />
+=======
+      <div className="absolute inset-0 bg-gradient-to-b from-purple-500/40 via-purple-700/50 to-black" />
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
       {/* Noise */}
 
@@ -2715,10 +2726,17 @@ export function SignUp() {
 
       {/* Glow */}
 
+<<<<<<< HEAD
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120vh] h-[60vh] rounded-b-[50%] bg-[#D99AA3]/20 blur-[80px]" />
 
       <motion.div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[100vh] h-[60vh] rounded-b-full bg-[#FFE5E8]/20 blur-[60px]"
+=======
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120vh] h-[60vh] rounded-b-[50%] bg-purple-400/20 blur-[80px]" />
+
+      <motion.div
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[100vh] h-[60vh] rounded-b-full bg-purple-300/20 blur-[60px]"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         animate={{
           opacity: [
             0.15,
@@ -2739,7 +2757,11 @@ export function SignUp() {
       />
 
       <motion.div
+<<<<<<< HEAD
         className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[90vh] h-[90vh] rounded-t-full bg-[#B76E79]/20 blur-[60px]"
+=======
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[90vh] h-[90vh] rounded-t-full bg-purple-400/20 blur-[60px]"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         animate={{
           opacity: [
             0.3,
@@ -2805,7 +2827,11 @@ export function SignUp() {
             <div className="absolute -inset-[1px] rounded-2xl overflow-hidden">
 
               <motion.div
+<<<<<<< HEAD
                 className="absolute top-0 left-0 h-[2px] w-[50%] bg-gradient-to-r from-transparent via-[#D99AA3] to-transparent opacity-70"
+=======
+                className="absolute top-0 left-0 h-[2px] w-[50%] bg-gradient-to-r from-transparent via-white to-transparent opacity-70"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 animate={{
                   left: [
                     '-50%',
@@ -2820,7 +2846,11 @@ export function SignUp() {
               />
 
               <motion.div
+<<<<<<< HEAD
                 className="absolute bottom-0 right-0 h-[2px] w-[50%] bg-gradient-to-r from-transparent via-[#D99AA3] to-transparent opacity-70"
+=======
+                className="absolute bottom-0 right-0 h-[2px] w-[50%] bg-gradient-to-r from-transparent via-white to-transparent opacity-70"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 animate={{
                   right: [
                     '-50%',
@@ -2877,6 +2907,7 @@ export function SignUp() {
                     type: 'spring',
                     duration: 0.8,
                   }}
+<<<<<<< HEAD
                   className="mx-auto w-20 h-20 rounded-full border border-[#D99AA3]/30 flex items-center justify-center relative overflow-hidden"
                 >
 
@@ -2885,6 +2916,16 @@ export function SignUp() {
                   </span>
 
                   <div className="absolute inset-0 bg-gradient-to-br from-[#D99AA3]/15 to-transparent opacity-50" />
+=======
+                  className="mx-auto w-20 h-20 rounded-full border border-white/10 flex items-center justify-center relative overflow-hidden"
+                >
+
+                  <span className="text-lg font-bold bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70">
+                    APH
+                  </span>
+
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-50" />
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                 </motion.div>
 
@@ -2915,7 +2956,11 @@ export function SignUp() {
 
                 <div className="relative">
 
+<<<<<<< HEAD
                   <Gift className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#D99AA3]/70 z-10" />
+=======
+                  <Gift className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/40 z-10" />
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                   <Input
                     type="text"
@@ -3026,7 +3071,11 @@ export function SignUp() {
                       setError('');
                     }}
                     required
+<<<<<<< HEAD
                     className="w-full appearance-none bg-white/5 border border-transparent focus:border-[#B76E79]/70 text-white h-11 rounded-md pl-10 pr-3 text-sm outline-none transition-all duration-300 focus:bg-white/10"
+=======
+                    className="w-full appearance-none bg-white/5 border border-transparent focus:border-white/20 text-white h-11 rounded-md pl-10 pr-3 text-sm outline-none transition-all duration-300 focus:bg-white/10"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                   >
 
                     <option
@@ -3203,9 +3252,13 @@ export function SignUp() {
 
                 {password.length > 0 && (
                   <div className="space-y-2 px-0.5">
+<<<<<<< HEAD
 
                     <div className="h-1.5 w-full overflow-hidden rounded-full bg-white/10">
 
+=======
+                    <div className="h-1.5 w-full overflow-hidden rounded-full bg-white/10">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <motion.div
                         initial={false}
                         animate={{
@@ -3223,11 +3276,17 @@ export function SignUp() {
                             : 'bg-red-500'
                         }`}
                       />
+<<<<<<< HEAD
 
                     </div>
 
                     <div className="flex items-center justify-between gap-3">
 
+=======
+                    </div>
+
+                    <div className="flex items-center justify-between gap-3">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <p
                         className={`text-[11px] font-medium ${
                           isStrongPassword
@@ -3243,9 +3302,13 @@ export function SignUp() {
                       <p className="text-[10px] text-white/35">
                         8+ chars • A-Z • a-z • 0-9 • special
                       </p>
+<<<<<<< HEAD
 
                     </div>
 
+=======
+                    </div>
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                   </div>
                 )}
 
@@ -3363,9 +3426,15 @@ export function SignUp() {
                   className="w-full relative group/button mt-5 disabled:opacity-70 disabled:cursor-not-allowed"
                 >
 
+<<<<<<< HEAD
                   <div className="absolute inset-0 bg-[#B76E79]/30 rounded-lg blur-lg opacity-0 group-hover/button:opacity-70 transition-opacity duration-300" />
 
                   <div className="relative overflow-hidden bg-[#B76E79] hover:bg-[#8F4F5A] text-white font-medium h-11 rounded-lg flex items-center justify-center transition-colors duration-300">
+=======
+                  <div className="absolute inset-0 bg-white/10 rounded-lg blur-lg opacity-0 group-hover/button:opacity-70 transition-opacity duration-300" />
+
+                  <div className="relative overflow-hidden bg-white text-black font-medium h-11 rounded-lg flex items-center justify-center">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                     <AnimatePresence
                       mode="wait"
@@ -3387,7 +3456,11 @@ export function SignUp() {
                           className="flex items-center gap-2"
                         >
 
+<<<<<<< HEAD
                           <div className="w-4 h-4 border-2 border-white/70 border-t-transparent rounded-full animate-spin" />
+=======
+                          <div className="w-4 h-4 border-2 border-black/70 border-t-transparent rounded-full animate-spin" />
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                           <span className="text-sm">
                             Creating Account...
@@ -3441,11 +3514,19 @@ export function SignUp() {
                     className="relative inline-block group/signin"
                   >
 
+<<<<<<< HEAD
                     <span className="relative z-10 text-[#D99AA3] group-hover/signin:text-[#FFE5E8] transition-colors duration-300 font-medium">
                       Sign In
                     </span>
 
                     <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-[#D99AA3] group-hover/signin:w-full transition-all duration-300" />
+=======
+                    <span className="relative z-10 text-white group-hover/signin:text-white/70 transition-colors duration-300 font-medium">
+                      Sign In
+                    </span>
+
+                    <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white group-hover/signin:w-full transition-all duration-300" />
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                   </Link>
 
@@ -3532,13 +3613,21 @@ export function SignUp() {
 
                       {/* CUSTOMER ID */}
 
+<<<<<<< HEAD
                       <div className="rounded-xl border border-[#D99AA3]/30 bg-[#B76E79]/10 p-4">
+=======
+                      <div className="rounded-xl border border-purple-400/20 bg-purple-500/10 p-4">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                         <p className="text-white/50 text-xs">
                           Your Customer ID
                         </p>
 
+<<<<<<< HEAD
                         <p className="text-[#FFE5E8] text-2xl font-bold tracking-wider mt-2 break-all">
+=======
+                        <p className="text-white text-2xl font-bold tracking-wider mt-2 break-all">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                           {successData.customerId}
                         </p>
 
@@ -3584,7 +3673,11 @@ export function SignUp() {
                             }
                           )
                         }
+<<<<<<< HEAD
                         className="w-full h-11 rounded-lg bg-[#B76E79] hover:bg-[#8F4F5A] text-white text-sm font-medium flex items-center justify-center gap-2 transition-colors duration-300"
+=======
+                        className="w-full h-11 rounded-lg bg-white text-black text-sm font-medium flex items-center justify-center gap-2"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       >
 
                         Continue to Sign In

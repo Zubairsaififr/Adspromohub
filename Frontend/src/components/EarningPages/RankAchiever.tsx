@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import React, {
 //   useEffect,
 //   useState,
@@ -2322,6 +2323,8 @@
 
 
 
+=======
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 import React, {
   useEffect,
   useState,
@@ -2344,15 +2347,25 @@ import {
   CalendarDays,
   CircleDollarSign,
 } from "lucide-react";
+<<<<<<< HEAD
 
 import UserNavbar from "../UserDashboard/UserNavbar";
 
+=======
+import UserNavbar from "../UserDashboard/UserNavbar";
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 // ============================================================
 // API
 // ============================================================
 
 const API_URL = import.meta.env.VITE_API_URL;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 // ============================================================
 // TYPES
 // ============================================================
@@ -2389,6 +2402,10 @@ interface Fund {
   total_paid: number;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 interface RankData {
   success: boolean;
 
@@ -2403,6 +2420,10 @@ interface RankData {
   funds: Fund[];
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 interface HistoryItem {
   id: number;
 
@@ -2431,6 +2452,10 @@ interface HistoryItem {
   created_at: string;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 interface HistoryData {
   success: boolean;
 
@@ -2441,6 +2466,10 @@ interface HistoryData {
   history: HistoryItem[];
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 // ============================================================
 // ICONS
 // ============================================================
@@ -2450,6 +2479,7 @@ const rankIcons: Record<
   React.ReactNode
 > = {
   Emerald: <Briefcase size={24} />,
+<<<<<<< HEAD
   Sapphire: <Plane size={24} />,
   Topaz: <Car size={24} />,
   Amethyst: <Home size={24} />,
@@ -2457,6 +2487,21 @@ const rankIcons: Record<
   "Crown Jewel": <Crown size={24} />,
 };
 
+=======
+
+  Sapphire: <Plane size={24} />,
+
+  Topaz: <Car size={24} />,
+
+  Amethyst: <Home size={24} />,
+
+  Diamond: <Gem size={24} />,
+
+  "Crown Jewel": <Crown size={24} />,
+};
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 // ============================================================
 // FORMAT MONEY
 // ============================================================
@@ -2464,11 +2509,19 @@ const rankIcons: Record<
 const formatMoney = (
   amount: number | string
 ) => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   return `$${Number(
     amount || 0
   ).toFixed(2)}`;
 };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 // ============================================================
 // FORMAT DATE
 // ============================================================
@@ -2476,6 +2529,10 @@ const formatMoney = (
 const formatDate = (
   date: string | null
 ) => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   if (!date) {
     return "Not paid yet";
   }
@@ -2492,6 +2549,10 @@ const formatDate = (
   );
 };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 // ============================================================
 // MONTH NAME
 // ============================================================
@@ -2499,6 +2560,10 @@ const formatDate = (
 const getMonthName = (
   month: number
 ) => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   if (
     month < 1 ||
     month > 12
@@ -2518,16 +2583,28 @@ const getMonthName = (
   );
 };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 // ============================================================
 // COMPONENT
 // ============================================================
 
 export default function RankAchiever() {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   const [
     isDark,
     setIsDark,
   ] = useState(false);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   const [
     data,
     setData,
@@ -2535,6 +2612,10 @@ export default function RankAchiever() {
     null
   );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   const [
     history,
     setHistory,
@@ -2542,26 +2623,46 @@ export default function RankAchiever() {
     null
   );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   const [
     loading,
     setLoading,
   ] = useState(true);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   const [
     refreshing,
     setRefreshing,
   ] = useState(false);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   const [
     error,
     setError,
   ] = useState("");
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ==========================================================
   // THEME
   // ==========================================================
 
   useEffect(() => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     const savedTheme =
       localStorage.getItem(
         "theme"
@@ -2570,17 +2671,33 @@ export default function RankAchiever() {
     setIsDark(
       savedTheme === "dark"
     );
+<<<<<<< HEAD
   }, []);
 
   useEffect(() => {
+=======
+
+  }, []);
+
+
+  useEffect(() => {
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     localStorage.setItem(
       "theme",
       isDark
         ? "dark"
         : "light"
     );
+<<<<<<< HEAD
   }, [isDark]);
 
+=======
+
+  }, [isDark]);
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ==========================================================
   // FETCH STATUS + HISTORY
   // ==========================================================
@@ -2588,20 +2705,34 @@ export default function RankAchiever() {
   const fetchRankAchiever = async (
     isRefresh = false
   ) => {
+<<<<<<< HEAD
     try {
+=======
+
+    try {
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       if (isRefresh) {
         setRefreshing(true);
       } else {
         setLoading(true);
       }
 
+<<<<<<< HEAD
       setError("");
 
+=======
+
+      setError("");
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       const token =
         localStorage.getItem(
           "access_token"
         );
 
+<<<<<<< HEAD
       if (!token) {
         setError(
           "Please login again."
@@ -2609,6 +2740,19 @@ export default function RankAchiever() {
         return;
       }
 
+=======
+
+      if (!token) {
+
+        setError(
+          "Please login again."
+        );
+
+        return;
+      }
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       // ------------------------------------------------------
       // STATUS + HISTORY PARALLEL
       // ------------------------------------------------------
@@ -2617,6 +2761,10 @@ export default function RankAchiever() {
         statusResponse,
         historyResponse,
       ] = await Promise.all([
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         fetch(
           `${API_URL}/api/rank-achiever/status`,
           {
@@ -2646,8 +2794,15 @@ export default function RankAchiever() {
             },
           }
         ),
+<<<<<<< HEAD
       ]);
 
+=======
+
+      ]);
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       // ------------------------------------------------------
       // STATUS
       // ------------------------------------------------------
@@ -2655,13 +2810,23 @@ export default function RankAchiever() {
       const statusResult =
         await statusResponse.json();
 
+<<<<<<< HEAD
       if (!statusResponse.ok) {
+=======
+
+      if (!statusResponse.ok) {
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         throw new Error(
           statusResult?.detail ||
           "Failed to load Rank Achiever status."
         );
       }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       // ------------------------------------------------------
       // HISTORY
       // ------------------------------------------------------
@@ -2669,44 +2834,89 @@ export default function RankAchiever() {
       const historyResult =
         await historyResponse.json();
 
+<<<<<<< HEAD
       if (!historyResponse.ok) {
+=======
+
+      if (!historyResponse.ok) {
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         throw new Error(
           historyResult?.detail ||
           "Failed to load Rank Achiever history."
         );
       }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       setData(
         statusResult
       );
 
+<<<<<<< HEAD
       setHistory(
         historyResult
       );
     } catch (err: any) {
+=======
+
+      setHistory(
+        historyResult
+      );
+
+    } catch (err: any) {
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       console.error(
         "Rank Achiever Error:",
         err
       );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       setError(
         err?.message ||
         "Something went wrong."
       );
+<<<<<<< HEAD
     } finally {
       setLoading(false);
+=======
+
+    } finally {
+
+      setLoading(false);
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       setRefreshing(false);
     }
   };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ==========================================================
   // INITIAL LOAD
   // ==========================================================
 
   useEffect(() => {
+<<<<<<< HEAD
     fetchRankAchiever();
   }, []);
 
+=======
+
+    fetchRankAchiever();
+
+  }, []);
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ==========================================================
   // CALCULATED VALUES
   // ==========================================================
@@ -2717,12 +2927,20 @@ export default function RankAchiever() {
         fund.is_eligible
     ) || [];
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   const paidFunds =
     data?.funds.filter(
       (fund) =>
         fund.paid_this_month
     ) || [];
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   const availableMonthlyReward =
     eligibleFunds.reduce(
       (
@@ -2736,6 +2954,10 @@ export default function RankAchiever() {
       0
     );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   const paidThisMonthAmount =
     paidFunds.reduce(
       (
@@ -2749,12 +2971,17 @@ export default function RankAchiever() {
       0
     );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ==========================================================
   // UI
   // ==========================================================
 
   return (
     <>
+<<<<<<< HEAD
       <UserNavbar />
 
       <div
@@ -2786,6 +3013,47 @@ export default function RankAchiever() {
                         ? "text-[#D99AA3]"
                         : "text-[#B76E79]"
                     }`}
+=======
+    <UserNavbar/>
+      <div
+        className={`flex min-h-screen w-full ${isDark
+          ? "animated-gradient text-white"
+          : "bg-gray-50 text-gray-900"
+          }`}
+      >
+
+        <div
+          className="flex min-w-0 flex-1 flex-col"
+        >
+
+          <main
+            className={`flex-1 p-4 sm:p-6 lg:p-8 ${isDark
+              ? "animated-gradient"
+              : "bg-gray-50"
+              }`}
+          >
+
+            {/* =================================================
+              LOADING
+          ================================================= */}
+
+            {loading ? (
+
+              <div
+                className="flex min-h-[60vh] items-center justify-center"
+              >
+
+                <div
+                  className="text-center"
+                >
+
+                  <RefreshCw
+                    size={32}
+                    className={`mx-auto mb-4 animate-spin ${isDark
+                      ? "text-purple-400"
+                      : "text-purple-600"
+                      }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                   />
 
                   <p
@@ -2797,13 +3065,25 @@ export default function RankAchiever() {
                   >
                     Loading Rank Achiever...
                   </p>
+<<<<<<< HEAD
                 </div>
               </div>
             ) : error ? (
+=======
+
+                </div>
+
+              </div>
+
+
+            ) : error ? (
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
               /* ===============================================
                  ERROR
               =============================================== */
 
+<<<<<<< HEAD
               <div className="flex min-h-[60vh] items-center justify-center px-5">
                 <div
                   className={`w-full max-w-md rounded-3xl border p-8 text-center shadow-sm ${
@@ -2819,6 +3099,26 @@ export default function RankAchiever() {
                         : "bg-red-50"
                     }`}
                   >
+=======
+              <div
+                className="flex min-h-[60vh] items-center justify-center px-5"
+              >
+
+                <div
+                  className={`w-full max-w-md rounded-3xl border p-8 text-center shadow-sm ${isDark
+                    ? "border-red-500/20 bg-white/[0.04]"
+                    : "border-red-200 bg-white"
+                    }`}
+                >
+
+                  <div
+                    className={`mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full ${isDark
+                      ? "bg-red-500/10"
+                      : "bg-red-50"
+                      }`}
+                  >
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     <Trophy
                       className={
                         isDark
@@ -2826,6 +3126,7 @@ export default function RankAchiever() {
                           : "text-red-600"
                       }
                     />
+<<<<<<< HEAD
                   </div>
 
                   <h2
@@ -2834,24 +3135,49 @@ export default function RankAchiever() {
                         ? "text-white"
                         : "text-gray-900"
                     }`}
+=======
+
+                  </div>
+
+
+                  <h2
+                    className={`mb-2 text-xl font-semibold ${isDark
+                      ? "text-white"
+                      : "text-gray-900"
+                      }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                   >
                     Unable to load data
                   </h2>
 
+<<<<<<< HEAD
                   <p
                     className={`mb-6 text-sm ${
                       isDark
                         ? "text-gray-400"
                         : "text-gray-500"
                     }`}
+=======
+
+                  <p
+                    className={`mb-6 text-sm ${isDark
+                      ? "text-gray-400"
+                      : "text-gray-500"
+                      }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                   >
                     {error}
                   </p>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                   <button
                     onClick={() =>
                       fetchRankAchiever()
                     }
+<<<<<<< HEAD
                     className="rounded-xl bg-[#B76E79] px-5 py-3 text-sm font-medium text-white transition hover:bg-[#8F4F5A]"
                   >
                     Try Again
@@ -2859,10 +3185,25 @@ export default function RankAchiever() {
                 </div>
               </div>
             ) : data ? (
+=======
+                    className="rounded-xl bg-purple-600 px-5 py-3 text-sm font-medium text-white transition hover:bg-purple-500"
+                  >
+                    Try Again
+                  </button>
+
+                </div>
+
+              </div>
+
+
+            ) : data ? (
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
               /* ===============================================
                  DATA
               =============================================== */
 
+<<<<<<< HEAD
               <div className="mx-auto max-w-7xl">
                 {/* =============================================
                   HEADER
@@ -2871,10 +3212,31 @@ export default function RankAchiever() {
                 <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                   <div>
                     <div className="mb-2 flex items-center gap-2">
+=======
+              <div
+                className="mx-auto max-w-7xl"
+              >
+
+                {/* =============================================
+                  HEADER
+              ============================================= */}
+
+                <div
+                  className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between"
+                >
+
+                  <div>
+
+                    <div
+                      className="mb-2 flex items-center gap-2"
+                    >
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <Trophy
                         size={25}
                         className={
                           isDark
+<<<<<<< HEAD
                             ? "text-[#D99AA3]"
                             : "text-[#B76E79]"
                         }
@@ -2897,23 +3259,64 @@ export default function RankAchiever() {
                           ? "text-white"
                           : "text-gray-900"
                       }`}
+=======
+                            ? "text-purple-400"
+                            : "text-purple-600"
+                        }
+                      />
+
+
+                      <span
+                        className={`text-sm font-medium ${isDark
+                          ? "text-purple-400"
+                          : "text-purple-600"
+                          }`}
+                      >
+                        RANK ACHIEVER
+                      </span>
+
+                    </div>
+
+
+                    <h1
+                      className={`text-3xl font-bold tracking-tight sm:text-4xl ${isDark
+                        ? "text-white"
+                        : "text-gray-900"
+                        }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     >
                       Rank Achiever Funds
                     </h1>
 
+<<<<<<< HEAD
                     <p
                       className={`mt-2 text-sm sm:text-base ${
                         isDark
                           ? "text-gray-400"
                           : "text-gray-500"
                       }`}
+=======
+
+                    <p
+                      className={`mt-2 text-sm sm:text-base ${isDark
+                        ? "text-gray-400"
+                        : "text-gray-500"
+                        }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     >
                       Maintain your team and wallet
                       requirements to qualify for
                       monthly rewards.
                     </p>
+<<<<<<< HEAD
                   </div>
 
+=======
+
+                  </div>
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                   <button
                     onClick={() =>
                       fetchRankAchiever(
@@ -2921,12 +3324,21 @@ export default function RankAchiever() {
                       )
                     }
                     disabled={refreshing}
+<<<<<<< HEAD
                     className={`flex w-fit items-center gap-2 rounded-xl border px-4 py-3 text-sm transition ${
                       isDark
                         ? "border-white/10 bg-white/[0.05] text-gray-300 hover:bg-white/[0.08]"
                         : "border-gray-200 bg-white text-gray-700 hover:bg-gray-50"
                     }`}
                   >
+=======
+                    className={`flex w-fit items-center gap-2 rounded-xl border px-4 py-3 text-sm transition ${isDark
+                      ? "border-white/10 bg-white/[0.05] text-gray-300 hover:bg-white/[0.08]"
+                      : "border-gray-200 bg-white text-gray-700 hover:bg-gray-50"
+                      }`}
+                  >
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     <RefreshCw
                       size={17}
                       className={
@@ -2937,6 +3349,7 @@ export default function RankAchiever() {
                     />
 
                     Refresh
+<<<<<<< HEAD
                   </button>
                 </div>
 
@@ -2961,6 +3374,38 @@ export default function RankAchiever() {
                           : "bg-blue-100"
                       }`}
                     >
+=======
+
+                  </button>
+
+                </div>
+
+
+                {/* =============================================
+                  TOP STATS
+              ============================================= */}
+
+                <div
+                  className="mb-8 grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4"
+                >
+
+                  {/* TEAM */}
+
+                  <div
+                    className={`rounded-2xl border p-5 shadow-sm ${isDark
+                      ? "border-blue-500/20 bg-gradient-to-br from-blue-500/10 to-transparent"
+                      : "border-blue-200 bg-gradient-to-br from-blue-50 to-white"
+                      }`}
+                  >
+
+                    <div
+                      className={`mb-4 flex h-11 w-11 items-center justify-center rounded-xl ${isDark
+                        ? "bg-blue-500/15"
+                        : "bg-blue-100"
+                        }`}
+                    >
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <Users
                         size={22}
                         className={
@@ -2969,6 +3414,7 @@ export default function RankAchiever() {
                             : "text-blue-600"
                         }
                       />
+<<<<<<< HEAD
                     </div>
 
                     <p
@@ -2977,10 +3423,22 @@ export default function RankAchiever() {
                           ? "text-gray-400"
                           : "text-gray-500"
                       }`}
+=======
+
+                    </div>
+
+
+                    <p
+                      className={`text-sm ${isDark
+                        ? "text-gray-400"
+                        : "text-gray-500"
+                        }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     >
                       Total Team Members
                     </p>
 
+<<<<<<< HEAD
                     <h2
                       className={`mt-1 text-2xl font-bold ${
                         isDark
@@ -3008,6 +3466,37 @@ export default function RankAchiever() {
                           : "bg-emerald-100"
                       }`}
                     >
+=======
+
+                    <h2
+                      className={`mt-1 text-2xl font-bold ${isDark
+                        ? "text-white"
+                        : "text-gray-900"
+                        }`}
+                    >
+                      {data.team_members.toLocaleString()}
+                    </h2>
+
+                  </div>
+
+
+                  {/* WALLET */}
+
+                  <div
+                    className={`rounded-2xl border p-5 shadow-sm ${isDark
+                      ? "border-emerald-500/20 bg-gradient-to-br from-emerald-500/10 to-transparent"
+                      : "border-emerald-200 bg-gradient-to-br from-emerald-50 to-white"
+                      }`}
+                  >
+
+                    <div
+                      className={`mb-4 flex h-11 w-11 items-center justify-center rounded-xl ${isDark
+                        ? "bg-emerald-500/15"
+                        : "bg-emerald-100"
+                        }`}
+                    >
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <Wallet
                         size={22}
                         className={
@@ -3016,6 +3505,7 @@ export default function RankAchiever() {
                             : "text-emerald-600"
                         }
                       />
+<<<<<<< HEAD
                     </div>
 
                     <p
@@ -3024,21 +3514,42 @@ export default function RankAchiever() {
                           ? "text-gray-400"
                           : "text-gray-500"
                       }`}
+=======
+
+                    </div>
+
+
+                    <p
+                      className={`text-sm ${isDark
+                        ? "text-gray-400"
+                        : "text-gray-500"
+                        }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     >
                       Current Wallet Balance
                     </p>
 
+<<<<<<< HEAD
                     <h2
                       className={`mt-1 text-2xl font-bold ${
                         isDark
                           ? "text-white"
                           : "text-gray-900"
                       }`}
+=======
+
+                    <h2
+                      className={`mt-1 text-2xl font-bold ${isDark
+                        ? "text-white"
+                        : "text-gray-900"
+                        }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     >
                       {formatMoney(
                         data.wallet_balance
                       )}
                     </h2>
+<<<<<<< HEAD
                   </div>
 
                   {/* ELIGIBLE MONTHLY */}
@@ -3057,10 +3568,33 @@ export default function RankAchiever() {
                           : "bg-[#FFE5E8]"
                       }`}
                     >
+=======
+
+                  </div>
+
+
+                  {/* ELIGIBLE MONTHLY */}
+
+                  <div
+                    className={`rounded-2xl border p-5 shadow-sm ${isDark
+                      ? "border-purple-500/20 bg-gradient-to-br from-purple-500/10 to-transparent"
+                      : "border-purple-200 bg-gradient-to-br from-purple-50 to-white"
+                      }`}
+                  >
+
+                    <div
+                      className={`mb-4 flex h-11 w-11 items-center justify-center rounded-xl ${isDark
+                        ? "bg-purple-500/15"
+                        : "bg-purple-100"
+                        }`}
+                    >
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <CircleDollarSign
                         size={22}
                         className={
                           isDark
+<<<<<<< HEAD
                             ? "text-[#D99AA3]"
                             : "text-[#B76E79]"
                         }
@@ -3073,21 +3607,46 @@ export default function RankAchiever() {
                           ? "text-gray-400"
                           : "text-gray-500"
                       }`}
+=======
+                            ? "text-purple-400"
+                            : "text-purple-600"
+                        }
+                      />
+
+                    </div>
+
+
+                    <p
+                      className={`text-sm ${isDark
+                        ? "text-gray-400"
+                        : "text-gray-500"
+                        }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     >
                       Eligible Monthly Reward
                     </p>
 
+<<<<<<< HEAD
                     <h2
                       className={`mt-1 text-2xl font-bold ${
                         isDark
                           ? "text-white"
                           : "text-gray-900"
                       }`}
+=======
+
+                    <h2
+                      className={`mt-1 text-2xl font-bold ${isDark
+                        ? "text-white"
+                        : "text-gray-900"
+                        }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     >
                       {formatMoney(
                         availableMonthlyReward
                       )}
                     </h2>
+<<<<<<< HEAD
                   </div>
 
                   {/* TOTAL PAID */}
@@ -3106,6 +3665,28 @@ export default function RankAchiever() {
                           : "bg-yellow-100"
                       }`}
                     >
+=======
+
+                  </div>
+
+
+                  {/* TOTAL PAID */}
+
+                  <div
+                    className={`rounded-2xl border p-5 shadow-sm ${isDark
+                      ? "border-yellow-500/20 bg-gradient-to-br from-yellow-500/10 to-transparent"
+                      : "border-yellow-200 bg-gradient-to-br from-yellow-50 to-white"
+                      }`}
+                  >
+
+                    <div
+                      className={`mb-4 flex h-11 w-11 items-center justify-center rounded-xl ${isDark
+                        ? "bg-yellow-500/15"
+                        : "bg-yellow-100"
+                        }`}
+                    >
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <Trophy
                         size={22}
                         className={
@@ -3114,6 +3695,7 @@ export default function RankAchiever() {
                             : "text-yellow-600"
                         }
                       />
+<<<<<<< HEAD
                     </div>
 
                     <p
@@ -3122,21 +3704,42 @@ export default function RankAchiever() {
                           ? "text-gray-400"
                           : "text-gray-500"
                       }`}
+=======
+
+                    </div>
+
+
+                    <p
+                      className={`text-sm ${isDark
+                        ? "text-gray-400"
+                        : "text-gray-500"
+                        }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     >
                       Total Fund Paid
                     </p>
 
+<<<<<<< HEAD
                     <h2
                       className={`mt-1 text-2xl font-bold ${
                         isDark
                           ? "text-white"
                           : "text-gray-900"
                       }`}
+=======
+
+                    <h2
+                      className={`mt-1 text-2xl font-bold ${isDark
+                        ? "text-white"
+                        : "text-gray-900"
+                        }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     >
                       {formatMoney(
                         history?.total_paid || 0
                       )}
                     </h2>
+<<<<<<< HEAD
                   </div>
                 </div>
 
@@ -3154,10 +3757,40 @@ export default function RankAchiever() {
                   <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                     <div>
                       <div className="flex items-center gap-2">
+=======
+
+                  </div>
+
+                </div>
+
+
+                {/* =============================================
+                  CURRENT MONTH OVERVIEW
+              ============================================= */}
+
+                <div
+                  className={`mb-8 rounded-3xl border p-5 shadow-sm sm:p-7 ${isDark
+                    ? "border-white/10 bg-white/[0.035]"
+                    : "border-gray-200 bg-white"
+                    }`}
+                >
+
+                  <div
+                    className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between"
+                  >
+
+                    <div>
+
+                      <div
+                        className="flex items-center gap-2"
+                      >
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         <CalendarDays
                           size={20}
                           className={
                             isDark
+<<<<<<< HEAD
                               ? "text-[#D99AA3]"
                               : "text-[#B76E79]"
                           }
@@ -3169,12 +3802,26 @@ export default function RankAchiever() {
                               ? "text-white"
                               : "text-gray-900"
                           }`}
+=======
+                              ? "text-purple-400"
+                              : "text-purple-600"
+                          }
+                        />
+
+
+                        <h2
+                          className={`text-xl font-semibold ${isDark
+                            ? "text-white"
+                            : "text-gray-900"
+                            }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         >
                           {getMonthName(
                             data.payout_month
                           )}{" "}
                           {data.payout_year}
                         </h2>
+<<<<<<< HEAD
                       </div>
 
                       <p
@@ -3183,10 +3830,22 @@ export default function RankAchiever() {
                             ? "text-gray-500"
                             : "text-gray-500"
                         }`}
+=======
+
+                      </div>
+
+
+                      <p
+                        className={`mt-1 text-sm ${isDark
+                          ? "text-gray-500"
+                          : "text-gray-500"
+                          }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       >
                         Current monthly Rank Achiever
                         qualification.
                       </p>
+<<<<<<< HEAD
                     </div>
 
                     <div className="flex gap-3">
@@ -3203,11 +3862,34 @@ export default function RankAchiever() {
                               ? "text-emerald-400"
                               : "text-emerald-700"
                           }`}
+=======
+
+                    </div>
+
+
+                    <div
+                      className="flex gap-3"
+                    >
+
+                      <div
+                        className={`rounded-xl border px-4 py-2 ${isDark
+                          ? "border-emerald-500/20 bg-emerald-500/10"
+                          : "border-emerald-200 bg-emerald-50"
+                          }`}
+                      >
+
+                        <p
+                          className={`text-[11px] ${isDark
+                            ? "text-emerald-400"
+                            : "text-emerald-700"
+                            }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         >
                           Eligible Funds
                         </p>
 
                         <p
+<<<<<<< HEAD
                           className={`text-lg font-bold ${
                             isDark
                               ? "text-white"
@@ -3231,21 +3913,54 @@ export default function RankAchiever() {
                               ? "text-[#D99AA3]"
                               : "text-[#8F4F5A]"
                           }`}
+=======
+                          className={`text-lg font-bold ${isDark
+                            ? "text-white"
+                            : "text-gray-900"
+                            }`}
+                        >
+                          {eligibleFunds.length}
+                        </p>
+
+                      </div>
+
+
+                      <div
+                        className={`rounded-xl border px-4 py-2 ${isDark
+                          ? "border-purple-500/20 bg-purple-500/10"
+                          : "border-purple-200 bg-purple-50"
+                          }`}
+                      >
+
+                        <p
+                          className={`text-[11px] ${isDark
+                            ? "text-purple-400"
+                            : "text-purple-700"
+                            }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         >
                           Paid This Month
                         </p>
 
                         <p
+<<<<<<< HEAD
                           className={`text-lg font-bold ${
                             isDark
                               ? "text-white"
                               : "text-gray-900"
                           }`}
+=======
+                          className={`text-lg font-bold ${isDark
+                            ? "text-white"
+                            : "text-gray-900"
+                            }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         >
                           {formatMoney(
                             paidThisMonthAmount
                           )}
                         </p>
+<<<<<<< HEAD
                       </div>
                     </div>
                   </div>
@@ -3255,12 +3970,32 @@ export default function RankAchiever() {
                   <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
                     {data.funds.map(
                       (fund) => {
+=======
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+
+                  {/* FUND JOURNEY */}
+
+                  <div
+                    className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6"
+                  >
+
+                    {data.funds.map(
+                      (fund) => {
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         const completed =
                           fund.paid_this_month;
 
                         const eligible =
                           fund.is_eligible;
 
+<<<<<<< HEAD
                         return (
                           <div
                             key={fund.rank}
@@ -3292,22 +4027,66 @@ export default function RankAchiever() {
                                       ? "bg-[#B76E79]/15 text-[#D99AA3]"
                                       : "bg-[#FFE5E8] text-[#B76E79]"
                               }`}
+=======
+
+                        return (
+
+                          <div
+                            key={fund.rank}
+                            className={`rounded-2xl border p-4 text-center ${completed
+                              ? isDark
+                                ? "border-blue-500/30 bg-blue-500/10"
+                                : "border-blue-300 bg-blue-50"
+                              : eligible
+                                ? isDark
+                                  ? "border-emerald-500/30 bg-emerald-500/10"
+                                  : "border-emerald-300 bg-emerald-50"
+                                : isDark
+                                  ? "border-white/10 bg-white/[0.025]"
+                                  : "border-gray-200 bg-gray-50"
+                              }`}
+                          >
+
+                            <div
+                              className={`mx-auto mb-2 flex h-10 w-10 items-center justify-center rounded-xl ${completed
+                                ? isDark
+                                  ? "bg-blue-500/15 text-blue-400"
+                                  : "bg-blue-100 text-blue-600"
+                                : eligible
+                                  ? isDark
+                                    ? "bg-emerald-500/15 text-emerald-400"
+                                    : "bg-emerald-100 text-emerald-600"
+                                  : isDark
+                                    ? "bg-purple-500/10 text-purple-400"
+                                    : "bg-purple-100 text-purple-600"
+                                }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             >
                               {rankIcons[
                                 fund.rank
                               ]}
                             </div>
 
+<<<<<<< HEAD
                             <p
                               className={`text-xs font-medium ${
                                 isDark
                                   ? "text-gray-200"
                                   : "text-gray-800"
                               }`}
+=======
+
+                            <p
+                              className={`text-xs font-medium ${isDark
+                                ? "text-gray-200"
+                                : "text-gray-800"
+                                }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             >
                               {fund.rank}
                             </p>
 
+<<<<<<< HEAD
                             <p
                               className={`mt-1 text-[10px] ${
                                 completed
@@ -3322,6 +4101,22 @@ export default function RankAchiever() {
                                       ? "text-gray-500"
                                       : "text-gray-400"
                               }`}
+=======
+
+                            <p
+                              className={`mt-1 text-[10px] ${completed
+                                ? isDark
+                                  ? "text-blue-400"
+                                  : "text-blue-600"
+                                : eligible
+                                  ? isDark
+                                    ? "text-emerald-400"
+                                    : "text-emerald-600"
+                                  : isDark
+                                    ? "text-gray-500"
+                                    : "text-gray-400"
+                                }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             >
                               {completed
                                 ? "Paid"
@@ -3329,6 +4124,7 @@ export default function RankAchiever() {
                                   ? "Eligible"
                                   : "In Progress"}
                             </p>
+<<<<<<< HEAD
                           </div>
                         );
                       }
@@ -3348,25 +4144,77 @@ export default function RankAchiever() {
                           ? "text-white"
                           : "text-gray-900"
                       }`}
+=======
+
+                          </div>
+
+                        );
+                      }
+                    )}
+
+                  </div>
+
+                </div>
+
+
+                {/* =============================================
+                  MONTHLY FUNDS
+              ============================================= */}
+
+                <div>
+
+                  <div
+                    className="mb-5"
+                  >
+
+                    <h2
+                      className={`text-2xl font-bold ${isDark
+                        ? "text-white"
+                        : "text-gray-900"
+                        }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     >
                       Monthly Funds
                     </h2>
 
+<<<<<<< HEAD
                     <p
                       className={`mt-1 text-sm ${
                         isDark
                           ? "text-gray-500"
                           : "text-gray-500"
                       }`}
+=======
+
+                    <p
+                      className={`mt-1 text-sm ${isDark
+                        ? "text-gray-500"
+                        : "text-gray-500"
+                        }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     >
                       Maintain both the required team
                       size and Income Wallet balance.
                     </p>
+<<<<<<< HEAD
                   </div>
 
                   <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
                     {data.funds.map(
                       (fund) => {
+=======
+
+                  </div>
+
+
+                  <div
+                    className="grid grid-cols-1 gap-5 lg:grid-cols-2"
+                  >
+
+                    {data.funds.map(
+                      (fund) => {
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         const teamProgress =
                           Math.min(
                             (
@@ -3376,6 +4224,10 @@ export default function RankAchiever() {
                             100
                           );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         const walletProgress =
                           Math.min(
                             (
@@ -3385,6 +4237,7 @@ export default function RankAchiever() {
                             100
                           );
 
+<<<<<<< HEAD
                         return (
                           <div
                             key={fund.rank}
@@ -3435,10 +4288,69 @@ export default function RankAchiever() {
                                         ? "text-white"
                                         : "text-gray-900"
                                     }`}
+=======
+
+                        return (
+
+                          <div
+                            key={fund.rank}
+                            className={`overflow-hidden rounded-3xl border p-6 shadow-sm ${fund.paid_this_month
+                              ? isDark
+                                ? "border-blue-500/30 bg-gradient-to-br from-blue-500/10 via-white/[0.03] to-transparent"
+                                : "border-blue-300 bg-gradient-to-br from-blue-50 via-white to-white"
+                              : fund.is_eligible
+                                ? isDark
+                                  ? "border-emerald-500/30 bg-gradient-to-br from-emerald-500/10 via-white/[0.03] to-transparent"
+                                  : "border-emerald-300 bg-gradient-to-br from-emerald-50 via-white to-white"
+                                : isDark
+                                  ? "border-white/10 bg-white/[0.025]"
+                                  : "border-gray-200 bg-white"
+                              }`}
+                          >
+
+                            {/* HEADER */}
+
+                            <div
+                              className="mb-6 flex items-start justify-between gap-4"
+                            >
+
+                              <div
+                                className="flex items-center gap-4"
+                              >
+
+                                <div
+                                  className={`flex h-14 w-14 items-center justify-center rounded-2xl ${fund.paid_this_month
+                                    ? isDark
+                                      ? "bg-blue-500/15 text-blue-400"
+                                      : "bg-blue-100 text-blue-600"
+                                    : fund.is_eligible
+                                      ? isDark
+                                        ? "bg-emerald-500/15 text-emerald-400"
+                                        : "bg-emerald-100 text-emerald-600"
+                                      : isDark
+                                        ? "bg-purple-500/10 text-purple-400"
+                                        : "bg-purple-100 text-purple-600"
+                                    }`}
+                                >
+                                  {rankIcons[
+                                    fund.rank
+                                  ]}
+                                </div>
+
+
+                                <div>
+
+                                  <h3
+                                    className={`text-xl font-bold ${isDark
+                                      ? "text-white"
+                                      : "text-gray-900"
+                                      }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                   >
                                     {fund.fund_type}
                                   </h3>
 
+<<<<<<< HEAD
                                   <p
                                     className={`mt-1 text-sm ${
                                       isDark
@@ -3510,10 +4422,102 @@ export default function RankAchiever() {
                                     ? "text-gray-500"
                                     : "text-gray-400"
                                 }`}
+=======
+
+                                  <p
+                                    className={`mt-1 text-sm ${isDark
+                                      ? "text-gray-500"
+                                      : "text-gray-500"
+                                      }`}
+                                  >
+                                    {fund.rank}
+                                  </p>
+
+                                </div>
+
+                              </div>
+
+
+                              {/* STATUS */}
+
+                              {fund.paid_this_month ? (
+
+                                <div
+                                  className={`flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium ${isDark
+                                    ? "border-blue-500/20 bg-blue-500/10 text-blue-400"
+                                    : "border-blue-200 bg-blue-50 text-blue-700"
+                                    }`}
+                                >
+
+                                  <CheckCircle2
+                                    size={14}
+                                  />
+
+                                  Paid
+
+                                </div>
+
+
+                              ) : fund.is_eligible ? (
+
+                                <div
+                                  className={`flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium ${isDark
+                                    ? "border-emerald-500/20 bg-emerald-500/10 text-emerald-400"
+                                    : "border-emerald-200 bg-emerald-50 text-emerald-700"
+                                    }`}
+                                >
+
+                                  <CheckCircle2
+                                    size={14}
+                                  />
+
+                                  Eligible
+
+                                </div>
+
+
+                              ) : (
+
+                                <div
+                                  className={`flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-xs font-medium ${isDark
+                                    ? "border-yellow-500/20 bg-yellow-500/10 text-yellow-400"
+                                    : "border-yellow-200 bg-yellow-50 text-yellow-700"
+                                    }`}
+                                >
+
+                                  <Clock
+                                    size={14}
+                                  />
+
+                                  In Progress
+
+                                </div>
+
+                              )}
+
+                            </div>
+
+
+                            {/* MONTHLY REWARD */}
+
+                            <div
+                              className={`mb-6 rounded-2xl border p-5 ${isDark
+                                ? "border-white/10 bg-black/20"
+                                : "border-gray-200 bg-gray-50"
+                                }`}
+                            >
+
+                              <p
+                                className={`text-xs uppercase tracking-wider ${isDark
+                                  ? "text-gray-500"
+                                  : "text-gray-400"
+                                  }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                               >
                                 Monthly Reward
                               </p>
 
+<<<<<<< HEAD
                               <div className="mt-1">
                                 <span
                                   className={`text-3xl font-bold ${
@@ -3521,12 +4525,25 @@ export default function RankAchiever() {
                                       ? "text-white"
                                       : "text-gray-900"
                                   }`}
+=======
+
+                              <div
+                                className="mt-1"
+                              >
+
+                                <span
+                                  className={`text-3xl font-bold ${isDark
+                                    ? "text-white"
+                                    : "text-gray-900"
+                                    }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 >
                                   {formatMoney(
                                     fund.monthly_amount
                                   )}
                                 </span>
 
+<<<<<<< HEAD
                                 <span
                                   className={`ml-2 text-sm ${
                                     isDark
@@ -3539,13 +4556,45 @@ export default function RankAchiever() {
                               </div>
                             </div>
 
+=======
+
+                                <span
+                                  className={`ml-2 text-sm ${isDark
+                                    ? "text-gray-500"
+                                    : "text-gray-400"
+                                    }`}
+                                >
+                                  / month
+                                </span>
+
+                              </div>
+
+                            </div>
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             {/* =================================
                               TEAM REQUIREMENT
                           ================================= */}
 
+<<<<<<< HEAD
                             <div className="mb-5">
                               <div className="mb-2 flex items-center justify-between text-sm">
                                 <div className="flex items-center gap-2">
+=======
+                            <div
+                              className="mb-5"
+                            >
+
+                              <div
+                                className="mb-2 flex items-center justify-between text-sm"
+                              >
+
+                                <div
+                                  className="flex items-center gap-2"
+                                >
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                   <Users
                                     size={16}
                                     className={
@@ -3559,6 +4608,10 @@ export default function RankAchiever() {
                                     }
                                   />
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                   <span
                                     className={
                                       isDark
@@ -3568,8 +4621,15 @@ export default function RankAchiever() {
                                   >
                                     Team Members
                                   </span>
+<<<<<<< HEAD
                                 </div>
 
+=======
+
+                                </div>
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 <span
                                   className={
                                     fund.team_requirement_met
@@ -3585,6 +4645,7 @@ export default function RankAchiever() {
                                   {" / "}
                                   {fund.required_team_members.toLocaleString()}
                                 </span>
+<<<<<<< HEAD
                               </div>
 
                               <div
@@ -3602,21 +4663,60 @@ export default function RankAchiever() {
                                         ? "bg-[#B76E79]"
                                         : "bg-[#B76E79]"
                                   }`}
+=======
+
+                              </div>
+
+
+                              <div
+                                className={`h-2 overflow-hidden rounded-full ${isDark
+                                  ? "bg-white/5"
+                                  : "bg-gray-200"
+                                  }`}
+                              >
+
+                                <div
+                                  className={`h-full rounded-full transition-all ${fund.team_requirement_met
+                                    ? "bg-emerald-500"
+                                    : "bg-purple-500"
+                                    }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                   style={{
                                     width:
                                       `${teamProgress}%`,
                                   }}
                                 />
+<<<<<<< HEAD
                               </div>
                             </div>
 
+=======
+
+                              </div>
+
+                            </div>
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             {/* =================================
                               WALLET REQUIREMENT
                           ================================= */}
 
                             <div>
+<<<<<<< HEAD
                               <div className="mb-2 flex items-center justify-between text-sm">
                                 <div className="flex items-center gap-2">
+=======
+
+                              <div
+                                className="mb-2 flex items-center justify-between text-sm"
+                              >
+
+                                <div
+                                  className="flex items-center gap-2"
+                                >
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                   <Wallet
                                     size={16}
                                     className={
@@ -3630,6 +4730,10 @@ export default function RankAchiever() {
                                     }
                                   />
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                   <span
                                     className={
                                       isDark
@@ -3639,8 +4743,15 @@ export default function RankAchiever() {
                                   >
                                     Wallet Maintenance
                                   </span>
+<<<<<<< HEAD
                                 </div>
 
+=======
+
+                                </div>
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 <span
                                   className={
                                     fund.wallet_maintenance_met
@@ -3660,6 +4771,7 @@ export default function RankAchiever() {
                                     fund.required_wallet_balance
                                   )}
                                 </span>
+<<<<<<< HEAD
                               </div>
 
                               <div
@@ -3677,18 +4789,46 @@ export default function RankAchiever() {
                                         ? "bg-[#B76E79]"
                                         : "bg-[#B76E79]"
                                   }`}
+=======
+
+                              </div>
+
+
+                              <div
+                                className={`h-2 overflow-hidden rounded-full ${isDark
+                                  ? "bg-white/5"
+                                  : "bg-gray-200"
+                                  }`}
+                              >
+
+                                <div
+                                  className={`h-full rounded-full transition-all ${fund.wallet_maintenance_met
+                                    ? "bg-emerald-500"
+                                    : "bg-purple-500"
+                                    }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                   style={{
                                     width:
                                       `${walletProgress}%`,
                                   }}
                                 />
+<<<<<<< HEAD
                               </div>
                             </div>
 
+=======
+
+                              </div>
+
+                            </div>
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             {/* =================================
                               REQUIREMENT CHECKS
                           ================================= */}
 
+<<<<<<< HEAD
                             <div className="mt-6 grid grid-cols-2 gap-3">
                               <div
                                 className={`rounded-xl border p-3 ${
@@ -3703,6 +4843,29 @@ export default function RankAchiever() {
                               >
                                 <div className="flex items-center gap-2">
                                   {fund.team_requirement_met ? (
+=======
+                            <div
+                              className="mt-6 grid grid-cols-2 gap-3"
+                            >
+
+                              <div
+                                className={`rounded-xl border p-3 ${fund.team_requirement_met
+                                  ? isDark
+                                    ? "border-emerald-500/20 bg-emerald-500/10"
+                                    : "border-emerald-200 bg-emerald-50"
+                                  : isDark
+                                    ? "border-white/10 bg-white/[0.03]"
+                                    : "border-gray-200 bg-gray-50"
+                                  }`}
+                              >
+
+                                <div
+                                  className="flex items-center gap-2"
+                                >
+
+                                  {fund.team_requirement_met ? (
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                     <CheckCircle2
                                       size={16}
                                       className={
@@ -3711,7 +4874,13 @@ export default function RankAchiever() {
                                           : "text-emerald-600"
                                       }
                                     />
+<<<<<<< HEAD
                                   ) : (
+=======
+
+                                  ) : (
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                     <Clock
                                       size={16}
                                       className={
@@ -3720,6 +4889,7 @@ export default function RankAchiever() {
                                           : "text-gray-400"
                                       }
                                     />
+<<<<<<< HEAD
                                   )}
 
                                   <span
@@ -3751,6 +4921,47 @@ export default function RankAchiever() {
                               >
                                 <div className="flex items-center gap-2">
                                   {fund.wallet_maintenance_met ? (
+=======
+
+                                  )}
+
+
+                                  <span
+                                    className={`text-xs ${fund.team_requirement_met
+                                      ? isDark
+                                        ? "text-emerald-300"
+                                        : "text-emerald-700"
+                                      : isDark
+                                        ? "text-gray-400"
+                                        : "text-gray-500"
+                                      }`}
+                                  >
+                                    Team Maintain
+                                  </span>
+
+                                </div>
+
+                              </div>
+
+
+                              <div
+                                className={`rounded-xl border p-3 ${fund.wallet_maintenance_met
+                                  ? isDark
+                                    ? "border-emerald-500/20 bg-emerald-500/10"
+                                    : "border-emerald-200 bg-emerald-50"
+                                  : isDark
+                                    ? "border-white/10 bg-white/[0.03]"
+                                    : "border-gray-200 bg-gray-50"
+                                  }`}
+                              >
+
+                                <div
+                                  className="flex items-center gap-2"
+                                >
+
+                                  {fund.wallet_maintenance_met ? (
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                     <CheckCircle2
                                       size={16}
                                       className={
@@ -3759,7 +4970,13 @@ export default function RankAchiever() {
                                           : "text-emerald-600"
                                       }
                                     />
+<<<<<<< HEAD
                                   ) : (
+=======
+
+                                  ) : (
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                     <Clock
                                       size={16}
                                       className={
@@ -3768,6 +4985,7 @@ export default function RankAchiever() {
                                           : "text-gray-400"
                                       }
                                     />
+<<<<<<< HEAD
                                   )}
 
                                   <span
@@ -3787,11 +5005,38 @@ export default function RankAchiever() {
                               </div>
                             </div>
 
+=======
+
+                                  )}
+
+
+                                  <span
+                                    className={`text-xs ${fund.wallet_maintenance_met
+                                      ? isDark
+                                        ? "text-emerald-300"
+                                        : "text-emerald-700"
+                                      : isDark
+                                        ? "text-gray-400"
+                                        : "text-gray-500"
+                                      }`}
+                                  >
+                                    Wallet Maintain
+                                  </span>
+
+                                </div>
+
+                              </div>
+
+                            </div>
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             {/* =================================
                               STATUS MESSAGE
                           ================================= */}
 
                             <div
+<<<<<<< HEAD
                               className={`mt-5 rounded-xl px-4 py-3 text-sm ${
                                 fund.paid_this_month
                                   ? isDark
@@ -3808,6 +5053,28 @@ export default function RankAchiever() {
                             >
                               {fund.paid_this_month ? (
                                 <div className="flex items-center gap-2">
+=======
+                              className={`mt-5 rounded-xl px-4 py-3 text-sm ${fund.paid_this_month
+                                ? isDark
+                                  ? "bg-blue-500/10 text-blue-300"
+                                  : "bg-blue-50 text-blue-700"
+                                : fund.is_eligible
+                                  ? isDark
+                                    ? "bg-emerald-500/10 text-emerald-300"
+                                    : "bg-emerald-50 text-emerald-700"
+                                  : isDark
+                                    ? "bg-white/[0.03] text-gray-500"
+                                    : "bg-gray-50 text-gray-500"
+                                }`}
+                            >
+
+                              {fund.paid_this_month ? (
+
+                                <div
+                                  className="flex items-center gap-2"
+                                >
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                   <CheckCircle2
                                     size={16}
                                   />
@@ -3817,12 +5084,27 @@ export default function RankAchiever() {
                                     paid for{" "}
                                     {getMonthName(
                                       data.payout_month
+<<<<<<< HEAD
                                     )}
                                     .
                                   </span>
                                 </div>
                               ) : fund.is_eligible ? (
                                 <div className="flex items-center gap-2">
+=======
+                                    )}.
+                                  </span>
+
+                                </div>
+
+
+                              ) : fund.is_eligible ? (
+
+                                <div
+                                  className="flex items-center gap-2"
+                                >
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                   <CheckCircle2
                                     size={16}
                                   />
@@ -3834,9 +5116,22 @@ export default function RankAchiever() {
                                     eligible for monthly
                                     payout.
                                   </span>
+<<<<<<< HEAD
                                 </div>
                               ) : (
                                 <div className="flex items-center gap-2">
+=======
+
+                                </div>
+
+
+                              ) : (
+
+                                <div
+                                  className="flex items-center gap-2"
+                                >
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                   <Clock
                                     size={16}
                                   />
@@ -3847,14 +5142,26 @@ export default function RankAchiever() {
                                     qualify for this monthly
                                     fund.
                                   </span>
+<<<<<<< HEAD
                                 </div>
                               )}
                             </div>
 
+=======
+
+                                </div>
+
+                              )}
+
+                            </div>
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             {/* =================================
                               PAYOUT INFORMATION
                           ================================= */}
 
+<<<<<<< HEAD
                             <div className="mt-5 grid grid-cols-2 gap-3">
                               <div
                                 className={`rounded-xl border p-3 ${
@@ -3869,21 +5176,49 @@ export default function RankAchiever() {
                                       ? "text-gray-600"
                                       : "text-gray-400"
                                   }`}
+=======
+                            <div
+                              className="mt-5 grid grid-cols-2 gap-3"
+                            >
+
+                              <div
+                                className={`rounded-xl border p-3 ${isDark
+                                  ? "border-white/5 bg-black/20"
+                                  : "border-gray-200 bg-gray-50"
+                                  }`}
+                              >
+
+                                <p
+                                  className={`text-[11px] ${isDark
+                                    ? "text-gray-600"
+                                    : "text-gray-400"
+                                    }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 >
                                   Last Payout
                                 </p>
 
+<<<<<<< HEAD
                                 <p
                                   className={`mt-1 text-xs ${
                                     isDark
                                       ? "text-gray-400"
                                       : "text-gray-600"
                                   }`}
+=======
+
+                                <p
+                                  className={`mt-1 text-xs ${isDark
+                                    ? "text-gray-400"
+                                    : "text-gray-600"
+                                    }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 >
                                   {formatDate(
                                     fund.last_payout_date
                                   )}
                                 </p>
+<<<<<<< HEAD
                               </div>
 
                               <div
@@ -3899,21 +5234,49 @@ export default function RankAchiever() {
                                       ? "text-gray-600"
                                       : "text-gray-400"
                                   }`}
+=======
+
+                              </div>
+
+
+                              <div
+                                className={`rounded-xl border p-3 ${isDark
+                                  ? "border-white/5 bg-black/20"
+                                  : "border-gray-200 bg-gray-50"
+                                  }`}
+                              >
+
+                                <p
+                                  className={`text-[11px] ${isDark
+                                    ? "text-gray-600"
+                                    : "text-gray-400"
+                                    }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 >
                                   Total Paid
                                 </p>
 
+<<<<<<< HEAD
                                 <p
                                   className={`mt-1 text-sm font-semibold ${
                                     isDark
                                       ? "text-gray-300"
                                       : "text-gray-800"
                                   }`}
+=======
+
+                                <p
+                                  className={`mt-1 text-sm font-semibold ${isDark
+                                    ? "text-gray-300"
+                                    : "text-gray-800"
+                                    }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 >
                                   {formatMoney(
                                     fund.total_paid
                                   )}
                                 </p>
+<<<<<<< HEAD
                               </div>
                             </div>
                           </div>
@@ -3943,10 +5306,53 @@ export default function RankAchiever() {
                   >
                     <div>
                       <div className="flex items-center gap-2">
+=======
+
+                              </div>
+
+                            </div>
+
+                          </div>
+
+                        );
+                      }
+                    )}
+
+                  </div>
+
+                </div>
+
+
+                {/* =============================================
+                  PAYOUT HISTORY
+              ============================================= */}
+
+                <div
+                  className={`mt-8 overflow-hidden rounded-3xl border shadow-sm ${isDark
+                    ? "border-white/10 bg-white/[0.035]"
+                    : "border-gray-200 bg-white"
+                    }`}
+                >
+
+                  <div
+                    className={`flex items-center justify-between border-b p-5 sm:p-6 ${isDark
+                      ? "border-white/10"
+                      : "border-gray-200"
+                      }`}
+                  >
+
+                    <div>
+
+                      <div
+                        className="flex items-center gap-2"
+                      >
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         <History
                           size={20}
                           className={
                             isDark
+<<<<<<< HEAD
                               ? "text-[#D99AA3]"
                               : "text-[#B76E79]"
                           }
@@ -3969,10 +5375,36 @@ export default function RankAchiever() {
                             ? "text-gray-500"
                             : "text-gray-500"
                         }`}
+=======
+                              ? "text-purple-400"
+                              : "text-purple-600"
+                          }
+                        />
+
+
+                        <h2
+                          className={`text-xl font-bold ${isDark
+                            ? "text-white"
+                            : "text-gray-900"
+                            }`}
+                        >
+                          Payout History
+                        </h2>
+
+                      </div>
+
+
+                      <p
+                        className={`mt-1 text-sm ${isDark
+                          ? "text-gray-500"
+                          : "text-gray-500"
+                          }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       >
                         Your credited Rank Achiever
                         monthly rewards.
                       </p>
+<<<<<<< HEAD
                     </div>
 
                     <div className="text-right">
@@ -3982,21 +5414,46 @@ export default function RankAchiever() {
                             ? "text-gray-500"
                             : "text-gray-400"
                         }`}
+=======
+
+                    </div>
+
+
+                    <div
+                      className="text-right"
+                    >
+
+                      <p
+                        className={`text-xs ${isDark
+                          ? "text-gray-500"
+                          : "text-gray-400"
+                          }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       >
                         Total Paid
                       </p>
 
+<<<<<<< HEAD
                       <p
                         className={`text-lg font-bold ${
                           isDark
                             ? "text-emerald-400"
                             : "text-emerald-600"
                         }`}
+=======
+
+                      <p
+                        className={`text-lg font-bold ${isDark
+                          ? "text-emerald-400"
+                          : "text-emerald-600"
+                          }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       >
                         {formatMoney(
                           history?.total_paid || 0
                         )}
                       </p>
+<<<<<<< HEAD
                     </div>
                   </div>
 
@@ -4010,6 +5467,28 @@ export default function RankAchiever() {
                             : "bg-gray-100"
                         }`}
                       >
+=======
+
+                    </div>
+
+                  </div>
+
+
+                  {!history ||
+                    history.history.length === 0 ? (
+
+                    <div
+                      className="p-10 text-center"
+                    >
+
+                      <div
+                        className={`mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full ${isDark
+                          ? "bg-white/5"
+                          : "bg-gray-100"
+                          }`}
+                      >
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         <History
                           size={24}
                           className={
@@ -4018,6 +5497,7 @@ export default function RankAchiever() {
                               : "text-gray-400"
                           }
                         />
+<<<<<<< HEAD
                       </div>
 
                       <p
@@ -4026,25 +5506,64 @@ export default function RankAchiever() {
                             ? "text-gray-300"
                             : "text-gray-700"
                         }`}
+=======
+
+                      </div>
+
+
+                      <p
+                        className={`font-medium ${isDark
+                          ? "text-gray-300"
+                          : "text-gray-700"
+                          }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       >
                         No payouts yet
                       </p>
 
+<<<<<<< HEAD
                       <p
                         className={`mt-1 text-sm ${
                           isDark
                             ? "text-gray-500"
                             : "text-gray-500"
                         }`}
+=======
+
+                      <p
+                        className={`mt-1 text-sm ${isDark
+                          ? "text-gray-500"
+                          : "text-gray-500"
+                          }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       >
                         Your credited Rank Achiever
                         rewards will appear here.
                       </p>
+<<<<<<< HEAD
                     </div>
                   ) : (
                     <div className="overflow-x-auto">
                       <table className="w-full min-w-[900px]">
                         <thead>
+=======
+
+                    </div>
+
+
+                  ) : (
+
+                    <div
+                      className="overflow-x-auto"
+                    >
+
+                      <table
+                        className="w-full min-w-[900px]"
+                      >
+
+                        <thead>
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                           <tr
                             className={
                               isDark
@@ -4052,6 +5571,10 @@ export default function RankAchiever() {
                                 : "bg-gray-50"
                             }
                           >
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             <th className="px-5 py-4 text-left text-xs font-medium text-gray-500">
                               Fund
                             </th>
@@ -4079,6 +5602,7 @@ export default function RankAchiever() {
                             <th className="px-5 py-4 text-left text-xs font-medium text-gray-500">
                               Status
                             </th>
+<<<<<<< HEAD
                           </tr>
                         </thead>
 
@@ -4099,48 +5623,110 @@ export default function RankAchiever() {
                                       ? "text-gray-200"
                                       : "text-gray-800"
                                   }`}
+=======
+
+                          </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                          {history.history.map(
+                            (item) => (
+
+                              <tr
+                                key={item.id}
+                                className={`border-t ${isDark
+                                  ? "border-white/5"
+                                  : "border-gray-100"
+                                  }`}
+                              >
+
+                                <td
+                                  className={`px-5 py-4 text-sm font-medium ${isDark
+                                    ? "text-gray-200"
+                                    : "text-gray-800"
+                                    }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 >
                                   {item.fund_type}
                                 </td>
 
+<<<<<<< HEAD
                                 <td
                                   className={`px-5 py-4 text-sm ${
                                     isDark
                                       ? "text-gray-400"
                                       : "text-gray-600"
                                   }`}
+=======
+
+                                <td
+                                  className={`px-5 py-4 text-sm ${isDark
+                                    ? "text-gray-400"
+                                    : "text-gray-600"
+                                    }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 >
                                   {item.rank_name}
                                 </td>
 
+<<<<<<< HEAD
                                 <td
                                   className={`px-5 py-4 text-sm ${
                                     isDark
                                       ? "text-gray-400"
                                       : "text-gray-600"
                                   }`}
+=======
+
+                                <td
+                                  className={`px-5 py-4 text-sm ${isDark
+                                    ? "text-gray-400"
+                                    : "text-gray-600"
+                                    }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 >
                                   {item.team_members.toLocaleString()}
                                 </td>
 
+<<<<<<< HEAD
                                 <td
                                   className={`px-5 py-4 text-sm ${
                                     isDark
                                       ? "text-gray-400"
                                       : "text-gray-600"
                                   }`}
+=======
+
+                                <td
+                                  className={`px-5 py-4 text-sm ${isDark
+                                    ? "text-gray-400"
+                                    : "text-gray-600"
+                                    }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 >
                                   {formatMoney(
                                     item.wallet_balance
                                   )}
                                 </td>
 
+<<<<<<< HEAD
                                 <td
                                   className={`px-5 py-4 text-sm ${
                                     isDark
                                       ? "text-gray-400"
                                       : "text-gray-600"
                                   }`}
+=======
+
+                                <td
+                                  className={`px-5 py-4 text-sm ${isDark
+                                    ? "text-gray-400"
+                                    : "text-gray-600"
+                                    }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 >
                                   {getMonthName(
                                     item.payout_month
@@ -4148,18 +5734,28 @@ export default function RankAchiever() {
                                   {item.payout_year}
                                 </td>
 
+<<<<<<< HEAD
                                 <td
                                   className={`px-5 py-4 text-sm font-semibold ${
                                     isDark
                                       ? "text-emerald-400"
                                       : "text-emerald-600"
                                   }`}
+=======
+
+                                <td
+                                  className={`px-5 py-4 text-sm font-semibold ${isDark
+                                    ? "text-emerald-400"
+                                    : "text-emerald-600"
+                                    }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 >
                                   {formatMoney(
                                     item.amount
                                   )}
                                 </td>
 
+<<<<<<< HEAD
                                 <td className="px-5 py-4">
                                   <span
                                     className={`rounded-full px-2.5 py-1 text-xs font-medium ${
@@ -4204,10 +5800,72 @@ export default function RankAchiever() {
                           : "bg-[#FFE5E8]"
                       }`}
                     >
+=======
+
+                                <td
+                                  className="px-5 py-4"
+                                >
+
+                                  <span
+                                    className={`rounded-full px-2.5 py-1 text-xs font-medium ${item.status ===
+                                      "credited"
+                                      ? isDark
+                                        ? "bg-emerald-500/10 text-emerald-400"
+                                        : "bg-emerald-50 text-emerald-700"
+                                      : isDark
+                                        ? "bg-gray-500/10 text-gray-400"
+                                        : "bg-gray-100 text-gray-600"
+                                      }`}
+                                  >
+                                    {item.status}
+                                  </span>
+
+                                </td>
+
+                              </tr>
+
+                            )
+                          )}
+
+                        </tbody>
+
+                      </table>
+
+                    </div>
+
+                  )}
+
+                </div>
+
+
+                {/* =============================================
+                  INFO
+              ============================================= */}
+
+                <div
+                  className={`mt-8 rounded-3xl border p-6 ${isDark
+                    ? "border-purple-500/15 bg-purple-500/[0.04]"
+                    : "border-purple-200 bg-purple-50"
+                    }`}
+                >
+
+                  <div
+                    className="flex gap-4"
+                  >
+
+                    <div
+                      className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${isDark
+                        ? "bg-purple-500/10"
+                        : "bg-purple-100"
+                        }`}
+                    >
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       <Trophy
                         size={21}
                         className={
                           isDark
+<<<<<<< HEAD
                             ? "text-[#D99AA3]"
                             : "text-[#B76E79]"
                         }
@@ -4221,16 +5879,42 @@ export default function RankAchiever() {
                             ? "text-white"
                             : "text-gray-900"
                         }`}
+=======
+                            ? "text-purple-400"
+                            : "text-purple-600"
+                        }
+                      />
+
+                    </div>
+
+
+                    <div>
+
+                      <h3
+                        className={`font-semibold ${isDark
+                          ? "text-white"
+                          : "text-gray-900"
+                          }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       >
                         How Rank Achiever Funds Work
                       </h3>
 
+<<<<<<< HEAD
                       <p
                         className={`mt-2 text-sm leading-6 ${
                           isDark
                             ? "text-gray-500"
                             : "text-gray-600"
                         }`}
+=======
+
+                      <p
+                        className={`mt-2 text-sm leading-6 ${isDark
+                          ? "text-gray-500"
+                          : "text-gray-600"
+                          }`}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       >
                         Rank Achiever Funds are based
                         on two live requirements:
@@ -4243,6 +5927,7 @@ export default function RankAchiever() {
                         can be credited only once for the
                         same payout month.
                       </p>
+<<<<<<< HEAD
                     </div>
                   </div>
                 </div>
@@ -4254,16 +5939,44 @@ export default function RankAchiever() {
         {/* =====================================================
           GRADIENT
         ===================================================== */}
+=======
+
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            ) : null}
+
+          </main>
+
+        </div>
+
+
+        {/* =====================================================
+          GRADIENT
+      ===================================================== */}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
         <style>
           {`
           .animated-gradient {
             background: linear-gradient(
               90deg,
+<<<<<<< HEAD
               #D99AA3,
               #B76E79,
               #E3AAB2,
               #D99AA3
+=======
+              #60a5fa,
+              #a78bfa,
+              #f472b6,
+              #60a5fa
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             );
 
             background-size: 300% 300%;
@@ -4294,6 +6007,10 @@ export default function RankAchiever() {
           }
         `}
         </style>
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
       </div>
     </>
   );

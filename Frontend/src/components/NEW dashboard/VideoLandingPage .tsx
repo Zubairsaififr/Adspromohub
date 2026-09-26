@@ -33,7 +33,11 @@ import video9 from "../../assets/Videos/video-9.mp4";
 import video10 from "../../assets/Videos/video-10.mp4";
 import video11 from "../../assets/Videos/video-11.mp4";
 import video12 from "../../assets/Videos/video-12.mp4";
+<<<<<<< HEAD
 import logo from "../../assets/Logo.png";
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
 // =====================================================
 // API
@@ -43,6 +47,10 @@ const API_URL =
     import.meta.env.VITE_API_URL ||
     "http://127.0.0.1:8000";
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 // =====================================================
 // VIDEOS
 // =====================================================
@@ -62,6 +70,10 @@ const videoSources = [
     video12,
 ];
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 // =====================================================
 // RANDOM VIDEO
 // =====================================================
@@ -69,6 +81,10 @@ const videoSources = [
 const getRandomVideoIndex = (
     currentIndex: number
 ): number => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
     const availableIndexes =
         videoSources
             .map(
@@ -87,6 +103,10 @@ const getRandomVideoIndex = (
     ];
 };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 // =====================================================
 // USER TYPE
 // =====================================================
@@ -102,6 +122,10 @@ interface LoggedInUser {
     is_active?: boolean;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 // =====================================================
 // SUBSCRIPTION TYPE
 // =====================================================
@@ -123,6 +147,10 @@ interface SubscriptionData {
     expired_at: string | null;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 // =====================================================
 // COMPOUNDING TYPES
 // =====================================================
@@ -149,6 +177,10 @@ interface CompoundingSession {
     credit_remaining_seconds?: number;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 interface CompoundingStatus {
     success: boolean;
 
@@ -180,6 +212,10 @@ interface CompoundingStatus {
         CompoundingSession | null;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 // =====================================================
 // API ERROR
 // =====================================================
@@ -188,7 +224,13 @@ const getApiErrorMessage =
     async (
         response: Response
     ): Promise<string> => {
+<<<<<<< HEAD
         try {
+=======
+
+        try {
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             const data =
                 await response.json();
 
@@ -212,6 +254,10 @@ const getApiErrorMessage =
             ) {
                 return data.message;
             }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         } catch {
             // Ignore invalid JSON
         }
@@ -219,6 +265,10 @@ const getApiErrorMessage =
         return "Something went wrong.";
     };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 // =====================================================
 // BACKEND DATETIME -> UTC
 // =====================================================
@@ -227,6 +277,10 @@ const parseBackendDate =
     (
         value?: string | null
     ): number => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         if (!value) {
             return 0;
         }
@@ -241,7 +295,11 @@ const parseBackendDate =
 
         const normalized =
             value.endsWith("Z") ||
+<<<<<<< HEAD
                 value.includes("+")
+=======
+            value.includes("+")
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 ? value
                 : `${value}Z`;
 
@@ -261,6 +319,10 @@ const parseBackendDate =
         return timestamp;
     };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 // =====================================================
 // SECONDS UNTIL
 // =====================================================
@@ -269,6 +331,10 @@ const getSecondsUntil =
     (
         value?: string | null
     ): number => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         const target =
             parseBackendDate(
                 value
@@ -290,6 +356,10 @@ const getSecondsUntil =
         );
     };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 // =====================================================
 // COUNTDOWN FORMAT
 // =====================================================
@@ -298,6 +368,10 @@ const formatCountdown =
     (
         totalSeconds: number
     ): string => {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
         const safe =
             Math.max(
                 Math.floor(
@@ -326,6 +400,10 @@ const formatCountdown =
             60;
 
         if (hours > 0) {
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             return (
                 `${String(hours).padStart(
                     2,
@@ -354,6 +432,10 @@ const formatCountdown =
         );
     };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 // =====================================================
 // VIDEO LANDING PAGE
 // =====================================================
@@ -361,6 +443,7 @@ const formatCountdown =
 const VideoLandingPage:
     React.FC = () => {
 
+<<<<<<< HEAD
         const navigate =
             useNavigate();
 
@@ -1516,18 +1599,822 @@ const VideoLandingPage:
                     ""
                 );
 
+=======
+    const navigate =
+        useNavigate();
+
+    const videoRef =
+        useRef<HTMLVideoElement | null>(
+            null
+        );
+
+
+    // =================================================
+    // REQUEST GUARDS
+    // =================================================
+
+    const finishingWatchRef =
+        useRef(false);
+
+    const claimingIncomeRef =
+        useRef(false);
+
+
+    // =================================================
+    // USER STATE
+    // =================================================
+
+    const [
+        loggedInUser,
+        setLoggedInUser,
+    ] = useState<LoggedInUser | null>(
+        null
+    );
+
+
+    // =================================================
+    // SUBSCRIPTION STATE
+    // =================================================
+
+    const [
+        subscription,
+        setSubscription,
+    ] = useState<SubscriptionData | null>(
+        null
+    );
+
+
+    // =================================================
+    // CUSTOMER ID COPY STATE
+    // =================================================
+
+    const [
+        customerIdCopied,
+        setCustomerIdCopied,
+    ] = useState(false);
+
+
+    // =================================================
+    // VIDEO STATES
+    // =================================================
+
+    const [
+        currentVideo,
+        setCurrentVideo,
+    ] = useState(
+        () =>
+            Math.floor(
+                Math.random() *
+                videoSources.length
+            )
+    );
+
+    const [
+        isMuted,
+        setIsMuted,
+    ] = useState(true);
+
+    const [
+        isScrolled,
+        setIsScrolled,
+    ] = useState(false);
+
+    const [
+        menuOpen,
+        setMenuOpen,
+    ] = useState(false);
+
+    const [
+        videoScale,
+        setVideoScale,
+    ] = useState(1);
+
+
+    // =================================================
+    // COMPOUNDING STATE
+    // =================================================
+
+    const [
+        compoundingStatus,
+        setCompoundingStatus,
+    ] =
+        useState<CompoundingStatus | null>(
+            null
+        );
+
+    const [
+        compoundingLoading,
+        setCompoundingLoading,
+    ] = useState(true);
+
+    const [
+        startingAd,
+        setStartingAd,
+    ] = useState(false);
+
+    const [
+        adLocked,
+        setAdLocked,
+    ] = useState(false);
+
+    const [
+        adSessionId,
+        setAdSessionId,
+    ] =
+        useState<number | null>(
+            null
+        );
+
+    const [
+        adRemainingSeconds,
+        setAdRemainingSeconds,
+    ] = useState(0);
+
+    const [
+        creditRemainingSeconds,
+        setCreditRemainingSeconds,
+    ] = useState(0);
+
+    const [
+        compoundingMessage,
+        setCompoundingMessage,
+    ] = useState("");
+
+    const [
+        successMessage,
+        setSuccessMessage,
+    ] = useState("");
+
+    const [
+        errorMessage,
+        setErrorMessage,
+    ] = useState("");
+
+
+    // =================================================
+    // LOGOUT / INVALID AUTH
+    // =================================================
+
+    const clearAuthentication =
+        useCallback(
+            () => {
+
+                localStorage.removeItem(
+                    "access_token"
+                );
+
+                localStorage.removeItem(
+                    "refresh_token"
+                );
+
+                localStorage.removeItem(
+                    "user"
+                );
+
+                localStorage.removeItem(
+                    "rememberMe"
+                );
+
+                setLoggedInUser(
+                    null
+                );
+
+                setSubscription(
+                    null
+                );
+
+                setMenuOpen(
+                    false
+                );
+
+                navigate(
+                    "/signin",
+                    {
+                        replace: true,
+                    }
+                );
+            },
+            [navigate]
+        );
+
+
+    // =================================================
+    // LOAD LOGGED-IN USER
+    // =================================================
+
+    useEffect(() => {
+
+        const accessToken =
+            localStorage.getItem(
+                "access_token"
+            );
+
+        const savedUser =
+            localStorage.getItem(
+                "user"
+            );
+
+
+        if (
+            !accessToken ||
+            !savedUser
+        ) {
+
+            clearAuthentication();
+
+            return;
+        }
+
+
+        try {
+
+            const parsedUser:
+                LoggedInUser =
+                JSON.parse(
+                    savedUser
+                );
+
+
+            if (
+                !parsedUser.customer_id
+            ) {
+                throw new Error(
+                    "Customer ID missing."
+                );
+            }
+
+
+            if (
+                parsedUser.is_admin ===
+                    true ||
+                parsedUser.role ===
+                    "admin"
+            ) {
+
+                navigate(
+                    "/admin",
+                    {
+                        replace: true,
+                    }
+                );
+
+                return;
+            }
+
+
+            setLoggedInUser(
+                parsedUser
+            );
+
+        } catch (error) {
+
+            console.error(
+                "Failed to read logged-in user:",
+                error
+            );
+
+            clearAuthentication();
+        }
+
+    }, [
+        clearAuthentication,
+        navigate,
+    ]);
+
+
+    // =================================================
+    // LOAD CURRENT SUBSCRIPTION
+    // =================================================
+
+    const loadSubscription =
+        useCallback(
+            async () => {
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 const token =
                     localStorage.getItem(
                         "access_token"
                     );
 
                 if (!token) {
+<<<<<<< HEAD
+=======
+                    return;
+                }
+
+
+                try {
+
+                    const response =
+                        await fetch(
+                            `${API_URL}/api/subscription/current`,
+                            {
+                                method:
+                                    "GET",
+
+                                headers: {
+                                    Authorization:
+                                        `Bearer ${token}`,
+                                },
+                            }
+                        );
+
+
+                    if (
+                        response.status ===
+                        401
+                    ) {
+                        clearAuthentication();
+                        return;
+                    }
+
+
+                    if (!response.ok) {
+
+                        console.error(
+                            "Unable to load subscription."
+                        );
+
+                        return;
+                    }
+
+
+                    const data:
+                        SubscriptionData =
+                        await response.json();
+
+
+                    setSubscription(
+                        data
+                    );
+
+                } catch (error) {
+
+                    console.error(
+                        "Subscription load error:",
+                        error
+                    );
+                }
+            },
+            [clearAuthentication]
+        );
+
+
+    useEffect(() => {
+
+        loadSubscription();
+
+    }, [loadSubscription]);
+
+
+    // =================================================
+    // LOAD COMPOUNDING STATUS
+    // =================================================
+
+    const loadCompoundingStatus =
+        useCallback(
+            async () => {
+
+                const token =
+                    localStorage.getItem(
+                        "access_token"
+                    );
+
+                if (!token) {
+                    return;
+                }
+
+
+                try {
+
+                    const response =
+                        await fetch(
+                            `${API_URL}/api/daily-compounding/status`,
+                            {
+                                method:
+                                    "GET",
+
+                                headers: {
+                                    Authorization:
+                                        `Bearer ${token}`,
+                                },
+                            }
+                        );
+
+
+                    if (
+                        response.status ===
+                        401
+                    ) {
+
+                        clearAuthentication();
+
+                        return;
+                    }
+
+
+                    if (!response.ok) {
+
+                        const message =
+                            await getApiErrorMessage(
+                                response
+                            );
+
+                        setErrorMessage(
+                            message
+                        );
+
+                        return;
+                    }
+
+
+                    const data:
+                        CompoundingStatus =
+                        await response.json();
+
+
+                    setCompoundingStatus(
+                        data
+                    );
+
+                    setCompoundingMessage(
+                        data.message || ""
+                    );
+
+
+                    // ================================
+                    // RESTORE RUNNING AD
+                    // ================================
+
+                    if (
+                        data.active_session &&
+                        data.session?.status ===
+                            "started"
+                    ) {
+
+                        setAdSessionId(
+                            data.session.id
+                        );
+
+                        setAdLocked(
+                            true
+                        );
+
+                        setSuccessMessage(
+                            ""
+                        );
+
+                        setErrorMessage(
+                            ""
+                        );
+
+
+                        let remaining =
+                            data.session
+                                .watch_remaining_seconds ||
+                            0;
+
+
+                        if (
+                            data.session
+                                .watch_complete_at
+                        ) {
+
+                            remaining =
+                                getSecondsUntil(
+                                    data.session
+                                        .watch_complete_at
+                                );
+                        }
+
+
+                        setAdRemainingSeconds(
+                            Math.max(
+                                remaining,
+                                0
+                            )
+                        );
+
+                        setCreditRemainingSeconds(
+                            0
+                        );
+
+                        return;
+                    }
+
+
+                    // ================================
+                    // WAITING FOR CREDIT
+                    // ================================
+
+                    if (
+                        data.active_session &&
+                        data.session?.status ===
+                            "completed"
+                    ) {
+
+                        setAdLocked(
+                            false
+                        );
+
+                        setAdSessionId(
+                            data.session.id
+                        );
+
+
+                        let remaining =
+                            data.session
+                                .credit_remaining_seconds ||
+                            0;
+
+
+                        if (
+                            data.session
+                                .eligible_at
+                        ) {
+
+                            remaining =
+                                getSecondsUntil(
+                                    data.session
+                                        .eligible_at
+                                );
+                        }
+
+
+                        setCreditRemainingSeconds(
+                            Math.max(
+                                remaining,
+                                0
+                            )
+                        );
+
+                        setAdRemainingSeconds(
+                            0
+                        );
+
+                        return;
+                    }
+
+
+                    // ================================
+                    // NO OPEN SESSION
+                    // ================================
+
+                    setAdLocked(
+                        false
+                    );
+
+                    setAdSessionId(
+                        null
+                    );
+
+                    setAdRemainingSeconds(
+                        0
+                    );
+
+                    setCreditRemainingSeconds(
+                        0
+                    );
+
+                } catch (error) {
+
+                    console.error(
+                        "Compounding status error:",
+                        error
+                    );
+
+                    setErrorMessage(
+                        "Unable to connect to compounding service."
+                    );
+
+                } finally {
+
+                    setCompoundingLoading(
+                        false
+                    );
+                }
+            },
+            [clearAuthentication]
+        );
+
+
+    useEffect(() => {
+
+        loadCompoundingStatus();
+
+    }, [loadCompoundingStatus]);
+
+
+    // =================================================
+    // SCROLL EFFECT
+    // =================================================
+
+    useEffect(() => {
+
+        const handleScroll =
+            () => {
+
+                const scrollTop =
+                    window.scrollY;
+
+                const heroHeight =
+                    window.innerHeight;
+
+                const progress =
+                    Math.min(
+                        scrollTop /
+                        heroHeight,
+                        1
+                    );
+
+
+                setIsScrolled(
+                    scrollTop > 70
+                );
+
+
+                setVideoScale(
+                    1 +
+                    progress *
+                    0.22
+                );
+            };
+
+
+        window.addEventListener(
+            "scroll",
+            handleScroll,
+            {
+                passive: true,
+            }
+        );
+
+
+        handleScroll();
+
+
+        return () => {
+
+            window.removeEventListener(
+                "scroll",
+                handleScroll
+            );
+        };
+
+    }, []);
+
+
+    // =================================================
+    // VIDEO PLAY
+    // =================================================
+
+    useEffect(() => {
+
+        const video =
+            videoRef.current;
+
+        if (!video) {
+            return;
+        }
+
+
+        video.load();
+
+
+        const playVideo =
+            async () => {
+
+                try {
+
+                    await video.play();
+
+                } catch (error) {
+
+                    console.log(
+                        "Autoplay blocked:",
+                        error
+                    );
+                }
+            };
+
+
+        playVideo();
+
+    }, [currentVideo]);
+
+
+    // =================================================
+    // LOCK PAGE DURING AD
+    // =================================================
+
+    useEffect(() => {
+
+        if (!adLocked) {
+
+            document.body.style.overflow =
+                "";
+
+            return;
+        }
+
+
+        const previousOverflow =
+            document.body.style.overflow;
+
+
+        document.body.style.overflow =
+            "hidden";
+
+
+        return () => {
+
+            document.body.style.overflow =
+                previousOverflow;
+        };
+
+    }, [adLocked]);
+
+
+    // =================================================
+    // WARN ON REFRESH / CLOSE DURING AD
+    // =================================================
+
+    useEffect(() => {
+
+        if (!adLocked) {
+            return;
+        }
+
+
+        const handleBeforeUnload =
+            (
+                event:
+                    BeforeUnloadEvent
+            ) => {
+
+                event.preventDefault();
+
+                event.returnValue =
+                    true;
+            };
+
+
+        window.addEventListener(
+            "beforeunload",
+            handleBeforeUnload
+        );
+
+
+        return () => {
+
+            window.removeEventListener(
+                "beforeunload",
+                handleBeforeUnload
+            );
+        };
+
+    }, [adLocked]);
+
+
+    // =================================================
+    // FINISH 30-SECOND WATCH
+    // =================================================
+
+    const finishAdWatch =
+        useCallback(
+            async (
+                sessionId: number
+            ) => {
+
+                if (
+                    finishingWatchRef.current
+                ) {
+                    return;
+                }
+
+
+                finishingWatchRef.current =
+                    true;
+
+
+                const token =
+                    localStorage.getItem(
+                        "access_token"
+                    );
+
+
+                if (!token) {
+
+                    finishingWatchRef.current =
+                        false;
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                     clearAuthentication();
 
                     return;
                 }
 
+<<<<<<< HEAD
                 if (
                     compoundingStatus &&
                     !compoundingStatus
@@ -1577,12 +2464,18 @@ const VideoLandingPage:
                 setStartingAd(
                     true
                 );
+=======
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                 try {
 
                     const response =
                         await fetch(
+<<<<<<< HEAD
                             `${API_URL}/api/daily-compounding/start`,
+=======
+                            `${API_URL}/api/daily-compounding/finish-watch/${sessionId}`,
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             {
                                 method:
                                     "POST",
@@ -1597,6 +2490,10 @@ const VideoLandingPage:
                             }
                         );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     if (
                         response.status ===
                         401
@@ -1607,6 +2504,10 @@ const VideoLandingPage:
                         return;
                     }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     if (!response.ok) {
 
                         const message =
@@ -1614,15 +2515,30 @@ const VideoLandingPage:
                                 response
                             );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         setErrorMessage(
                             message
                         );
 
+<<<<<<< HEAD
+=======
+
+                        /*
+                         * Backend may say a second or
+                         * two still remains because
+                         * server time is authoritative.
+                         */
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         await loadCompoundingStatus();
 
                         return;
                     }
 
+<<<<<<< HEAD
                     const data =
                         await response.json();
 
@@ -1665,10 +2581,23 @@ const VideoLandingPage:
                     );
 
                     setCreditRemainingSeconds(
+=======
+
+                    const data =
+                        await response.json();
+
+
+                    setAdLocked(
+                        false
+                    );
+
+                    setAdRemainingSeconds(
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         0
                     );
 
                     setCompoundingMessage(
+<<<<<<< HEAD
                         "Advertisement is running. Please watch the complete ad."
                     );
 
@@ -1680,21 +2609,297 @@ const VideoLandingPage:
                         true
                     );
 
+=======
+                        data.message ||
+                        "Advertisement completed."
+                    );
+
+                    setSuccessMessage(
+                        "Ad completed successfully. Your compounding income is now pending."
+                    );
+
+                    setErrorMessage(
+                        ""
+                    );
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     await loadCompoundingStatus();
 
                 } catch (error) {
 
                     console.error(
+<<<<<<< HEAD
                         "Start ad error:",
                         error
                     );
 
                     setErrorMessage(
                         "Unable to start advertisement. Please try again."
+=======
+                        "Finish ad error:",
+                        error
+                    );
+
+
+                    setErrorMessage(
+                        "Unable to complete the advertisement. Please try again."
+                    );
+
+                    /*
+                     * Keep/restore state from backend.
+                     */
+
+                    await loadCompoundingStatus();
+
+                } finally {
+
+                    finishingWatchRef.current =
+                        false;
+                }
+            },
+            [
+                clearAuthentication,
+                loadCompoundingStatus,
+            ]
+        );
+
+
+    // =================================================
+    // AD TIMER
+    // =================================================
+
+    useEffect(() => {
+
+        if (
+            !adLocked ||
+            !adSessionId
+        ) {
+            return;
+        }
+
+
+        if (
+            adRemainingSeconds <=
+            0
+        ) {
+
+            /*
+             * Production-safe retry at the zero boundary.
+             * The backend remains authoritative; waiting one extra
+             * second avoids getting stuck when server/client clocks
+             * differ by a fraction of a second.
+             */
+            const finishTimer =
+                window.setTimeout(
+                    () => {
+                        finishAdWatch(
+                            adSessionId
+                        );
+                    },
+                    1000
+                );
+
+            return () => {
+                window.clearTimeout(
+                    finishTimer
+                );
+            };
+        }
+
+
+        const timer =
+            window.setTimeout(
+                () => {
+
+                    setAdRemainingSeconds(
+                        (
+                            previous
+                        ) =>
+                            Math.max(
+                                previous -
+                                1,
+                                0
+                            )
+                    );
+
+                },
+                1000
+            );
+
+
+        return () => {
+
+            window.clearTimeout(
+                timer
+            );
+        };
+
+    }, [
+        adLocked,
+        adSessionId,
+        adRemainingSeconds,
+        finishAdWatch,
+    ]);
+
+
+    // =================================================
+    // CLAIM COMPOUNDING
+    // =================================================
+
+    const claimCompoundingIncome =
+        useCallback(
+            async (
+                sessionId: number
+            ) => {
+
+                if (
+                    claimingIncomeRef.current
+                ) {
+                    return;
+                }
+
+
+                claimingIncomeRef.current =
+                    true;
+
+
+                const token =
+                    localStorage.getItem(
+                        "access_token"
+                    );
+
+
+                if (!token) {
+
+                    claimingIncomeRef.current =
+                        false;
+
+                    clearAuthentication();
+
+                    return;
+                }
+
+
+                try {
+
+                    const response =
+                        await fetch(
+                            `${API_URL}/api/daily-compounding/complete/${sessionId}`,
+                            {
+                                method:
+                                    "POST",
+
+                                headers: {
+                                    Authorization:
+                                        `Bearer ${token}`,
+
+                                    "Content-Type":
+                                        "application/json",
+                                },
+                            }
+                        );
+
+
+                    if (
+                        response.status ===
+                        401
+                    ) {
+
+                        clearAuthentication();
+
+                        return;
+                    }
+
+
+                    if (!response.ok) {
+
+                        const message =
+                            await getApiErrorMessage(
+                                response
+                            );
+
+
+                        setErrorMessage(
+                            message
+                        );
+
+
+                        await loadCompoundingStatus();
+
+                        return;
+                    }
+
+
+                    const data =
+                        await response.json();
+
+
+                    const growthAmount =
+                        Number(
+                            data?.growth
+                                ?.growth_amount ||
+                            0
+                        );
+
+
+                    const walletBalance =
+                        Number(
+                            data?.wallet
+                                ?.balance ||
+                            0
+                        );
+
+
+                    setSuccessMessage(
+                        growthAmount > 0
+                            ? `Daily compounding $${growthAmount.toFixed(
+                                2
+                            )} credited successfully. Income Wallet balance: $${walletBalance.toFixed(
+                                2
+                            )}.`
+                            : "Daily compounding income credited successfully."
+                    );
+
+
+                    setErrorMessage(
+                        ""
+                    );
+
+                    setCompoundingMessage(
+                        "Daily compounding growth credited successfully."
+                    );
+
+                    setCreditRemainingSeconds(
+                        0
+                    );
+
+                    setAdSessionId(
+                        null
+                    );
+
+
+                    await Promise.all([
+                        loadCompoundingStatus(),
+                        loadSubscription(),
+                    ]);
+
+                } catch (error) {
+
+                    console.error(
+                        "Compounding claim error:",
+                        error
+                    );
+
+
+                    setErrorMessage(
+                        "Unable to credit compounding income."
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     );
 
                 } finally {
 
+<<<<<<< HEAD
                     setStartingAd(
                         false
                     );
@@ -1801,11 +3006,292 @@ const VideoLandingPage:
                 if (adLocked) {
                     return;
                 }
+=======
+                    claimingIncomeRef.current =
+                        false;
+                }
+            },
+            [
+                clearAuthentication,
+                loadCompoundingStatus,
+                loadSubscription,
+            ]
+        );
+
+
+    // =================================================
+    // CREDIT COUNTDOWN
+    // =================================================
+
+    useEffect(() => {
+
+        if (
+            adLocked ||
+            !adSessionId ||
+            compoundingStatus
+                ?.session
+                ?.status !==
+                "completed"
+        ) {
+            return;
+        }
+
+
+        if (
+            creditRemainingSeconds <=
+            0
+        ) {
+
+            claimCompoundingIncome(
+                adSessionId
+            );
+
+            return;
+        }
+
+
+        const timer =
+            window.setTimeout(
+                () => {
+
+                    setCreditRemainingSeconds(
+                        (
+                            previous
+                        ) =>
+                            Math.max(
+                                previous -
+                                1,
+                                0
+                            )
+                    );
+
+                },
+                1000
+            );
+
+
+        return () => {
+
+            window.clearTimeout(
+                timer
+            );
+        };
+
+    }, [
+        adLocked,
+        adSessionId,
+        creditRemainingSeconds,
+        compoundingStatus,
+        claimCompoundingIncome,
+    ]);
+
+
+    // =================================================
+    // START AD
+    // =================================================
+
+    const handleWatchAdsAndEarn =
+        async () => {
+
+            if (
+                startingAd ||
+                adLocked
+            ) {
+                return;
+            }
+
+
+            setSuccessMessage(
+                ""
+            );
+
+            setErrorMessage(
+                ""
+            );
+
+
+            const token =
+                localStorage.getItem(
+                    "access_token"
+                );
+
+
+            if (!token) {
+
+                clearAuthentication();
+
+                return;
+            }
+
+
+            if (
+                compoundingStatus &&
+                !compoundingStatus
+                    .subscription_active
+            ) {
+
+                setErrorMessage(
+                    "An active subscription is required to watch ads and earn."
+                );
+
+                return;
+            }
+
+
+            /*
+             * If there is already a pending
+             * compounding session, don't create
+             * another one.
+             */
+
+            if (
+                compoundingStatus
+                    ?.active_session &&
+                compoundingStatus
+                    ?.session
+                    ?.status ===
+                    "completed"
+            ) {
+
+                setErrorMessage(
+                    "Your previous compounding income is still pending."
+                );
+
+                return;
+            }
+
+
+            if (
+                compoundingStatus &&
+                !compoundingStatus
+                    .can_watch_ad &&
+                !compoundingStatus
+                    .active_session
+            ) {
+
+                setErrorMessage(
+                    compoundingStatus
+                        .message ||
+                    "Watch Ads & Earn is not available right now."
+                );
+
+                return;
+            }
+
+
+            setStartingAd(
+                true
+            );
+
+
+            try {
+
+                const response =
+                    await fetch(
+                        `${API_URL}/api/daily-compounding/start`,
+                        {
+                            method:
+                                "POST",
+
+                            headers: {
+                                Authorization:
+                                    `Bearer ${token}`,
+
+                                "Content-Type":
+                                    "application/json",
+                            },
+                        }
+                    );
+
+
+                if (
+                    response.status ===
+                    401
+                ) {
+
+                    clearAuthentication();
+
+                    return;
+                }
+
+
+                if (!response.ok) {
+
+                    const message =
+                        await getApiErrorMessage(
+                            response
+                        );
+
+
+                    setErrorMessage(
+                        message
+                    );
+
+                    await loadCompoundingStatus();
+
+                    return;
+                }
+
+
+                const data =
+                    await response.json();
+
+
+                const sessionId =
+                    Number(
+                        data?.session
+                            ?.id
+                    );
+
+
+                if (
+                    !sessionId ||
+                    Number.isNaN(
+                        sessionId
+                    )
+                ) {
+
+                    throw new Error(
+                        "Invalid ad session ID."
+                    );
+                }
+
+
+                const watchSeconds =
+                    Number(
+                        data?.session
+                            ?.ad_watch_seconds ||
+                        compoundingStatus
+                            ?.ad_watch_seconds ||
+                        30
+                    );
+
+
+                setAdSessionId(
+                    sessionId
+                );
+
+                setAdRemainingSeconds(
+                    Math.max(
+                        watchSeconds,
+                        0
+                    )
+                );
+
+                setCreditRemainingSeconds(
+                    0
+                );
+
+                setCompoundingMessage(
+                    "Advertisement is running. Please watch the complete ad."
+                );
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                 setMenuOpen(
                     false
                 );
 
+<<<<<<< HEAD
                 navigate(
                     "/newdashboard"
                 );
@@ -2088,11 +3574,663 @@ const VideoLandingPage:
                                 <div className="text-left">
 
                                     <p className="max-w-[150px] truncate text-sm font-semibold text-white">
+=======
+
+                /*
+                 * This activates the full-screen
+                 * interaction shield.
+                 */
+
+                setAdLocked(
+                    true
+                );
+
+
+                /*
+                 * Refresh status so server
+                 * timestamps remain authoritative.
+                 */
+
+                await loadCompoundingStatus();
+
+            } catch (error) {
+
+                console.error(
+                    "Start ad error:",
+                    error
+                );
+
+
+                setErrorMessage(
+                    "Unable to start advertisement. Please try again."
+                );
+
+            } finally {
+
+                setStartingAd(
+                    false
+                );
+            }
+        };
+
+
+    // =================================================
+    // CHANGE RANDOM VIDEO
+    // =================================================
+
+    const changeToRandomVideo =
+        () => {
+
+            if (adLocked) {
+                return;
+            }
+
+            setCurrentVideo(
+                (
+                    previousIndex
+                ) =>
+                    getRandomVideoIndex(
+                        previousIndex
+                    )
+            );
+        };
+
+
+    // =================================================
+    // VIDEO ENDED
+    // =================================================
+
+    const handleVideoEnded =
+        () => {
+
+            /*
+             * While the ad is locked, keep the
+             * current video available.
+             *
+             * If the video itself ends during
+             * the 30-second earning period,
+             * restart it so the screen never
+             * becomes blank.
+             */
+
+            if (adLocked) {
+
+                const video =
+                    videoRef.current;
+
+                if (video) {
+
+                    video.currentTime =
+                        0;
+
+                    video.play().catch(
+                        () => {
+                            // Ignore autoplay issue
+                        }
+                    );
+                }
+
+                return;
+            }
+
+
+            changeToRandomVideo();
+        };
+
+
+    // =================================================
+    // MUTE
+    // =================================================
+
+    const toggleMute =
+        () => {
+
+            if (adLocked) {
+                return;
+            }
+
+            setIsMuted(
+                (
+                    previousState
+                ) =>
+                    !previousState
+            );
+        };
+
+
+    // =================================================
+    // SCROLL TO CONTENT
+    // =================================================
+
+    const scrollToContent =
+        () => {
+
+            if (adLocked) {
+                return;
+            }
+
+            window.scrollTo({
+                top:
+                    window.innerHeight,
+
+                behavior:
+                    "smooth",
+            });
+        };
+
+
+    // =================================================
+    // DASHBOARD
+    // =================================================
+
+    const goToDashboard =
+        () => {
+
+            if (adLocked) {
+                return;
+            }
+
+            setMenuOpen(
+                false
+            );
+
+            navigate(
+                "/newdashboard"
+            );
+        };
+
+
+    // =================================================
+    // LOGOUT
+    // =================================================
+
+    const handleLogout =
+        () => {
+
+            if (adLocked) {
+                return;
+            }
+
+            clearAuthentication();
+        };
+
+
+    // =================================================
+    // USER DISPLAY VALUES
+    // =================================================
+
+    const userName =
+        loggedInUser
+            ?.full_name
+            ?.trim() ||
+        "User";
+
+
+    const customerId =
+        loggedInUser
+            ?.customer_id
+            ?.trim() ||
+        "";
+
+
+    // =================================================
+    // SUBSCRIPTION DISPLAY VALUES
+    // =================================================
+
+    const subscriptionAmount =
+        Number(
+            subscription
+                ?.current_amount ||
+            0
+        );
+
+
+    const subscriptionActive =
+        Boolean(
+            subscription
+                ?.subscription_active
+        ) &&
+        subscriptionAmount >
+            0;
+
+
+    const subscriptionStatus =
+        subscriptionActive
+            ? "ACTIVE"
+            : "INACTIVE";
+
+
+    // =================================================
+    // COPY CUSTOMER ID
+    // =================================================
+
+    const handleCopyCustomerId =
+        async (
+            event:
+                React.MouseEvent
+        ) => {
+
+            event.stopPropagation();
+
+
+            if (
+                adLocked ||
+                !customerId
+            ) {
+                return;
+            }
+
+
+            try {
+
+                await navigator
+                    .clipboard
+                    .writeText(
+                        customerId
+                    );
+
+
+                setCustomerIdCopied(
+                    true
+                );
+
+
+                window.setTimeout(
+                    () => {
+
+                        setCustomerIdCopied(
+                            false
+                        );
+
+                    },
+                    2000
+                );
+
+            } catch (error) {
+
+                console.error(
+                    "Customer ID copy failed:",
+                    error
+                );
+            }
+        };
+
+
+    // =================================================
+    // WATCH BUTTON STATE
+    // =================================================
+
+    const watchButtonDisabled =
+        compoundingLoading ||
+        startingAd ||
+        adLocked ||
+        (
+            compoundingStatus
+                ?.active_session ===
+                true &&
+            compoundingStatus
+                ?.session
+                ?.status ===
+                "completed"
+        ) ||
+        (
+            compoundingStatus !==
+                null &&
+            !compoundingStatus
+                .can_watch_ad
+        );
+
+
+    let watchButtonText =
+        "Watch Ads & Earn";
+
+
+    if (compoundingLoading) {
+
+        watchButtonText =
+            "Checking Availability...";
+
+    } else if (startingAd) {
+
+        watchButtonText =
+            "Starting Ad...";
+
+    } else if (adLocked) {
+
+        watchButtonText =
+            `Watching Ad ${formatCountdown(
+                adRemainingSeconds
+            )}`;
+
+    } else if (
+        compoundingStatus
+            ?.active_session &&
+        compoundingStatus
+            ?.session
+            ?.status ===
+            "completed"
+    ) {
+
+        if (
+            creditRemainingSeconds >
+            0
+        ) {
+
+            watchButtonText =
+                `Reward Pending ${formatCountdown(
+                    creditRemainingSeconds
+                )}`;
+
+        } else {
+
+            watchButtonText =
+                "Crediting Reward...";
+        }
+    }
+
+
+    // =================================================
+    // UI
+    // =================================================
+
+    return (
+        <main className="min-h-screen bg-[#080511] text-white">
+
+            {/* =========================================
+                STICKY HEADER
+            ========================================== */}
+
+            <header
+                className={`fixed left-0 right-0 top-0 z-50 transition-all duration-500 ${
+                    isScrolled
+                        ? "bg-[#0d0718]/90 shadow-lg backdrop-blur-xl"
+                        : "bg-transparent"
+                }`}
+            >
+
+                <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 sm:px-8 lg:px-12">
+
+                    {/* LOGO */}
+
+                    <button
+                        type="button"
+                        onClick={() => {
+                            if (!adLocked) {
+                                navigate("/");
+                            }
+                        }}
+                        className="text-xl font-black tracking-wide text-white sm:text-2xl"
+                    >
+                        ADS
+                        <span className="text-purple-400">
+                            PROMOHUB
+                        </span>
+                    </button>
+
+
+                    {/* DESKTOP NAVIGATION */}
+
+                    <nav className="hidden items-center gap-4 md:flex">
+
+                        <button
+                            type="button"
+                            onClick={() => {
+                                if (!adLocked) {
+                                    navigate(
+                                        "/dashboard"
+                                    );
+                                }
+                            }}
+                            className="cursor-pointer text-sm font-medium text-white/80 transition hover:text-purple-300"
+                        >
+                            Dashboard
+                        </button>
+
+
+                        {/* USER DETAILS */}
+
+                        <button
+                            type="button"
+                            onClick={
+                                goToDashboard
+                            }
+                            className="flex cursor-pointer items-center gap-3 rounded-full border border-purple-400/20 bg-purple-600/20 px-4 py-2 transition hover:border-purple-400/40 hover:bg-purple-600/30"
+                        >
+
+                            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-purple-600">
+                                <User
+                                    size={
+                                        16
+                                    }
+                                />
+                            </div>
+
+
+                            <div className="text-left">
+
+                                <p className="max-w-[150px] truncate text-sm font-semibold text-white">
+                                    {
+                                        userName
+                                    }
+                                </p>
+
+
+                                {customerId && (
+                                    <div
+                                        role="button"
+                                        tabIndex={0}
+                                        onClick={
+                                            handleCopyCustomerId
+                                        }
+                                        onKeyDown={async (
+                                            event
+                                        ) => {
+
+                                            if (
+                                                adLocked
+                                            ) {
+                                                return;
+                                            }
+
+                                            if (
+                                                event.key ===
+                                                    "Enter" ||
+                                                event.key ===
+                                                    " "
+                                            ) {
+
+                                                event.preventDefault();
+                                                event.stopPropagation();
+
+                                                try {
+
+                                                    await navigator
+                                                        .clipboard
+                                                        .writeText(
+                                                            customerId
+                                                        );
+
+                                                    setCustomerIdCopied(
+                                                        true
+                                                    );
+
+                                                    window.setTimeout(
+                                                        () => {
+                                                            setCustomerIdCopied(
+                                                                false
+                                                            );
+                                                        },
+                                                        2000
+                                                    );
+
+                                                } catch (
+                                                    error
+                                                ) {
+
+                                                    console.error(
+                                                        "Customer ID copy failed:",
+                                                        error
+                                                    );
+                                                }
+                                            }
+                                        }}
+                                        title="Click to copy Customer ID"
+                                        className="mt-0.5 flex w-fit cursor-copy items-center gap-1 text-[10px] font-medium tracking-wide text-purple-200/70 transition hover:text-purple-200"
+                                    >
+
+                                        <span>
+                                            {
+                                                customerId
+                                            }
+                                        </span>
+
+                                        {customerIdCopied ? (
+                                            <Check
+                                                size={
+                                                    10
+                                                }
+                                                className="text-green-300"
+                                            />
+                                        ) : (
+                                            <Copy
+                                                size={
+                                                    10
+                                                }
+                                            />
+                                        )}
+
+                                    </div>
+                                )}
+
+                            </div>
+
+                        </button>
+
+
+                        {/* SUBSCRIPTION */}
+
+                        <button
+                            type="button"
+                            onClick={
+                                goToDashboard
+                            }
+                            className="cursor-pointer rounded-full bg-purple-600 px-5 py-2 text-sm font-semibold text-white transition hover:bg-purple-700"
+                        >
+
+                            <span>
+                                ${subscriptionAmount.toFixed(
+                                    2
+                                )}
+                            </span>
+
+                            <span
+                                className={`ml-2 text-[10px] font-bold ${
+                                    subscriptionActive
+                                        ? "text-green-200"
+                                        : "text-red-200"
+                                }`}
+                            >
+                                {
+                                    subscriptionStatus
+                                }
+                            </span>
+
+                        </button>
+
+
+                        {/* LOGOUT */}
+
+                        <button
+                            type="button"
+                            onClick={
+                                handleLogout
+                            }
+                            className="flex cursor-pointer items-center gap-2 rounded-full border border-red-400/30 bg-red-500/10 px-4 py-2 text-sm font-semibold text-red-200 transition hover:border-red-400/50 hover:bg-red-500/20 hover:text-white"
+                        >
+
+                            <LogOut
+                                size={
+                                    16
+                                }
+                            />
+
+                            Logout
+
+                        </button>
+
+                    </nav>
+
+
+                    {/* MOBILE MENU */}
+
+                    <button
+                        type="button"
+                        onClick={() => {
+
+                            if (adLocked) {
+                                return;
+                            }
+
+                            setMenuOpen(
+                                (
+                                    previousState
+                                ) =>
+                                    !previousState
+                            );
+                        }}
+                        className="rounded-full border border-white/30 p-2 text-white md:hidden"
+                        aria-label="Toggle menu"
+                    >
+
+                        {menuOpen ? (
+                            <X
+                                size={
+                                    22
+                                }
+                            />
+                        ) : (
+                            <Menu
+                                size={
+                                    22
+                                }
+                            />
+                        )}
+
+                    </button>
+
+                </div>
+
+
+                {/* MOBILE NAVIGATION */}
+
+                {menuOpen && (
+                    <div className="border-t border-white/10 bg-[#0d0718]/95 px-5 py-5 backdrop-blur-xl md:hidden">
+
+                        <nav className="flex flex-col gap-4">
+
+                            <div className="flex items-center gap-3 rounded-xl border border-purple-400/20 bg-purple-500/10 p-4">
+
+                                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-purple-600">
+
+                                    <User
+                                        size={
+                                            20
+                                        }
+                                    />
+
+                                </div>
+
+
+                                <div className="min-w-0">
+
+                                    <p className="truncate text-sm font-semibold text-white">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                         {
                                             userName
                                         }
                                     </p>
 
+<<<<<<< HEAD
                                     {customerId && (
                                         <div
                                             role="button"
@@ -2159,6 +4297,21 @@ const VideoLandingPage:
                                         >
 
                                             <span>
+=======
+
+                                    {customerId && (
+                                        <button
+                                            type="button"
+                                            onClick={
+                                                handleCopyCustomerId
+                                            }
+                                            title="Tap to copy Customer ID"
+                                            className="mt-0.5 flex cursor-copy items-center gap-1 text-xs font-medium tracking-wide text-purple-300 transition hover:text-purple-200"
+                                        >
+
+                                            <span>
+                                                Customer ID:{" "}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                                 {
                                                     customerId
                                                 }
@@ -2167,46 +4320,96 @@ const VideoLandingPage:
                                             {customerIdCopied ? (
                                                 <Check
                                                     size={
+<<<<<<< HEAD
                                                         10
                                                     }
                                                     className="text-[#E3AAB2]"
+=======
+                                                        12
+                                                    }
+                                                    className="text-green-300"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                                 />
                                             ) : (
                                                 <Copy
                                                     size={
+<<<<<<< HEAD
                                                         10
+=======
+                                                        12
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                                     }
                                                 />
                                             )}
 
+<<<<<<< HEAD
                                         </div>
+=======
+                                        </button>
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                     )}
 
                                 </div>
 
+<<<<<<< HEAD
                             </button>
 
                             {/* SUBSCRIPTION */}
+=======
+                            </div>
+
+
+                            <button
+                                type="button"
+                                onClick={() => {
+
+                                    if (!adLocked) {
+                                        navigate(
+                                            "/dashboard"
+                                        );
+                                    }
+                                }}
+                                className="cursor-pointer rounded-xl bg-white/5 px-5 py-3 text-left font-medium text-white/80 transition hover:bg-white/10 hover:text-purple-300"
+                            >
+                                Dashboard
+                            </button>
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                             <button
                                 type="button"
                                 onClick={
                                     goToDashboard
                                 }
+<<<<<<< HEAD
                                 className="cursor-pointer rounded-full bg-gradient-to-r from-[#8F4F5A] via-[#B76E79] to-[#D99AA3] px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-[#B76E79]/15 transition hover:scale-[1.02]"
                             >
 
                                 <span>
+=======
+                                className="cursor-pointer rounded-xl bg-purple-600 px-5 py-3 text-center font-semibold text-white transition hover:bg-purple-700"
+                            >
+
+                                <span>
+                                    Subscription:{" "}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                     ${subscriptionAmount.toFixed(
                                         2
                                     )}
                                 </span>
 
                                 <span
+<<<<<<< HEAD
                                     className={`ml-2 text-[10px] font-bold ${
                                         subscriptionActive
                                             ? "text-[#FFE5E8]"
                                             : "text-[#D99AA3]"
+=======
+                                    className={`ml-2 text-xs font-bold ${
+                                        subscriptionActive
+                                            ? "text-green-200"
+                                            : "text-red-200"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                     }`}
                                 >
                                     {
@@ -2216,19 +4419,30 @@ const VideoLandingPage:
 
                             </button>
 
+<<<<<<< HEAD
                             {/* LOGOUT */}
+=======
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                             <button
                                 type="button"
                                 onClick={
                                     handleLogout
                                 }
+<<<<<<< HEAD
                                 className="flex cursor-pointer items-center gap-2 rounded-full border border-[#D99AA3]/30 bg-[#8F4F5A]/15 px-4 py-2 text-sm font-semibold text-[#E3AAB2] transition hover:border-[#D99AA3]/50 hover:bg-[#B76E79]/20 hover:text-white"
+=======
+                                className="flex cursor-pointer items-center justify-center gap-2 rounded-xl border border-red-400/30 bg-red-500/10 px-5 py-3 font-semibold text-red-200 transition hover:bg-red-500/20 hover:text-white"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             >
 
                                 <LogOut
                                     size={
+<<<<<<< HEAD
                                         16
+=======
+                                        18
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                     }
                                 />
 
@@ -2238,6 +4452,7 @@ const VideoLandingPage:
 
                         </nav>
 
+<<<<<<< HEAD
                         {/* MOBILE MENU */}
 
                         <button
@@ -2538,10 +4753,167 @@ const VideoLandingPage:
                                             <p className="rounded-full border border-[#D99AA3]/30 bg-[#B76E79]/10 px-5 py-2 text-xs font-medium text-[#FFE5E8] sm:text-sm">
                                                 {
                                                     successMessage
+=======
+                    </div>
+                )}
+
+            </header>
+
+
+            {/* =========================================
+                HERO SECTION
+            ========================================== */}
+
+            <section
+                id="home"
+                className="relative h-screen min-h-[620px] w-full overflow-hidden"
+            >
+
+                {/* VIDEO */}
+
+                <div
+                    className="absolute inset-0 transition-transform duration-300 ease-out"
+                    style={{
+                        transform:
+                            `scale(${videoScale})`,
+                    }}
+                >
+
+                    <video
+                        ref={
+                            videoRef
+                        }
+                        key={
+                            videoSources[
+                                currentVideo
+                            ]
+                        }
+                        src={
+                            videoSources[
+                                currentVideo
+                            ]
+                        }
+                        autoPlay
+                        muted={
+                            isMuted
+                        }
+                        playsInline
+                        onEnded={
+                            handleVideoEnded
+                        }
+                        className="h-full w-full object-cover"
+                    />
+
+                </div>
+
+
+                {/* DARK OVERLAY */}
+
+                <div className="absolute inset-0 bg-black/45" />
+
+
+                {/* GRADIENT OVERLAY */}
+
+                <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-[#080511]" />
+
+
+                {/* HERO CONTENT */}
+
+                <div className="relative z-10 flex h-full items-center justify-center px-5 pt-20 text-center">
+
+                    <div className="max-w-5xl">
+
+                        <p className="mb-5 text-xs font-semibold uppercase tracking-[0.35em] text-purple-200 sm:text-sm">
+                            Watch. Earn. Enjoy.
+                        </p>
+
+
+                        <h1 className="text-4xl font-black leading-[1.08] sm:text-6xl lg:text-8xl">
+
+                            Your Screen Time
+
+                            <span className="block text-purple-300">
+                                Can Earn More
+                            </span>
+
+                        </h1>
+
+
+                        <p className="mx-auto mt-6 max-w-2xl text-sm leading-7 text-gray-200 sm:text-lg">
+
+                            Watch advertisements,
+                            earn points, grow your
+                            network, and unlock
+                            exciting digital
+                            opportunities with
+                            ADSPROMOHUB.
+
+                        </p>
+
+
+                        <div className="mt-8 flex flex-col items-center justify-center gap-4">
+
+                            {/* =========================
+                                WATCH ADS BUTTON
+                            ========================== */}
+
+                            <button
+                                type="button"
+                                onClick={
+                                    handleWatchAdsAndEarn
+                                }
+                                disabled={
+                                    watchButtonDisabled
+                                }
+                                className={`rounded-full px-8 py-4 font-bold text-white transition ${
+                                    watchButtonDisabled
+                                        ? "cursor-not-allowed bg-purple-600/60 opacity-80"
+                                        : "cursor-pointer bg-purple-600 hover:scale-105 hover:bg-purple-700"
+                                }`}
+                            >
+                                {
+                                    watchButtonText
+                                }
+                            </button>
+
+
+                            {/* =========================
+                                STATUS MESSAGE
+                            ========================== */}
+
+                            {!adLocked && (
+                                <div className="max-w-xl">
+
+                                    {successMessage && (
+                                        <p className="rounded-full border border-green-400/20 bg-green-500/10 px-5 py-2 text-xs font-medium text-green-200 sm:text-sm">
+                                            {
+                                                successMessage
+                                            }
+                                        </p>
+                                    )}
+
+
+                                    {errorMessage && (
+                                        <p className="rounded-full border border-red-400/20 bg-red-500/10 px-5 py-2 text-xs font-medium text-red-200 sm:text-sm">
+                                            {
+                                                errorMessage
+                                            }
+                                        </p>
+                                    )}
+
+
+                                    {!successMessage &&
+                                        !errorMessage &&
+                                        compoundingMessage && (
+                                            <p className="text-xs font-medium text-white/70 sm:text-sm">
+                                                {
+                                                    compoundingMessage
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                                 }
                                             </p>
                                         )}
 
+<<<<<<< HEAD
                                         {errorMessage && (
                                             <p className="rounded-full border border-[#D99AA3]/30 bg-[#8F4F5A]/15 px-5 py-2 text-xs font-medium text-[#E3AAB2] sm:text-sm">
                                                 {
@@ -2590,11 +4962,44 @@ const VideoLandingPage:
                                 )}
 
                             </div>
+=======
+
+                                    {compoundingStatus &&
+                                        !compoundingStatus.inside_ad_window &&
+                                        !compoundingStatus.active_session && (
+                                            <p className="mt-2 text-xs font-semibold text-purple-200">
+                                                Ads are available from 9:00 AM to 9:00 PM.
+                                            </p>
+                                        )}
+
+
+                                    {compoundingStatus
+                                        ?.active_session &&
+                                        compoundingStatus
+                                            ?.session
+                                            ?.status ===
+                                            "completed" &&
+                                        creditRemainingSeconds >
+                                            0 && (
+                                            <p className="mt-2 text-xs font-semibold text-purple-200 sm:text-sm">
+                                                Compounding reward will be credited in{" "}
+                                                {
+                                                    formatCountdown(
+                                                        creditRemainingSeconds
+                                                    )
+                                                }
+                                            </p>
+                                        )}
+
+                                </div>
+                            )}
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                         </div>
 
                     </div>
 
+<<<<<<< HEAD
                     {/* SOUND BUTTON */}
 
                     <button
@@ -2788,6 +5193,210 @@ const VideoLandingPage:
                                     style={{
                                         width:
                                             `${compoundingStatus
+=======
+                </div>
+
+
+                {/* SOUND BUTTON */}
+
+                <button
+                    type="button"
+                    onClick={
+                        toggleMute
+                    }
+                    className="absolute bottom-24 right-5 z-20 flex h-12 w-12 items-center justify-center rounded-full border border-white/40 bg-black/30 text-white backdrop-blur-md transition hover:bg-white hover:text-black sm:right-10"
+                    aria-label={
+                        isMuted
+                            ? "Unmute video"
+                            : "Mute video"
+                    }
+                >
+
+                    {isMuted ? (
+                        <VolumeX
+                            size={
+                                20
+                            }
+                        />
+                    ) : (
+                        <Volume2
+                            size={
+                                20
+                            }
+                        />
+                    )}
+
+                </button>
+
+
+                {/* VIDEO INDICATORS */}
+
+                <div className="absolute bottom-28 left-1/2 z-20 flex -translate-x-1/2 gap-2">
+
+                    {videoSources.map(
+                        (
+                            _,
+                            index
+                        ) => (
+
+                            <button
+                                type="button"
+                                key={
+                                    index
+                                }
+                                onClick={() => {
+
+                                    if (!adLocked) {
+                                        setCurrentVideo(
+                                            index
+                                        );
+                                    }
+                                }}
+                                aria-label={
+                                    `Play video ${
+                                        index +
+                                        1
+                                    }`
+                                }
+                                className={`h-1.5 rounded-full transition-all duration-300 ${
+                                    currentVideo ===
+                                    index
+                                        ? "w-10 bg-white"
+                                        : "w-5 bg-white/40"
+                                }`}
+                            />
+
+                        )
+                    )}
+
+                </div>
+
+
+                {/* SCROLL */}
+
+                <button
+                    type="button"
+                    onClick={
+                        scrollToContent
+                    }
+                    className="absolute bottom-5 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center text-white"
+                    aria-label="Scroll to next section"
+                >
+
+                    <span className="mb-2 text-[10px] uppercase tracking-[0.3em] sm:text-xs">
+                        Scroll to explore
+                    </span>
+
+                    <ChevronDown
+                        className="animate-bounce"
+                        size={
+                            25
+                        }
+                    />
+
+                </button>
+
+            </section>
+
+
+            {/* =========================================
+                ABOUT SECTION
+            ========================================== */}
+
+            <section className="bg-[#080511] px-5 py-20 text-center text-white sm:px-8 lg:px-12">
+
+                <button
+                    type="button"
+                    onClick={() => {
+
+                        if (!adLocked) {
+                            navigate(
+                                "/dashboard"
+                            );
+                        }
+                    }}
+                    className="cursor-pointer rounded-full bg-purple-600 px-8 py-4 font-bold text-white transition hover:scale-105 hover:bg-purple-700"
+                >
+                    Dashboard
+                </button>
+
+            </section>
+
+
+            {/* =========================================
+                FULL SCREEN AD LOCK
+            ========================================== */}
+
+            {adLocked && (
+
+                <div
+                    className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/35 px-5 backdrop-blur-[1px]"
+                    onClick={(
+                        event
+                    ) => {
+
+                        /*
+                         * Swallow all clicks while
+                         * advertisement is active.
+                         */
+
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }}
+                    onContextMenu={(
+                        event
+                    ) => {
+
+                        event.preventDefault();
+                    }}
+                >
+
+                    {/* =================================
+                        TIMER CARD
+                    ================================== */}
+
+                    <div className="pointer-events-none w-full max-w-sm rounded-3xl border border-white/20 bg-[#0d0718]/90 p-7 text-center shadow-2xl backdrop-blur-xl">
+
+                        <p className="text-xs font-bold uppercase tracking-[0.3em] text-purple-300">
+                            Advertisement Running
+                        </p>
+
+
+                        <div className="my-6">
+
+                            <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-full border-4 border-purple-500 bg-purple-500/10">
+
+                                <span className="text-4xl font-black text-white">
+                                    {
+                                        adRemainingSeconds
+                                    }
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <h2 className="text-xl font-black text-white">
+                            Keep Watching
+                        </h2>
+
+
+                        <p className="mt-3 text-sm leading-6 text-white/70">
+                            Please watch the complete advertisement.
+                            Navigation and page interactions are locked until the timer finishes.
+                        </p>
+
+
+                        <div className="mt-5 h-2 overflow-hidden rounded-full bg-white/10">
+
+                            <div
+                                className="h-full rounded-full bg-purple-500 transition-all duration-1000"
+                                style={{
+                                    width:
+                                        `${
+                                            compoundingStatus
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                                 ?.ad_watch_seconds
                                                 ? Math.min(
                                                     100,
@@ -2806,6 +5415,7 @@ const VideoLandingPage:
                                                     )
                                                 )
                                                 : 0
+<<<<<<< HEAD
                                             }%`,
                                     }}
                                 />
@@ -2824,5 +5434,27 @@ const VideoLandingPage:
             </main>
         );
     };
+=======
+                                        }%`,
+                                }}
+                            />
+
+                        </div>
+
+
+                        <p className="mt-4 text-xs font-semibold text-purple-200">
+                            Do not close or refresh this page.
+                        </p>
+
+                    </div>
+
+                </div>
+            )}
+
+        </main>
+    );
+};
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
 export default VideoLandingPage;

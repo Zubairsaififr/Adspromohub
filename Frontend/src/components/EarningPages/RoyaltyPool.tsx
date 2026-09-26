@@ -22,8 +22,15 @@ import { useNavigate } from "react-router-dom";
 
 import UserNavbar from "../UserDashboard/UserNavbar";
 
+<<<<<<< HEAD
 const API_URL = import.meta.env.VITE_API_URL;
 
+=======
+
+const API_URL = import.meta.env.VITE_API_URL;
+
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 // =====================================================
 // TYPES
 // =====================================================
@@ -37,6 +44,10 @@ interface RoyaltyLeg {
   qualifies_current_slab: boolean;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 interface RoyaltyStatus {
   qualified: boolean;
   qualification_reason: string;
@@ -60,6 +71,10 @@ interface RoyaltyStatus {
   legs: RoyaltyLeg[];
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 interface RoyaltySummary {
   total_earned: number | string;
 
@@ -76,6 +91,10 @@ interface RoyaltySummary {
   remaining_cap: number | string;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 interface RoyaltyHistoryItem {
   id: number;
 
@@ -108,12 +127,20 @@ interface RoyaltyHistoryItem {
   created_at: string;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 interface RoyaltyHistory {
   total_earned: number | string;
   count: number;
   history: RoyaltyHistoryItem[];
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 // =====================================================
 // HELPERS
 // =====================================================
@@ -122,6 +149,10 @@ const getToken = () =>
   localStorage.getItem("access_token") ||
   localStorage.getItem("token");
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 const toNumber = (
   value: number | string | undefined | null
 ) => {
@@ -132,16 +163,28 @@ const toNumber = (
     : 0;
 };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 const formatMoney = (
   value: number | string | undefined | null
 ) =>
   `$${toNumber(value).toFixed(2)}`;
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 const formatNumber = (
   value: number | string | undefined | null
 ) =>
   toNumber(value).toLocaleString();
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 const formatDate = (
   value: string | null | undefined
 ) => {
@@ -161,6 +204,10 @@ const formatDate = (
   }
 };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 const getStatusClass = (
   status: string,
   isDark: boolean
@@ -179,6 +226,10 @@ const getStatusClass = (
     : "bg-yellow-50 text-yellow-600";
 };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 const formatQualificationReason = (
   reason: string
 ) => {
@@ -202,6 +253,10 @@ const formatQualificationReason = (
   }
 };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 // =====================================================
 // COMPONENT
 // =====================================================
@@ -235,6 +290,10 @@ const RoyaltyPool: React.FC = () => {
   const [error, setError] =
     useState("");
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ===================================================
   // THEME
   // ===================================================
@@ -248,6 +307,10 @@ const RoyaltyPool: React.FC = () => {
     }
   }, []);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ===================================================
   // LOGOUT / INVALID TOKEN
   // ===================================================
@@ -273,6 +336,10 @@ const RoyaltyPool: React.FC = () => {
       navigate("/signin");
     }, [navigate]);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ===================================================
   // API HELPER
   // ===================================================
@@ -321,6 +388,10 @@ const RoyaltyPool: React.FC = () => {
     [handleUnauthorized]
   );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ===================================================
   // FETCH ALL ROYALTY DATA
   // ===================================================
@@ -406,6 +477,10 @@ const RoyaltyPool: React.FC = () => {
       ]
     );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ===================================================
   // INITIAL LOAD
   // ===================================================
@@ -414,6 +489,10 @@ const RoyaltyPool: React.FC = () => {
     fetchRoyalty(false);
   }, [fetchRoyalty]);
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ===================================================
   // DERIVED VALUES
   // ===================================================
@@ -421,6 +500,10 @@ const RoyaltyPool: React.FC = () => {
   const history =
     royaltyHistory?.history || [];
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   const todayEarned = useMemo(
     () => {
       if (!history.length) {
@@ -456,6 +539,10 @@ const RoyaltyPool: React.FC = () => {
     [history]
   );
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   const qualifyingLegs =
     royaltyStatus?.legs?.filter(
       (leg) =>
@@ -463,22 +550,40 @@ const RoyaltyPool: React.FC = () => {
         leg.qualifies_current_slab
     ) || [];
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ===================================================
   // THEME CLASSES
   // ===================================================
 
   const bgClass = isDark
+<<<<<<< HEAD
     ? "bg-[#120B0D] text-white"
     : "bg-[#FFF9FA] text-slate-900";
+=======
+    ? "bg-black text-white"
+    : "bg-slate-50 text-slate-900";
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
   const cardClass = isDark
     ? "border-white/10 bg-white/[0.04]"
     : "border-slate-200 bg-white";
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   const mutedClass = isDark
     ? "text-gray-400"
     : "text-slate-500";
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
   // ===================================================
   // UI
   // ===================================================
@@ -493,6 +598,7 @@ const RoyaltyPool: React.FC = () => {
         {/* Background Glow */}
 
         <div className="pointer-events-none fixed inset-0 overflow-hidden">
+<<<<<<< HEAD
           <div className="absolute -left-40 -top-40 h-96 w-96 rounded-full bg-[#B76E79]/10 blur-3xl" />
 
           <div className="absolute -bottom-40 -right-40 h-96 w-96 rounded-full bg-[#D99AA3]/10 blur-3xl" />
@@ -500,6 +606,16 @@ const RoyaltyPool: React.FC = () => {
 
         <div className="relative min-h-screen lg:pl-64">
           <main className="px-4 pb-12 pt-24 sm:px-6 lg:px-8 sm:mr-[220px]">
+=======
+          <div className="absolute -left-40 -top-40 h-96 w-96 rounded-full bg-purple-600/10 blur-3xl" />
+
+          <div className="absolute -bottom-40 -right-40 h-96 w-96 rounded-full bg-fuchsia-600/10 blur-3xl" />
+        </div>
+
+
+        <div className="relative min-h-screen lg:pl-64">
+          <main className="px-4 pb-12 pt-24 sm:px-6 lg:px-8">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
             <div className="mx-auto max-w-7xl">
 
               {/* =======================================
@@ -509,7 +625,11 @@ const RoyaltyPool: React.FC = () => {
               <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <div className="flex items-center gap-3">
 
+<<<<<<< HEAD
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#B76E79]/15 text-[#D99AA3]">
+=======
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-purple-500/15 text-purple-300">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     <Crown size={23} />
                   </div>
 
@@ -528,6 +648,10 @@ const RoyaltyPool: React.FC = () => {
                   </div>
                 </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 <button
                   type="button"
 
@@ -537,7 +661,11 @@ const RoyaltyPool: React.FC = () => {
 
                   disabled={refreshing}
 
+<<<<<<< HEAD
                   className="inline-flex items-center justify-center gap-2 rounded-xl border border-[#B76E79]/20 bg-[#B76E79]/10 px-4 py-2.5 text-sm font-medium text-[#D99AA3] transition hover:bg-[#B76E79]/20 disabled:opacity-50"
+=======
+                  className="inline-flex items-center justify-center gap-2 rounded-xl border border-purple-500/20 bg-purple-500/10 px-4 py-2.5 text-sm font-medium text-purple-300 transition hover:bg-purple-500/20 disabled:opacity-50"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                 >
                   <RefreshCw
                     size={16}
@@ -553,6 +681,10 @@ const RoyaltyPool: React.FC = () => {
                 </button>
               </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
               {/* =======================================
                   LOADING
               ======================================= */}
@@ -561,7 +693,11 @@ const RoyaltyPool: React.FC = () => {
                 <div className="flex min-h-[400px] items-center justify-center">
                   <div className="text-center">
 
+<<<<<<< HEAD
                     <div className="mx-auto mb-4 h-10 w-10 animate-spin rounded-full border-2 border-[#B76E79]/20 border-t-[#B76E79]" />
+=======
+                    <div className="mx-auto mb-4 h-10 w-10 animate-spin rounded-full border-2 border-purple-500/20 border-t-purple-500" />
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                     <p
                       className={`text-sm ${mutedClass}`}
@@ -573,6 +709,10 @@ const RoyaltyPool: React.FC = () => {
                 </div>
               )}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
               {/* =======================================
                   ERROR
               ======================================= */}
@@ -599,6 +739,10 @@ const RoyaltyPool: React.FC = () => {
                 </div>
               )}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
               {/* =======================================
                   CONTENT
               ======================================= */}
@@ -623,7 +767,11 @@ const RoyaltyPool: React.FC = () => {
                       >
                         <div className="mb-4 flex items-center justify-between">
 
+<<<<<<< HEAD
                           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#B76E79]/15 text-[#D99AA3]">
+=======
+                          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/15 text-purple-300">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             <TrendingUp
                               size={19}
                             />
@@ -648,6 +796,10 @@ const RoyaltyPool: React.FC = () => {
                         </div>
                       </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       {/* TOTAL */}
 
                       <div
@@ -680,6 +832,10 @@ const RoyaltyPool: React.FC = () => {
                         </div>
                       </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       {/* DAILY ESTIMATE */}
 
                       <div
@@ -711,6 +867,10 @@ const RoyaltyPool: React.FC = () => {
                         </div>
                       </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       {/* PAYOUTS */}
 
                       <div
@@ -743,6 +903,10 @@ const RoyaltyPool: React.FC = () => {
 
                     </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     {/* =================================
                         CURRENT QUALIFICATION
                     ================================= */}
@@ -772,6 +936,10 @@ const RoyaltyPool: React.FC = () => {
                             )}
                           </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                           <div>
                             <div className="flex flex-wrap items-center gap-2">
 
@@ -804,16 +972,27 @@ const RoyaltyPool: React.FC = () => {
 
                         </div>
 
+<<<<<<< HEAD
                         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
 
                           <div className="rounded-xl bg-[#B76E79]/[0.06] px-4 py-3">
+=======
+
+                        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+
+                          <div className="rounded-xl bg-purple-500/[0.06] px-4 py-3">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             <div
                               className={`text-[11px] ${mutedClass}`}
                             >
                               Matching Slab
                             </div>
 
+<<<<<<< HEAD
                             <div className="mt-1 font-bold text-[#D99AA3]">
+=======
+                            <div className="mt-1 font-bold text-purple-300">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                               {royaltyStatus.current_slab
                                 ? `${formatNumber(
                                     royaltyStatus.current_slab
@@ -822,7 +1001,12 @@ const RoyaltyPool: React.FC = () => {
                             </div>
                           </div>
 
+<<<<<<< HEAD
                           <div className="rounded-xl bg-[#B76E79]/[0.06] px-4 py-3">
+=======
+
+                          <div className="rounded-xl bg-purple-500/[0.06] px-4 py-3">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             <div
                               className={`text-[11px] ${mutedClass}`}
                             >
@@ -836,7 +1020,12 @@ const RoyaltyPool: React.FC = () => {
                             </div>
                           </div>
 
+<<<<<<< HEAD
                           <div className="rounded-xl bg-[#B76E79]/[0.06] px-4 py-3">
+=======
+
+                          <div className="rounded-xl bg-purple-500/[0.06] px-4 py-3">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             <div
                               className={`text-[11px] ${mutedClass}`}
                             >
@@ -850,7 +1039,12 @@ const RoyaltyPool: React.FC = () => {
                             </div>
                           </div>
 
+<<<<<<< HEAD
                           <div className="rounded-xl bg-[#B76E79]/[0.06] px-4 py-3">
+=======
+
+                          <div className="rounded-xl bg-purple-500/[0.06] px-4 py-3">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             <div
                               className={`text-[11px] ${mutedClass}`}
                             >
@@ -868,6 +1062,10 @@ const RoyaltyPool: React.FC = () => {
 
                       </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       {/* CAP PROGRESS */}
 
                       <div className="mt-5">
@@ -892,6 +1090,10 @@ const RoyaltyPool: React.FC = () => {
 
                         </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         <div
                           className={`h-2 overflow-hidden rounded-full ${
                             isDark
@@ -900,7 +1102,11 @@ const RoyaltyPool: React.FC = () => {
                           }`}
                         >
                           <div
+<<<<<<< HEAD
                             className="h-full rounded-full bg-gradient-to-r from-[#8F4F5A] via-[#B76E79] to-[#D99AA3] transition-all duration-500"
+=======
+                            className="h-full rounded-full bg-gradient-to-r from-purple-500 to-fuchsia-500 transition-all duration-500"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
                             style={{
                               width: `${
@@ -925,6 +1131,10 @@ const RoyaltyPool: React.FC = () => {
                           />
                         </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         <div
                           className={`mt-2 text-right text-[11px] ${mutedClass}`}
                         >
@@ -937,6 +1147,10 @@ const RoyaltyPool: React.FC = () => {
                       </div>
                     </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     {/* =================================
                         TEAM LEGS
                     ================================= */}
@@ -975,13 +1189,21 @@ const RoyaltyPool: React.FC = () => {
                         </div>
                       </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       {(royaltyStatus.legs?.length ?? 0) ===
                         0 && (
                         <div className="px-6 py-12 text-center">
 
                           <Users
                             size={28}
+<<<<<<< HEAD
                             className="mx-auto text-[#D99AA3]"
+=======
+                            className="mx-auto text-purple-300"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                           />
 
                           <h3 className="mt-3 font-semibold">
@@ -998,6 +1220,10 @@ const RoyaltyPool: React.FC = () => {
                         </div>
                       )}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       {(royaltyStatus.legs?.length ?? 0) >
                         0 && (
                         <div className="overflow-x-auto">
@@ -1034,6 +1260,10 @@ const RoyaltyPool: React.FC = () => {
                               </tr>
                             </thead>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             <tbody>
                               {royaltyStatus.legs.map(
                                 (leg) => (
@@ -1055,7 +1285,11 @@ const RoyaltyPool: React.FC = () => {
                                           className={`flex h-9 w-9 items-center justify-center rounded-xl ${
                                             leg.is_power_leg
                                               ? "bg-amber-500/10 text-amber-300"
+<<<<<<< HEAD
                                               : "bg-[#B76E79]/10 text-[#D99AA3]"
+=======
+                                              : "bg-purple-500/10 text-purple-300"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                           }`}
                                         >
                                           {leg.is_power_leg ? (
@@ -1069,6 +1303,10 @@ const RoyaltyPool: React.FC = () => {
                                           )}
                                         </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                         <div>
                                           <div className="text-sm font-medium">
                                             {leg.full_name}
@@ -1083,6 +1321,10 @@ const RoyaltyPool: React.FC = () => {
 
                                     </td>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                     <td className="px-5 py-4">
                                       <div className="text-sm font-semibold">
                                         {formatNumber(
@@ -1095,6 +1337,10 @@ const RoyaltyPool: React.FC = () => {
                                       </div>
                                     </td>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                     <td className="px-5 py-4">
 
                                       {leg.is_power_leg ? (
@@ -1109,6 +1355,10 @@ const RoyaltyPool: React.FC = () => {
 
                                     </td>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                     <td className="px-5 py-4">
 
                                       {leg.is_power_leg ? (
@@ -1130,6 +1380,10 @@ const RoyaltyPool: React.FC = () => {
 
                                     </td>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                     <td className="px-5 py-4">
 
                                       {leg.is_power_leg ? (
@@ -1169,6 +1423,10 @@ const RoyaltyPool: React.FC = () => {
 
                     </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     {/* =================================
                         HISTORY
                     ================================= */}
@@ -1186,7 +1444,11 @@ const RoyaltyPool: React.FC = () => {
                       >
                         <div className="flex items-center gap-3">
 
+<<<<<<< HEAD
                           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#B76E79]/10 text-[#D99AA3]">
+=======
+                          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-purple-500/10 text-purple-300">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             <Target size={18} />
                           </div>
 
@@ -1206,10 +1468,18 @@ const RoyaltyPool: React.FC = () => {
                         </div>
                       </div>
 
+<<<<<<< HEAD
                       {history.length === 0 && (
                         <div className="px-6 py-16 text-center">
 
                           <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-[#B76E79]/10 text-[#D99AA3]">
+=======
+
+                      {history.length === 0 && (
+                        <div className="px-6 py-16 text-center">
+
+                          <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-500/10 text-purple-300">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             <Crown size={25} />
                           </div>
 
@@ -1228,6 +1498,10 @@ const RoyaltyPool: React.FC = () => {
                         </div>
                       )}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                       {history.length > 0 && (
                         <div className="overflow-x-auto">
 
@@ -1279,6 +1553,10 @@ const RoyaltyPool: React.FC = () => {
                               </tr>
                             </thead>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             <tbody>
                               {history.map(
                                 (income) => (
@@ -1300,8 +1578,14 @@ const RoyaltyPool: React.FC = () => {
                                       </div>
                                     </td>
 
+<<<<<<< HEAD
                                     <td className="px-5 py-4">
                                       <span className="inline-flex rounded-lg bg-[#B76E79]/10 px-2.5 py-1 text-xs font-semibold text-[#D99AA3]">
+=======
+
+                                    <td className="px-5 py-4">
+                                      <span className="inline-flex rounded-lg bg-purple-500/10 px-2.5 py-1 text-xs font-semibold text-purple-300">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                         {formatNumber(
                                           income.slab_threshold
                                         )}
@@ -1309,6 +1593,10 @@ const RoyaltyPool: React.FC = () => {
                                       </span>
                                     </td>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                     <td className="px-5 py-4">
                                       <div className="text-sm font-semibold">
                                         {formatNumber(
@@ -1321,6 +1609,10 @@ const RoyaltyPool: React.FC = () => {
                                       </div>
                                     </td>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                     <td className="px-5 py-4">
                                       <div className="text-sm font-semibold">
                                         {formatNumber(
@@ -1333,6 +1625,10 @@ const RoyaltyPool: React.FC = () => {
                                       </div>
                                     </td>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                     <td className="px-5 py-4">
                                       <div className="text-sm font-medium">
                                         {formatMoney(
@@ -1341,6 +1637,10 @@ const RoyaltyPool: React.FC = () => {
                                       </div>
                                     </td>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                     <td className="px-5 py-4">
                                       <div className="text-sm">
                                         {formatMoney(
@@ -1349,6 +1649,10 @@ const RoyaltyPool: React.FC = () => {
                                       </div>
                                     </td>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                     <td className="px-5 py-4">
                                       <div className="text-sm font-semibold text-emerald-400">
                                         +
@@ -1358,6 +1662,10 @@ const RoyaltyPool: React.FC = () => {
                                       </div>
                                     </td>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                     <td className="px-5 py-4">
 
                                       <div className="text-sm font-medium">
@@ -1375,6 +1683,10 @@ const RoyaltyPool: React.FC = () => {
 
                                     </td>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                     <td className="px-5 py-4">
 
                                       <span
@@ -1405,20 +1717,36 @@ const RoyaltyPool: React.FC = () => {
 
                     </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     {/* =================================
                         INFO
                     ================================= */}
 
+<<<<<<< HEAD
                     <div className="mt-6 rounded-2xl border border-[#B76E79]/10 bg-[#B76E79]/[0.03] p-5">
 
                       <div className="flex gap-3">
 
                         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#B76E79]/10 text-[#D99AA3]">
+=======
+                    <div className="mt-6 rounded-2xl border border-purple-500/10 bg-purple-500/[0.03] p-5">
+
+                      <div className="flex gap-3">
+
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-purple-500/10 text-purple-300">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                           <Crown size={18} />
                         </div>
 
                         <div>
+<<<<<<< HEAD
                           <h3 className="font-semibold text-[#D99AA3]">
+=======
+                          <h3 className="font-semibold text-purple-300">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             How Royalty Pool Works
                           </h3>
 
@@ -1466,6 +1794,10 @@ const RoyaltyPool: React.FC = () => {
 
                     </div>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     {/* =================================
                         QUICK STATS
                     ================================= */}
@@ -1479,7 +1811,11 @@ const RoyaltyPool: React.FC = () => {
                         >
                           Current matching:
                           {" "}
+<<<<<<< HEAD
                           <span className="font-semibold text-[#D99AA3]">
+=======
+                          <span className="font-semibold text-purple-300">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             {qualifyingLegs.length}
                             {" qualifying non-power "}
                             {qualifyingLegs.length === 1
@@ -1487,7 +1823,11 @@ const RoyaltyPool: React.FC = () => {
                               : "legs"}
                           </span>
                           {" at "}
+<<<<<<< HEAD
                           <span className="font-semibold text-[#D99AA3]">
+=======
+                          <span className="font-semibold text-purple-300">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             {formatNumber(
                               royaltyStatus.current_slab
                             )}
@@ -1508,4 +1848,8 @@ const RoyaltyPool: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 export default RoyaltyPool;

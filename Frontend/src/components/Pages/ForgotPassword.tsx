@@ -30,6 +30,7 @@ const ForgotPassword: React.FC = () => {
 
     const [login, setLogin] = useState("");
 
+<<<<<<< HEAD
     const [otp, setOtp] = useState<string[]>([
         "",
         "",
@@ -38,6 +39,11 @@ const ForgotPassword: React.FC = () => {
         "",
         "",
     ]);
+=======
+    const [otp, setOtp] = useState<string[]>(
+        ["", "", "", "", "", ""]
+    );
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
     const [newPassword, setNewPassword] =
         useState("");
@@ -593,11 +599,19 @@ const ForgotPassword: React.FC = () => {
 
             <div className="absolute inset-0 overflow-hidden">
 
+<<<<<<< HEAD
                 <div className="absolute -left-32 -top-32 h-96 w-96 rounded-full bg-[#B76E79]/20 blur-[120px]" />
 
                 <div className="absolute -bottom-40 -right-32 h-[450px] w-[450px] rounded-full bg-[#8F4F5A]/20 blur-[140px]" />
 
                 <div className="absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#D99AA3]/10 blur-[120px]" />
+=======
+                <div className="absolute -left-32 -top-32 h-96 w-96 rounded-full bg-purple-600/20 blur-[120px]" />
+
+                <div className="absolute -bottom-40 -right-32 h-[450px] w-[450px] rounded-full bg-violet-500/20 blur-[140px]" />
+
+                <div className="absolute left-1/2 top-1/2 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-fuchsia-600/10 blur-[120px]" />
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
 
             </div>
 
@@ -626,7 +640,11 @@ const ForgotPassword: React.FC = () => {
                                 clearMessages();
                             }
                         }}
+<<<<<<< HEAD
                         className="mb-6 flex items-center gap-2 text-sm text-white/60 transition hover:text-[#E3AAB2]"
+=======
+                        className="mb-6 flex items-center gap-2 text-sm text-white/60 transition hover:text-purple-300"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                     >
                         <ArrowLeft
                             size={17}
@@ -648,7 +666,11 @@ const ForgotPassword: React.FC = () => {
                         className="text-xl font-black tracking-wide sm:text-2xl"
                     >
                         ADS
+<<<<<<< HEAD
                         <span className="text-[#D99AA3]">
+=======
+                        <span className="text-purple-400">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             PROMOHUB
                         </span>
                     </button>
@@ -668,10 +690,17 @@ const ForgotPassword: React.FC = () => {
 
                         <div className="mb-7 text-center">
 
+<<<<<<< HEAD
                             <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#D99AA3]/25 bg-[#B76E79]/10">
 
                                 <KeyRound
                                     className="text-[#E3AAB2]"
+=======
+                            <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border border-purple-400/20 bg-purple-500/10">
+
+                                <KeyRound
+                                    className="text-purple-300"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                     size={30}
                                 />
 
@@ -719,7 +748,11 @@ const ForgotPassword: React.FC = () => {
                                 }}
                                 placeholder="Email or APH Customer ID"
                                 autoComplete="username"
+<<<<<<< HEAD
                                 className="w-full rounded-xl border border-white/10 bg-white/[0.06] py-3.5 pl-12 pr-4 text-sm text-white outline-none transition placeholder:text-white/30 focus:border-[#D99AA3]/60 focus:bg-white/[0.08]"
+=======
+                                className="w-full rounded-xl border border-white/10 bg-white/[0.06] py-3.5 pl-12 pr-4 text-sm text-white outline-none transition placeholder:text-white/30 focus:border-purple-400/60 focus:bg-white/[0.08]"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             />
 
                         </div>
@@ -739,7 +772,11 @@ const ForgotPassword: React.FC = () => {
                             disabled={
                                 loading
                             }
+<<<<<<< HEAD
                             className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-[#B76E79] px-5 py-3.5 font-semibold text-white transition hover:bg-[#8F4F5A] disabled:cursor-not-allowed disabled:opacity-60"
+=======
+                            className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-purple-600 px-5 py-3.5 font-semibold text-white transition hover:bg-purple-700 disabled:cursor-not-allowed disabled:opacity-60"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         >
                             {loading ? (
                                 <>
@@ -781,10 +818,17 @@ const ForgotPassword: React.FC = () => {
 
                         <div className="mb-7 text-center">
 
+<<<<<<< HEAD
                             <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#D99AA3]/25 bg-[#B76E79]/10">
 
                                 <ShieldCheck
                                     className="text-[#E3AAB2]"
+=======
+                            <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border border-purple-400/20 bg-purple-500/10">
+
+                                <ShieldCheck
+                                    className="text-purple-300"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                     size={31}
                                 />
 
@@ -799,7 +843,11 @@ const ForgotPassword: React.FC = () => {
                                 generated for
                             </p>
 
+<<<<<<< HEAD
                             <p className="mt-1 break-all text-sm font-semibold text-[#E3AAB2]">
+=======
+                            <p className="mt-1 break-all text-sm font-semibold text-purple-300">
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                 {login}
                             </p>
 
@@ -855,7 +903,11 @@ const ForgotPassword: React.FC = () => {
                                         onPaste={
                                             handleOtpPaste
                                         }
+<<<<<<< HEAD
                                         className="h-12 w-11 rounded-xl border border-white/10 bg-white/[0.06] text-center text-lg font-bold text-white outline-none transition focus:border-[#D99AA3] focus:bg-[#B76E79]/10 sm:h-14 sm:w-12"
+=======
+                                        className="h-12 w-11 rounded-xl border border-white/10 bg-white/[0.06] text-center text-lg font-bold text-white outline-none transition focus:border-purple-400 focus:bg-purple-500/10 sm:h-14 sm:w-12"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                     />
                                 )
                             )}
@@ -885,7 +937,11 @@ const ForgotPassword: React.FC = () => {
                             disabled={
                                 loading
                             }
+<<<<<<< HEAD
                             className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-[#B76E79] px-5 py-3.5 font-semibold text-white transition hover:bg-[#8F4F5A] disabled:cursor-not-allowed disabled:opacity-60"
+=======
+                            className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-purple-600 px-5 py-3.5 font-semibold text-white transition hover:bg-purple-700 disabled:cursor-not-allowed disabled:opacity-60"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         >
                             {loading ? (
                                 <>
@@ -927,7 +983,11 @@ const ForgotPassword: React.FC = () => {
                                 onClick={
                                     handleResendOtp
                                 }
+<<<<<<< HEAD
                                 className="font-semibold text-[#E3AAB2] transition hover:text-[#FFE5E8] disabled:cursor-not-allowed disabled:text-white/30"
+=======
+                                className="font-semibold text-purple-300 transition hover:text-purple-200 disabled:cursor-not-allowed disabled:text-white/30"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             >
                                 {resendSeconds >
                                 0
@@ -953,10 +1013,17 @@ const ForgotPassword: React.FC = () => {
 
                         <div className="mb-7 text-center">
 
+<<<<<<< HEAD
                             <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border border-[#D99AA3]/25 bg-[#B76E79]/10">
 
                                 <LockKeyhole
                                     className="text-[#E3AAB2]"
+=======
+                            <div className="mx-auto mb-5 flex h-16 w-16 items-center justify-center rounded-2xl border border-purple-400/20 bg-purple-500/10">
+
+                                <LockKeyhole
+                                    className="text-purple-300"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                                     size={30}
                                 />
 
@@ -1009,7 +1076,11 @@ const ForgotPassword: React.FC = () => {
                                 }}
                                 placeholder="Minimum 8 characters"
                                 autoComplete="new-password"
+<<<<<<< HEAD
                                 className="w-full rounded-xl border border-white/10 bg-white/[0.06] py-3.5 pl-12 pr-12 text-sm text-white outline-none transition placeholder:text-white/30 focus:border-[#D99AA3]/60"
+=======
+                                className="w-full rounded-xl border border-white/10 bg-white/[0.06] py-3.5 pl-12 pr-12 text-sm text-white outline-none transition placeholder:text-white/30 focus:border-purple-400/60"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             />
 
                             <button
@@ -1076,7 +1147,11 @@ const ForgotPassword: React.FC = () => {
                                 }}
                                 placeholder="Re-enter new password"
                                 autoComplete="new-password"
+<<<<<<< HEAD
                                 className="w-full rounded-xl border border-white/10 bg-white/[0.06] py-3.5 pl-12 pr-12 text-sm text-white outline-none transition placeholder:text-white/30 focus:border-[#D99AA3]/60"
+=======
+                                className="w-full rounded-xl border border-white/10 bg-white/[0.06] py-3.5 pl-12 pr-12 text-sm text-white outline-none transition placeholder:text-white/30 focus:border-purple-400/60"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                             />
 
                             <button
@@ -1139,7 +1214,11 @@ const ForgotPassword: React.FC = () => {
                             disabled={
                                 loading
                             }
+<<<<<<< HEAD
                             className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-[#B76E79] px-5 py-3.5 font-semibold text-white transition hover:bg-[#8F4F5A] disabled:cursor-not-allowed disabled:opacity-60"
+=======
+                            className="mt-6 flex w-full items-center justify-center gap-2 rounded-xl bg-purple-600 px-5 py-3.5 font-semibold text-white transition hover:bg-purple-700 disabled:cursor-not-allowed disabled:opacity-60"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         >
                             {loading ? (
                                 <>
@@ -1220,7 +1299,11 @@ const ForgotPassword: React.FC = () => {
                                     }
                                 )
                             }
+<<<<<<< HEAD
                             className="mt-6 w-full rounded-xl bg-[#B76E79] px-5 py-3.5 font-semibold text-white transition hover:bg-[#8F4F5A]"
+=======
+                            className="mt-6 w-full rounded-xl bg-purple-600 px-5 py-3.5 font-semibold text-white transition hover:bg-purple-700"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         >
                             Sign In Now
                         </button>
@@ -1242,7 +1325,11 @@ const ForgotPassword: React.FC = () => {
                                     "/signin"
                                 )
                             }
+<<<<<<< HEAD
                             className="font-semibold text-[#E3AAB2] transition hover:text-[#FFE5E8]"
+=======
+                            className="font-semibold text-purple-300 transition hover:text-purple-200"
+>>>>>>> f254a205c48e5e0093046f1318dd6de6f18d577d
                         >
                             Sign In
                         </button>
